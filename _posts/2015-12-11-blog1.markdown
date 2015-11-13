@@ -1,10 +1,10 @@
 ---
 layout: blognav
-title:  "Announcing Snapdeal Ads"
+title:  "Introducing Snapdeal Ads"
 author: "Asif Ali"
 authordesc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem antium doloremque laudantium, totam rem aperiam, eaque ipsa quae. "
 dated: "12 Nov"
-image: "img/blogamir.png"
+image: "img/amir-3.png"
 ---
 
 <p class="lead">
