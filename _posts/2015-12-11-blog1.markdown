@@ -8,15 +8,15 @@ image: "img/blog-single.jpg"
 ---
 
 <p class="lead">
-Snapdeal Ads is a new platform that will help sellers on Snapdeal to be able to reach a much larger audience and achieve increased sales.</p>
+Snapdeal Ads is an advertising platform that will help sellers to be able to reach a much larger audience, using pay per click advertising technology. </p>
 <p>
 
-This platform will help you leverage pay per click advertising revenue and reach a total of 9 crore customers across our various properties. 
-Using Snapdeal ads you can now
+Snapdeal Ads will help you reach over 9 crore customers across our various properties and helps you get started in just a few clicks. 
+Using Snapdeal ads you can now:
 <ul class="bullets">
-<li>Reach new users by targeting your products in specific categories.</li>
+<li>Reach new users in specific product categories.</li>
 <li>Reach users who may have shown interest in similar products to your products.</li>
-<li>Reach users who have</li>
+<li>Reach users who have bought products from Snapdeal and are more likely to buy other related products.</li>
 </ul>
 
      

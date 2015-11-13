@@ -2374,7 +2374,7 @@ button[type="submit"] .form-loading {
 }
 .text-tabs .active .tab-title {
   opacity: 1;
-  color: #3277DE;
+  color: #FF4D20;
 }
 .bg-primary .text-tabs .tab-title:after {
   background: #e5d0ff;
