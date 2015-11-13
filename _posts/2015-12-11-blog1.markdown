@@ -4,7 +4,7 @@ title:  "Announcing Snapdeal Ads"
 author: "Asif Ali"
 authordesc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem antium doloremque laudantium, totam rem aperiam, eaque ipsa quae. "
 dated: "12 Nov"
-image: "img/blog-single.jpg"
+image: "img/blogamir.png"
 ---
 
 <p class="lead">
