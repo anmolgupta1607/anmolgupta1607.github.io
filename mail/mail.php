@@ -10,14 +10,11 @@ $emailMethod                = 'phpmail'; // REQUIRED value. Options: 'smtp' , 'p
 
 // Outgoing Server Settings - replace values on the right of the = sign with your own.
 // These 3 settings are only required if you choose 'smtp' for emailMethod above.
-$outgoingServerAddress      = 'mail.yourdomain.com'; // Consult your hosting provider.
-$outgoingServerPort         = '25';                  // Options: '587' , '25' - Consult your hosting provider.
-$outgoingServerSecurity     = 'tls';                 // Options: 'ssl' , 'tls' , null - Consult your hosting provider.
+               // Options: 'ssl' , 'tls' , null - Consult your hosting provider.
 
 // Sending Account Settings - replace these details with an email account held on the SMTP server entered above.
 // These 2 settings are only required if you choose 'smtp' for emailMethod above.
-$sendingAccountUsername     = 'email@domain.com';
-$sendingAccountPassword     = 'p@55w0rd';
+
 
 // Recipient (To:) Details  - Change this to the email details of who will receive all the emails from the website.
 $recipientEmail             = 'anmol.gupta@snapdeal.com'; // REQUIRED value.
