@@ -525,12 +525,28 @@ $(document).ready(function() {
     // Accordions
 
     $('.accordion li').click(function() {
-        if ($(this).closest('.accordion').hasClass('one-open')) {
-            $(this).closest('.accordion').find('li').removeClass('active');
-            $(this).addClass('active');
-        } else {
+if($(this).hasClass('active')){
+     $(this).toggleClass('active');
+}
+else{
+     $(this).closest('.accordion').find('li').removeClass('active');
+     $(this).toggleClass('active');
+
+}
+
+     /*   if ($(this).closest('.accordion').hasClass('one-open')) {
+            console.log("hello");
+            if($(this).hasClass('active')){
+            console.log("active");
             $(this).toggleClass('active');
         }
+            $(this).closest('.accordion').find('li').removeClass('active');
+           $(this).addClass('active');
+
+        } 
+*/
+      
+    
     });
     
 
