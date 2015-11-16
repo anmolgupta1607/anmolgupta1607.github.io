@@ -358,13 +358,14 @@ var msg1=$("#msg1").val();
   <button type="submit">Submit</button>
 </form>
                   -->   
- <form  action="//formspree.io/anmol.gupta@snapdeal.com"
+ <form   data-success="Thanks for your submission, we will be in touch shortly." data-error="Please fill all fields correctly." action="//formspree.io/anmol.gupta@snapdeal.com"
       method="POST">
       <input type="hidden" name="_next" value="thanks.html" />
     <input type="text" class="validate-required" name="name" id="name1" placeholder="Your Name" />
                                 <input type="text" class="validate-required validate-email" id="email1"  name="email" placeholder="Email Address" />
                                 <textarea class="validate-required" name="message" id="msg1" rows="4" placeholder="Message"></textarea>
    <button type="submit">Send Message</button>
+   <div class="form-success" style="background-color:#50AE54">Thanks for your submission, we will be in touch shortly.</div>
 </form> 
                       </div>
                     </div>
