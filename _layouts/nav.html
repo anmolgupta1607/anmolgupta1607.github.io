@@ -18,67 +18,9 @@ layout: default
 
         <link href='http://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600' rel='stylesheet' type='text/css'>
            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <style>
+ 
 
- #ytplayer{ 
-        height:390px; width:640px; display: block;
-        opacity: 0;
-    }
-
-        #carousel {
- width:     1288px;
-    overflow:   hidden;
-    height: 180px;
-
-  }
-
-  #carousel ul {
-  
-  }
-
-  #carousel ul li {
-    width:945px;
-
-   
-   
-}
-        </style>
-        <script type="text/javascript">
-       
-      // Load the IFrame Player API code asynchronously.
-      
-      </script>
-       
-            <script type="text/javascript">
-  
-    $( document ).ready(function() {
-       
-        console.log("ready");
-        $("#carousel ul").each(function(){
-      // Set the interval to be 10 seconds
-      var t = setInterval(function(){
-        $("#carousel ul").animate({marginLeft:-1288},1000,function(){
-          // This code runs after the animation completes
-        
-          $(this).find("li:last").after($(this).find("li:first"));
-          // Now we've taken out the left-most list item, reset the margin
-         
-       
-
-            $(this).css({marginLeft:0});
-        })
-      },5000);
-    });
-
-
-
-
-    });
-
-
-
-
-        </script>
+ 
     </head>
     <body>
           <div class="nav-container" >

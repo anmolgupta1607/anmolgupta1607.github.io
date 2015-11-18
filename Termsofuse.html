@@ -19,235 +19,20 @@ layout: default
 
         <link href='http://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600' rel='stylesheet' type='text/css'>
            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-             <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
-              <script type="text/javascript" src="js/jssor.caroslider.mini.js"></script>
+          
         <style>
 
-            .jssorb05 {
-            position: absolute;
-        }
-        .jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
-            position: absolute;
-            /* size of bullet elment */
-            width: 16px;
-            height: 16px;
-            background: url('img/b05.png') no-repeat;
-            overflow: hidden;
-            cursor: pointer;
-        }
-        .jssorb05 div { background-position: -7px -7px; }
-        .jssorb05 div:hover, .jssorb05 .av:hover { background-position: -37px -7px; }
-        .jssorb05 .av { background-position: -67px -7px; }
-        .jssorb05 .dn, .jssorb05 .dn:hover { background-position: -97px -7px; }
-
-        /* jssor slider arrow navigator skin 22 css */
-        /*
-        .jssora22l                  (normal)
-        .jssora22r                  (normal)
-        .jssora22l:hover            (normal mouseover)
-        .jssora22r:hover            (normal mouseover)
-        .jssora22l.jssora22ldn      (mousedown)
-        .jssora22r.jssora22rdn      (mousedown)
-        */
-        .jssora22l, .jssora22r {
-            display: block;
-            position: absolute;
-            /* size of arrow element */
-            width: 40px;
-            height: 58px;
-            cursor: pointer;
-            background: url('img/a22.png') center center no-repeat;
-            overflow: hidden;
-        }
-        .jssora22l { background-position: -10px -31px; }
-        .jssora22r { background-position: -70px -31px; }
-        .jssora22l:hover { background-position: -130px -31px; }
-        .jssora22r:hover { background-position: -190px -31px; }
-        .jssora22l.jssora22ldn { background-position: -250px -31px; }
-        .jssora22r.jssora22rdn { background-position: -310px -31px; }
-
-
-          .jssorb03 {
-            position: absolute;
-        }
-        .jssorb03 div, .jssorb03 div:hover, .jssorb03 .av {
-            position: absolute;
-            /* size of bullet elment */
-            width: 21px;
-            height: 21px;
-            text-align: center;
-            line-height: 21px;
-            color: white;
-            font-size: 12px;
-            background: url('img/b03.png') no-repeat;
-            overflow: hidden;
-            cursor: pointer;
-        }
-        .jssorb03 div { background-position: -5px -4px; }
-        .jssorb03 div:hover, .jssorb03 .av:hover { background-position: -35px -4px; }
-        .jssorb03 .av { background-position: -65px -4px; }
-        .jssorb03 .dn, .jssorb03 .dn:hover { background-position: -95px -4px; }
-
-        /* jssor slider arrow navigator skin 03 css */
-        /*
-        .jssora03l                  (normal)
-        .jssora03r                  (normal)
-        .jssora03l:hover            (normal mouseover)
-        .jssora03r:hover            (normal mouseover)
-        .jssora03l.jssora03ldn      (mousedown)
-        .jssora03r.jssora03rdn      (mousedown)
-        */
-        .jssora03l, .jssora03r {
-            display: block;
-            position: absolute;
-            /* size of arrow element */
-            width: 55px;
-            height: 55px;
-            cursor: pointer;
-            background: url('img/a03.png') no-repeat;
-            overflow: hidden;
-        }
-        .jssora03l { background-position: -3px -33px; }
-        .jssora03r { background-position: -63px -33px; }
-        .jssora03l:hover { background-position: -123px -33px; }
-        .jssora03r:hover { background-position: -183px -33px; }
-        .jssora03l.jssora03ldn { background-position: -243px -33px; }
-        .jssora03r.jssora03rdn { background-position: -303px -33px; }
+            
 
  #ytplayer{ 
         height:390px; width:640px; display: block;
         opacity: 0;
     }
 
-        #carousel {
- width:     1288px;
-    overflow:   hidden;
-    height: 180px;
-
-  }
-
-  #carousel ul {
-  
-  }
-
-  #carousel ul li {
-    width:945px;
-
-   
-   
-}
+       
         </style>
-        <script type="text/javascript">
+    
        
-      // Load the IFrame Player API code asynchronously.
-      
-      </script>
-       
-            <script type="text/javascript">
-  
-    $( document ).ready(function() {
-   /*    
-        console.log("ready");
-        $("#carousel ul").each(function(){
-      // Set the interval to be 10 seconds
-      var t = setInterval(function(){
-        $("#carousel ul").animate({marginLeft:-1288},1000,function(){
-          // This code runs after the animation completes
-        
-          $(this).find("li:last").after($(this).find("li:first"));
-          // Now we've taken out the left-most list item, reset the margin
-         
-       
-
-            $(this).css({marginLeft:0});
-        })
-      },5000);
-    });*/
-  
-            var jssor_3_options = {
-              $AutoPlay: true,
-              $AutoPlaySteps: 4,
-              $SlideDuration: 160,
-              $SlideWidth: 250,
-              $SlideSpacing: 3,
-              $Cols: 5,
-              $ArrowNavigatorOptions: {
-                $Class: $JssorArrowNavigator$,
-                $Steps: 4
-              },
-             
-            };
-
-
-
-  var jssor_1_options = {
-              $AutoPlay: true,
-              $SlideDuration: 1000,
-              $SlideEasing: $Jease$.$OutQuint,
-              $ArrowNavigatorOptions: {
-                $Class: $JssorArrowNavigator$
-              },
-              $BulletNavigatorOptions: {
-                $Class: $JssorBulletNavigator$
-              }
-            };
-
-            
-            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
-     
-            //responsive code begin
-            //you can remove responsive code if you don't want the slider scales while window resizes
-  var jssor_3_slider = new $JssorSlider$("jssor_3", jssor_3_options);
-            
-            //responsive code begin
-            //you can remove responsive code if you don't want the slider scales while window resizes
-            function ScaleSlider3() {
-                var refSize = jssor_3_slider.$Elmt.parentNode.clientWidth;
-                if (refSize) {
-                    refSize = Math.min(refSize, 809);
-                    jssor_1_slider.$ScaleWidth(refSize);
-                }
-                else {
-                    window.setTimeout(ScaleSlider3, 30);
-                }
-            }
-
-
-
-
-            function ScaleSlider() {
-                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
-                if (refSize) {
-                    refSize = Math.min(refSize, 1920);
-                    jssor_1_slider.$ScaleWidth(refSize);
-                }
-                else {
-                    window.setTimeout(ScaleSlider, 30);
-                }
-            }
-           
-            ScaleSlider();
-      
-                 ScaleSlider3();
-            $(window).bind("load", ScaleSlider3);
-            $(window).bind("resize", ScaleSlider3);
-            $(window).bind("orientationchange", ScaleSlider3);
-
-
-
-
-            $(window).bind("load", ScaleSlider);
-            $(window).bind("resize", ScaleSlider);
-            $(window).bind("orientationchange", ScaleSlider);
-      
-
-
-    });
-
-
-
-
-        </script>
     </head>
     <body>
         <div class="nav-container" style="position:relative;z-index:4" >
@@ -300,12 +85,12 @@ layout: default
                             </ul>
                         </div>
                     </div>
-                    <!--end of module group-->
+                   
                 </div>
             </nav>
         </div>
      
-                <!--end of container-->
+                
         
      
         
@@ -394,35 +179,10 @@ While we try to maintain the security of the Website, we do not guarantee that t
 
              </p>
            
-                <!--end of container-->
+               
             </section>
             </div>
-           <!--  <section class="image-edge pt120 pb120 pt-xs-40 pb-xs-40"> -->
-              <!--   <div class="col-md-6 col-sm-4 p0 col-md-push-6 col-sm-push-8">
-                    <img alt="Screenshot" class="cast-shadow mb-xs-24" src="img/app3.jpg" />
-                </div>
-                <div class="container">
-                    <div class="col-md-5 col-md-pull-0 col-sm-7 col-sm-pull-4 v-align-transform">
-                        <h3 class="mb40 mb-xs-16">Use the pre-built text and image variations to spruik cool features.</h3>
-                        <p class="lead mb40">
-                            We've built three distinct image and text combinations for you to showcase the features of your product or service.
-                        </p>
-                        <div class="feature boxed">
-                            <p>
-                                "What a sick app this is - I've been searching forever for something like this to come along - WOW"
-                            </p>
-                            <div class="spread-children">
-                                <img alt="Pic" class="image-xs" src="img/avatar1.png" />
-                                <span>Anne Bracken - Themeforest</span>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-                <!--end of container-->
-           <!--  </section> -->
-         
-        
-                <!--end of container-->
+       
           
                <footer class="footer-1 bg-dark">
                 <div class="container">
@@ -436,7 +196,7 @@ While we try to maintain the security of the Website, we do not guarantee that t
                                 <hr>
                              
                             </div>
-                            <!--end of widget-->
+                
                         </div>
                         <div class="col-md-3 col-sm-6">
                             <div class="widget">
@@ -478,11 +238,11 @@ While we try to maintain the security of the Website, we do not guarantee that t
                                 </li>
                                 </ul>
                             </div>
-                            <!--end of widget-->
+                      
                         </div>
                    
                     </div>
-                    <!--end of row-->
+           
                     <div class="row">
                         <div class="col-sm-6">
                             <span class="sub">&copy; Copyright 2015 - Snapdeal</span>
@@ -490,7 +250,7 @@ While we try to maintain the security of the Website, we do not guarantee that t
                     
                     </div>
                 </div>
-                <!--end of container-->
+             
                 <a class="btn btn-sm fade-half back-to-top inner-link" href="#top">Top</a>
             </footer>
         </div>
