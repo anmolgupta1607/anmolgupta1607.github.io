@@ -40,6 +40,42 @@
  36. Spacing
 
 /*!---------- 1. GLOBAL STYLES ----------*/
+@media only screen and (max-width: 500px) {
+    #vid1 {
+        display:none;
+    }
+    #sec1 {
+      margin-top:0px !important;
+    }
+    #jssor_3 {
+      width: 400px !important;
+
+    }
+    .jssora03l {
+      display:none !important;
+    }
+    .jssora03r {
+      display:none !important;
+    }
+    .screenshot {
+      width:90% !important;
+    }
+     .screenshot2 {
+      width:90% !important;
+      height:50% !important;
+    }
+    #vid2 {
+      width:75% !important;
+      height:10% !important;
+
+    }
+      #vid3 {
+      width:100% !important;
+      height:100% !important;
+
+    }
+   
+}
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
