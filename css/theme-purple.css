@@ -78,10 +78,13 @@
       height:280px !important;
     }
     .feedback2{
-      height:330px !important;
+      height:340px !important;
     }
     .feedback3{
-      height:370px !important;
+      height:350px !important;
+    }
+    .target{
+      margin-left:20px !important;
     }
    
 }
