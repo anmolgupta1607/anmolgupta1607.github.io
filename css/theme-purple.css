@@ -74,6 +74,12 @@
       height:100% !important;
 
     }
+    .feedback{
+      height:280px !important;
+    }
+    .feedback2{
+      height:320px !important;
+    }
    
 }
 body {
