@@ -12,7 +12,22 @@ The Following API will return information about a Creative of the Product Ad.
 
 <strong>API Link: [Product Ads API]({% post_url 2015-06-11-productapi %})</strong>
 
-The Javascript tag should be integrated with the snapdeal webpage where the ad slot/ad space allocated for product Ads.
+	<iframe src="http://52.5.245.198:9009/pub/getAd?pubId=1&js=true&siteId=101&impressionId=hello&similar_ads=false&inv=site&category=
+	MOBILES&adspaceId=1006&pagetype=category&rs=html">
+	</iframe>
+The above tag should be integrated with the publisher webpage to get a product or Banner ad.
 
-	<script type="text/javascript" src="http://sa.sdlcdn.com/adtech/images/p/sd-pixel.js?v=201511052110"></script>
-	<div class="sd_pa" id="sd_pa_1"></div>
+<strong>Example</strong>
+
+	<html>
+	<body>
+	<iframe src="http://52.5.245.198:9009/pub/getAd?pubId=1&js=true&siteId=101&impressionId=hello&similar_ads=false&inv=site&category=MOB
+	egory&rs=html">
+	<p>Your browser does not support iframes.</p>
+	</iframe>
+	</body>
+	</html>
+
+<strong>Sample Result</strong>
+
+<img src="{{ site.baseurl }}/img/productadnew.png">

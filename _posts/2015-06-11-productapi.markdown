@@ -6,11 +6,11 @@ title:  "Product and Banner Ads API"
 <h6>API for Product and Banner Ad serving</h6>
 
 
-This API returns the creative information of a Product or Banner AD based on the ad space ID that is passed fro URL.
+The API responses are modified to return the HTML response. Iframe tags are used to call these APIs from the webpage.
 
 <strong>Resource URL:</strong>
 
-http://test.snapdeal.com/pub/getAd?pub_id/ad_Space_ID/impressionid
+http://test.snapdeal.com/pub/getAd?pub_id/impressionid/similar_ads/inv/category/adspaceId/pagetype/rs
 
 <h6>Resource Information:</h6>
 
@@ -81,6 +81,12 @@ http://test.snapdeal.com/pub/getAd?pub_id/ad_Space_ID/impressionid
 <td>Optional</td>
 </tr>
 
+<tr>
+<td>similar ads</td>
+<td>Its a boolean value that tells the system whether to return a similar ad or not</td>
+<td>Required</td>
+</tr>
+
 
 
 
@@ -92,192 +98,45 @@ http://test.snapdeal.com/pub/getAd?pub_id/ad_Space_ID/impressionid
 
 GET
 
- http://test.snapdeal.com/pub/getAd?pubId=1&adSpaceId=1005&impressionid=12345
+ http://52.5.245.198:9009/pub/getAd?pubId=1&js=true&siteId=101&impressionId=hello&similar_ads=false&inv=site&category=MOBI
+ LES&adspaceId=1006&pagetype=category&rs=html
 
  
 <strong>Sample Response</strong>
 
-[
-{
-"adSpaceId": 1001,
-"adId": 567567,
-"campaignId": 334455,
-"image_url": "http://ch.reducedata.com/rtb/getImage/1/567567?cb=886727616",
-"requestId": "100111",
-"pixel_url": "http://impression.reducedata.com/rtb/impressionPixel/1/567567/hello?cb=1606203778&vid=0&auid=${AUCTION_ID}",
-"width": 300,
-"advId": 2857,
-"click_url": "http://click.reducedata.com/rtb/clickTracker/1/567567/hello?cb=1563693528&auid=${AUCTION_ID}",
-"type": "CREATIVE_TYPE_BANNER_AD",
-"height": 250,
-"target": "_blank"
-}
-]
 
-<h6>Output Parameters</h6>
+	<style>.sa_pa_style {position:relative;border:1px solid #ffffff;border-radius:2px;padding:2px;text-decoration:none;} .sa_pa_style:hover{border
+	#fb8928;text-decoration:none;}.sa_pa_rating{background-image:url( http://sa.sdlcdn.com/adtech/images/icons/gridstars_sprite.png );backgroun
+	no-repeat;height:10px;width:58px;padding-right:5px;margin-top:5px;float:left;} a:hover{text-decoration: none;}</style>
+	<div style='width:166px;padding:10px 5px;float:left'>
+	<div class='sa_pa_style'>
+	<a href='52.5.295.198/rtb/clickTracker/1/531/hello?cb=1563280649&auid=${AUCTION_ID}' target='_self'>
+	<div style='align:center;margin-bottom:5px;'>
+	<img border='0' style='width:166px;height:194px;' src='http://sdstg.s3.amazonaws.com/imgs/a/a/a/166x194/SDL066442468_1372927343_image1
+	mg >
+	</div>
+	<div style='font-size: 12px;color: #212121;word-wrap: normal;font-family: robotoMedium;margin-bottom: 4px;height: 30px;text-overflow: ellipsi
+	-webkit-box;-webkit-line-clamp: 2;line-height: 15px;-webkit-box-orient: vertical;overflow: hidden;margin-top: 5px;max-height: 35px;'>
+	Samsung Galaxy_WTTS7
+	</div>
+	<div style='position:static;margin-top:6px;'>
+	<div style='font-size:16px;font-family:robotoMedium;color:#212121;text-decoration:none;font-weight:normal;'>Rs 32225 </div>
+	<div style='font-size:13px;color:#565656;line-height:15pt;text-align:left;font-weight:normal;display:block;margin-top:0px;'>
+	<div class='sa_pa_rating' style='background-position: 0px - 0 px;'></div>
+	<div style='float:left;'>(0)</div>
+	</div>
+	<div style='clear:both'></div>
+	<div
+	style='color:#9e9e9e;font-size:12px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;line-height:20px;font-family:robotoRegular;disp
+	156px !important;-webkit-box-orient:vertical;'>Sold by ST AANALYTICSIQ CONSULTING SERVICES PVT LTD </div>
+	</div>
+	<img border='0' width='1' height='1' src='52.5.295.198/rtb/impressionPixel/1/531/hello?cb=1706151826&vid=0&auid=${AUCTION_ID}' style='posi
+	opacity: 0;width: 1px;height: 1px;'></img>
+	</a>
+	</div>
+	</div>
 
-<table class="table">
-<th>Parameter Name</th>
-<th>Details</th>
-<th>Type</th>
 
-<tr>
-<td>offerPrice</td>
-<td>Price at which product sold in Snpadeal site</td>
-<td>Integer</td>
-</tr>
-
-<tr>
-<td>creativeHeight</td>
-<td>Height of the creative</td>
-<td>Integer</td>
-</tr>
-
-<tr>
-<td>pixel_url</td>
-<td>Pixel URL of the creative</td>
-<td>Url</td>
-</tr>
-
-<tr>
-<td>sellerName</td>
-<td>Name of the seller</td>
-<td>String</td>
-</tr>
-
-<tr>
-<td>rating</td>
-<td>Seller Rating</td>
-<td></td>
-</tr>
-
-<tr>
-<td>discount</td>
-<td>Percentage of discount offered</td>
-<td>Integer</td>
-</tr>
-
-<tr>
-<td>extClickTrackingUrl</td>
-<td>When an Ad is delivered in third-party publisher site this URL is used
-
-to track the click</td>
-<td>URL</td>
-</tr>
-
-<tr>
-<td>creativeId</td>
-<td>Unique identifier of the creative</td>
-<td>String</td>
-</tr>
-
-<tr>
-<td>sellerCode</td>
-<td>Unique seller code</td>
-<td>String</td>
-</tr>
-
-<tr>
-<td>extImpressionTrackingUrl</td>
-<td>	
-
-When an Ad is delivered in third-party publisher site this URL is used
-
-to track the Impression</td>
-<td>URL</td>
-</tr>
-
-<tr>
-<td>clickTrackingUrl</td>
-<td>Tracking of the clicked Url(R)</td>
-<td>URL</td>
-</tr>
-<tr>
-<tr>
-<td>requestId</td>
-<td>Id assigned to each unique request</td>
-<td>String</td>
-</tr>
-<tr>
-<td>price</td>
-<td>Actual Price of the product</td>
-<td>Integer</td>
-</tr>
-<td>conversionTrackingUrl</td>
-<td>Url of the converted ads (click to buy)</td>
-<td>URL</td>
-</tr>
-<tr>
-<td>pogId</td>
-<td>Product offer group id</td>
-<td>String</td>
-</tr>
-<tr>
-<td>height</td>
-<td>hieght of the frame/ad</td>
-<td>Integer</td>
-</tr>
-<tr>
-<td>ratingNum</td>
-<td>denotes the number of reviews for a Particular Product</td>
-<td>Integer</td>
-</tr>
-<tr>
-<td>altText</td>
-<td>Text to be displayed</td>
-<td>String</td>
-</tr>
-<tr>
-<td>campaignId</td>
-<td>Unique Id assigned to the campaign</td>
-<td>String</td>
-</tr>
-<tr>
-<td>image_Url</td>
-<td>URL of the Image</td>
-<td>String</td>
-</tr>
-<tr>
-<td>creativeSize</td>
-<td>size of the creative</td>
-<td>-</td>
-</tr>
-<tr>
-<td>creative</td>
-<td>Denotes the type of the creative(Banner or Product)</td>
-<td>String</td>
-</tr>
-<tr>
-<td>target</td>
-<td>Targeting Option enabled by the seller(Location,Segment)</td>
-<td>String</td>
-</tr>
-<tr>
-<td>creativeWidth</td>
-<td>width of the creative</td>
-<td>Integer</td>
-</tr>
-<tr>
-<td>adSpaceId</td>
-<td>Area defined for ad display</td>
-<td>String</td>
-</tr>
-<tr>
-<td>adId</td>
-<td>Unique id assigned to the ad</td>
-<td>String</td>
-</tr>
-<tr>
-<td>creativeType</td>
-<td>Type of creative:banner?</td>
-<td>Integer</td>
-</tr>
-<tr>
-<td>name</td>
-<td>Name give to the ad</td>
-<td>String</td>
-</tr>
-</table>
 
 <strong>Requests to the above APIs will result in one of 3 possible return codes:</strong> 
 
