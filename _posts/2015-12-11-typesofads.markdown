@@ -39,10 +39,6 @@ Product Carousel on PDP page(Example)
 <img src="{{ site.baseurl }}/img/carouselads.jpg" >
  
 
-Product carousel on Category listing Page(Example)
-
-<img src="{{ site.baseurl }}/img/productcarousel.png" >
-
 <h6>Similar Product Ads</h6>
 
 Similar ads are product ads that are recommended by the system to the user. The similar product ads display the ads of products belonging to the same subcategory.

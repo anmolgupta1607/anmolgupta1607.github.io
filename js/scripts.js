@@ -531,6 +531,9 @@ if($(this).hasClass('active')){
 else{
      $(this).closest('.accordion').find('li').removeClass('active');
      $(this).toggleClass('active');
+    
+
+
 
 }
 

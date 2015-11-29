@@ -138,9 +138,9 @@ var msg1=$("#msg1").val();
       method="POST">
       <input type="hidden" name="_next" value="thanks.html" />
       <input type="hidden" name="_subject" value="New submission!" />
-    <input type="text" class="validate-required" name="name" id="name1" placeholder="Your Name" />
-                                <input type="text" class="validate-required validate-email" id="email1"  name="_replyto" placeholder="Email Address" />
-                                <textarea class="validate-required" name="message" id="msg1" rows="4" placeholder="Message"></textarea>
+    <input type="text" class="validate-required" name="name" id="name1" placeholder="Your Name" required />
+                                <input type="email" class="validate-required validate-email" id="email1"  name="_replyto" placeholder="Email Address" required />
+                                <textarea class="validate-required" name="message" id="msg1" rows="4" placeholder="Message" required></textarea>
    <button type="submit">Send Message</button>
    <div class="form-success" style="background-color:#50AE54">Thanks for your submission, we will be in touch shortly.</div>
 </form> 
