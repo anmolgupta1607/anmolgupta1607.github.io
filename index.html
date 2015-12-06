@@ -21,7 +21,7 @@ layout: default
         <link href="css/theme-purple.css" rel="stylesheet" type="text/css" media="all" />
         <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
 
-        <link href='http://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600' rel='stylesheet' type='text/css'>
         
               <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
 <script>
@@ -32,6 +32,12 @@ layout: default
   });
 </script>
         <style>
+        .preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
 
             .jssorb05 {
             position: absolute;
@@ -129,10 +135,16 @@ layout: default
    
    
 }
+ .hideAll  {
+        visibility:hidden;
+     }
         </style>
      
        
             <script type="text/javascript">
+            $(window).load(function() {
+    $("#tabs").removeClass("hideAll");
+});
   
     $( document ).ready(function() {
   
@@ -287,10 +299,11 @@ layout: default
                     </video> 
              
                     <div class="text-center" style="margin-top:-610px;height:300px;position:relative;z-index:2">
+            
                     <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1300px; height: 200px; overflow: hidden; visibility: hidden;">
         <!-- Loading Screen -->
      
-        <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
+        <div id="tabs" class="hideAll" data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
             <div data-p="225.00" style="display: none;text-align:center">
                <h1 class="large" style="color:#FFF;font-weight:300">Advertise your store</h1>
                             <p class="lead" style="color:#FFF;font-weight:300" >
@@ -584,7 +597,7 @@ layout: default
                                 </div>
                                 <br/>
                                 <p>
-                                      We participated in a paid campaign around Rakshabandhan. To our surprise, we got booting figure of sales, even more then promised. Would surely take it again.
+                                      We participated in a paid campaign around Rakshabandhan. To our surprise, we got booming figure of sales, even more then promised. Would surely take it again.
                                 </p>
                             </div>
                            
@@ -592,7 +605,7 @@ layout: default
                         <div class="feedback2 col-sm-4" style="height:466px">
                             <div class="feedback feature feature-2 boxed" style="height:410px">
                                 <div class="text-center">
-                                    <img src="img/Picture2.png" style="height:90px;width:90px"></img>
+                                    <img src="img/Picture3.png" style="height:90px;width:90px"></img>
                                     <br/>
                                     <br/>
                                     <h5 class="uppercase"> Kiran Jindal, Asian Shoes</h5>
@@ -606,7 +619,7 @@ layout: default
                         <div class="feedback2 col-sm-4" style="height:466px">
                             <div class="feedback feature feature-2 boxed" style="height:410px">
                                 <div class="text-center">
-                                   <img src="img/Picture3.png" style="height:90px;width:90px"></img>
+                                   <img src="img/Picture2.png" style="height:90px;width:90px"></img>
                                    <br/>
                                     <br/>
                                     <h5 class="uppercase">Mohamed Imran, Friske Knits</h5>
