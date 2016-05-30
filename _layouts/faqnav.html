@@ -110,7 +110,7 @@ layout: default
             console.log(start,end);
             var identifier=window.location.pathname.substr(start,end-start);
             console.log('-----',$('#'+identifier));
-            $('#'+identifier).css({"border-top":"4px solid #419bf9"});
+            $('#'+identifier).css({"border-top":"2px solid #419bf9"});
               var image=$("#"+identifier+" img").attr('src');
                 console.log(image);
                 image=image.substr(0,7)+".png";
@@ -337,10 +337,10 @@ margin-top:40px;
     font-weight: 800;
     width: 180px;
     justify-content: center;
-    border-top: 4px solid #fff;
+    border-top: 2px solid #fff;
    }
      .topic-block:hover{
-    border-top: 4px solid #419bf9;
+    border-top: 2px solid #419bf9;
     
    }
 
