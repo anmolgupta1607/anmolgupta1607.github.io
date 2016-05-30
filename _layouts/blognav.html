@@ -4,218 +4,503 @@ layout: default
 
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Snapdeal Ads</title>
-        <meta name="viewport" content="width=device-width, initial-scale=0.9">
-        <link href="{{ site.baseurl }}/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="{{ site.baseurl }}/css/themify-icons.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="{{ site.baseurl }}/css/flexslider.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="{{ site.baseurl }}/css/lightbox.min.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="{{ site.baseurl }}/css/ytplayer.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="{{ site.baseurl }}/css/theme-purple.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="{{ site.baseurl }}/css/custom.css" rel="stylesheet" type="text/css" media="all" />
 
-        <link href='http://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600' rel='stylesheet' type='text/css'>
-           <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<head>
+    <meta charset="utf-8">
+    <title>Snapdeal Ads</title>
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.9">
+    <link href="{{ site.baseurl }}/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="{{ site.baseurl }}/css/themify-icons.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="{{ site.baseurl }}/css/flexslider.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="{{ site.baseurl }}/css/lightbox.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="{{ site.baseurl }}/css/ytplayer.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="{{ site.baseurl }}/css/theme-purple.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="{{ site.baseurl }}/css/custom.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="shortcut icon" href="https://i3.sdlcdn.com/img/icons/favicon.ico" type="image/x-icon" />
+    <link rel=icon type=image/ico href="{{ site.baseurl }}/img/favicon.ico" />
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script type="text/javascript">
+    (function(e,t){var n=e.amplitude||{_q:[]};var r=t.createElement("script");r.type="text/javascript";
+      r.async=true;r.src="https://d24n15hnbwhuhn.cloudfront.net/libs/amplitude-2.9.1-min.gz.js";
+      r.onload=function(){e.amplitude.runQueuedFunctions()};var i=t.getElementsByTagName("script")[0];
+      i.parentNode.insertBefore(r,i);var s=function(){this._q=[];return this};function o(e){
+        s.prototype[e]=function(){this._q.push([e].concat(Array.prototype.slice.call(arguments,0)));
+          return this}}var a=["add","append","clearAll","prepend","set","setOnce","unset"];for(var c=0;c<a.length;c++){
+        o(a[c])}n.Identify=s;var u=["init","logEvent","logRevenue","setUserId","setUserProperties","setOptOut","setVersionName","setDomain","setDeviceId","setGlobalUserProperties","identify","clearUserProperties"];
+      function p(e){function t(t){e[t]=function(){e._q.push([t].concat(Array.prototype.slice.call(arguments,0)));
+      }}for(var n=0;n<u.length;n++){t(u[n])}}p(n);e.amplitude=n})(window,document);
+
+       amplitude.init("1de18a5af79a36376d3600b19da9f5aa", null, {
+
+    includeReferrer: true
+
+});
+  </script>
+    <script>
+    $(document).ready(function() {
+           $(".recent-posts-block:gt(2)").hide();
+            $(".recent-posts-block:eq(2)").css("border","none");
+            $("#toggle-button").click(function(){
+                if($("#toggle-button").text()=="Show more..."){
+                 $(".recent-posts-block:gt(2)").slideDown();
+                     $(".recent-posts-block:last()").css("border","none");
+                 $("#toggle-button").text("Show less...");
+             }
+             else if($("#toggle-button").text()=="Show less..."){
+                $(".recent-posts-block:gt(2)").slideUp();
+                 $("#toggle-button").text("Show more...");
+             }
+            });
+
+            $(".video-block:gt(2)").hide();
+              $("#toggle-button-videos").click(function(){
+                if($("#toggle-button-videos").text()=="Show more..."){
+                 $(".video-block:gt(2)").slideDown();
+                     $(".video-block:last()").css("border","none");
+                 $("#toggle-button-videos").text("Show less...");
+             }
+             else if($("#toggle-button-videos").text()=="Show less..."){
+                $(".video-block:gt(2)").slideUp();
+                 $("#toggle-button-videos").text("Show more...");
+             }
+            });
+
+        setTimeout(function() {
+          /*  var path = window.location.pathname;
+            var xpath = path.substring(path.lastIndexOf("/") + 1, path.indexOf(".html"));
+            $("#" + xpath).addClass("arrow");*/
+
+            console.log('----------******',window.location.pathname.substr(window.location.pathname.lastIndexOf('/')+1,window.location.pathname.indexOf('.')));
+            console.log('--8888',window.location.pathname.indexOf('.'));
+            var start=window.location.pathname.lastIndexOf('/')+1;
+            var end=window.location.pathname.indexOf('.');
+            console.log(start,end);
+            var identifier=window.location.pathname.substr(start,end-start);
+            console.log('-----',$('#'+identifier));
+            $('#'+identifier).css("background-color","#f7f7f7");
+            if(window.location.hash) {
+                $(window.location.hash).click();
+            } else {
+                $('#getting-started-with-snapdeal-ads').click();
+            }
+        }, 5);
+          setTimeout(function() {
+                $('.nav-container #blogs').addClass('menu-active');
+            }, 100);
+    });
+    </script>
+
+    <style>
+    .menu li .active {
+        opacity: 1 !important;
+    }
     
+    .nav-blog:after {
+        content: "" !important;
+    }
+    .recent-posts-block{
+         
+    width: 300px;
+    min-height: 130px;
+    border-top: 1px solid #d5d5d5 !important;
+    padding-left: 13px;
+    padding-top: 21px;
+    background-color: white;
+    }
+     .recent-posts-date{
+          font-family: Helvetica;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+    }
+     .recent-posts-title{
+      font-family: Helvetica;
+    color: #333333;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 22px;
+    }
+     .recent-posts-description{
+    font-family: Georgia;
+    color: #333333;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    margin-top: 10px;
+    }
+    .recent-posts-block:hover{
+        background-color: #f7f7f7;
+    }
 
- 
-    </head>
-    <body>
-          <div class="nav-container" >
-            <a id="top"></a>
-            <nav>
-               
-                <div class="nav-bar">
-                    <div class="module left">
-                        <a href="{{ site.baseurl }}/home-app-landing.html">
-                            <img class="logo logo-light" alt="Foundry" src="img/logo-light.png" />
-                            <img class="logo logo-dark" alt="Foundry" src="{{ site.baseurl }}/img/sdlogo.png"  />
-                        </a>
-                    </div>
-                    <div class="module widget-handle mobile-toggle right visible-sm visible-xs">
-                        <i class="ti-menu"></i>
-                    </div>
-                    <div class="module-group right">
-                        <div class="module left">
-                            <ul class="menu">
-                                <li>
-                                    <a href="{{ site.baseurl }}/home-app-landing.html">
-                                        Home
-                                    </a>
-                   
-                                </li>
-                              
-                                <li >
-                                    <a href="{{ site.baseurl }}/features.html">
-                                        Features
-                                    </a>
-                             
-                                </li>
-                                <li >
-                                    <a href="{{ site.baseurl }}/faq.html">
-                                        FAQs
-                                    </a>
-                              
-                                </li>
-                                <li >
-                                    <a href="{% post_url 2015-12-11-blog1 %}">
-                                        Blog
-                                    </a>
-                                  
-                                </li>
-                         
-                                <li>
-                                    <a class="btn" href="{{ site.baseurl }}/contact.html" >GET IN TOUCH</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!--end of module group-->
-                </div>
-            </nav>
-        </div>
+    #toggle-button{
+        background-color: #f7f7f7;
+        height: 41px;
      
-        <section>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-9 col-md-push-3 mb-xs-24">
-                            <div class="post-snippet mb64">
-                               <!--  <img class="mb24" alt="Post Image" src="{{ site.baseurl }}/{{page.image}}" /> -->
-                                <div class="post-title">
-                                    <span class="label">{{page.dated}}</span>
-                                    <h4 class="inline-block">{{page.title}}</h4>
-                                </div>
-                                <ul class="post-meta">
-                                    <li>
-                                        <i class="ti-user"></i>
-                                        <span>Written by
-                                            <a href="#">{{page.author}}</a>
-                                        </span>
-                                    </li>
-                                   
-                                </ul>
-                                <hr>
-                              {{content}}
-                            </div>
-                            <!--end of post snippet-->
-                            <hr>
-                         
-                            <!--end of comments-->
-                        </div>
-                        <!--end of nine col-->
-                        <div class="col-md-3 col-md-pull-9 hidden-sm">
-                           
-                            <!--end of widget-->
-                         
-                            <!--end of widget-->
-                          
-                            <!--end of widget-->
-                            <div class="widget">
-                                <h6 class="title">Recent Posts</h6>
-                                <hr>
-                                <ul class="link-list recent-posts">
-                                    <li>
-                                       <a href="{{ site.baseurl }}{% post_url 2015-12-11-blog1 %}">{{page.title}}</a>
-                                        <span class="date">{{page.dated}}</span>
-                                    </li>
-                                  
-                                </ul>
-                            </div>
-                            <!--end of widget-->
-                           
-                            <!--end of widget-->
-                        </div>
-                        <!--end of sidebar-->
-                    </div>
-                    <!--end of container row-->
-                </div>
-                <!--end of container-->
-            </section>
- 
-        <footer class="footer-1 bg-dark">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-3 col-sm-6">
-                            <h3>Snapdeal Ads</h3>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="widget">
-                                <h6 class="title">Recent Posts</h6>
-                                <hr>
-                             <a href="{% post_url 2015-12-11-blog1 %}">Introducing Snapdeal Ads</a>
-                            </div>
-                            <!--end of widget-->
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="widget">
-                                <h6 class="title">Important Links</h6>
-                                <hr>
-                                 <ul class="link-list recent-posts">
-                                    <li>
-                                        <a href="{{ site.baseurl }}/home-app-landing.html">Home</a>
-                                        
-                                    </li>
-                                   
-                                    <li>
-                                        <a href="{{ site.baseurl }}/features.html">Features</a>
-                                       
-                                    </li>
-                                    <li>
-                                        <a href="{{ site.baseurl }}/faq.html">FAQs</a>
-                                        
-                                    </li>
-                                     <li>
-                                        <a href="{% post_url 2015-12-11-blog1 %}">Blog</a>
-                                        
-                                    </li>
-                                    <li>
-                                        <a href="{{ site.baseurl }}/Termsofuse.html">Terms and Conditions </a>
-                                        
-                                    </li>
-                                    <li>
-                                        <a href="{{ site.baseurl }}/privacypolicy.html">Privacy Policy</a>
-                                        
-                                    </li>
-                                                    <li >
-                                  
-                                    <a href="{% post_url 2015-12-11-intro %}">
+        font-family: Helvetica;
+color:  rgba(0, 0, 0, 0.5);
+font-size: 14px;/* Approximation due to font substitution */
+font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    }
+      #toggle-button-videos{
+        background-color: #f7f7f7;
+        height: 41px;
+     
+        font-family: Helvetica;
+color:  rgba(0, 0, 0, 0.5);
+font-size: 14px;/* Approximation due to font substitution */
+font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    }
     
-     Help
-    </a>
-                                  
-                                </li>
-                                </ul>
-                            </div>
-                            <!--end of widget-->
-                        </div>
-                   
-                    </div>
-                    <!--end of row-->
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <span class="sub">&copy; Copyright 2015 - Snapdeal</span>
-                        </div>
-                    
+   p{
+    margin-bottom: 0px;
+   }
+
+   .blog-heading{
+     margin-top: 10px;
+    font-family: Helvetica;
+    color: #666666;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+   
+    padding-left: 10px;
+    border-left: 5px solid #666666;
+        margin-bottom: 15px;
+   }
+
+   .blog-section-heading{
+font-family: Helvetica;
+color:  #333333;
+font-size: 26px;
+font-weight: 700;
+line-height: 32px;
+margin-top:40px;
+   }
+
+   .blog-section-subheading{
+    font-family: Helvetica;
+    color: #333333;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
+    margin:0px;
+    margin-top: 30px;
+   }
+
+   .blog-content{
+    font-family: Georgia;
+    color: #333333;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    margin-top: 3px;
+    margin-bottom: 12px;
+    text-align: justify;
+  
+   }
+   .blog-content a:hover{
+    text-decoration: underline;
+   }
+   .blog-content a{
+    font-weight: 400;
+   }
+
+   .blog-image{
+    margin-top: 30px;
+   webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+   }
+
+   .blog-image-video{
+     webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    border: 1px solid #e9e9e9;
+   }
+
+   .blog-image-video:hover{
+        border: 1px solid #0a94f7;   }
+
+   .table{
+    margin-top: 30px;
+   }
+   .video-block{
+   border-top: 1px solid #f5f5f5;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+   }
+
+   .video-block-title{
+   font-family: Helvetica;
+    color: #333333;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 22px;
+    margin-top: 10px;
+   }
+
+   .video-block-language{
+ font-family: Helvetica;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+   }
+   .video-block sup{
+        font-weight: 800 !important;
+    font-size: 9px;
+    
+    padding: 0px 3px;
+   }
+    </style>
+</head>
+
+<body>
+    <div class="nav-container">
+        <a id="top"></a>
+        <nav>
+            <div class="nav-bar">
+                <div class="module left">
+                    <a href="{{ site.baseurl }}/index.html"> <img class="logo logo-light" alt="Foundry" src="img/logo-light.png" /> <img class="logo logo-dark" alt="Foundry" src="{{ site.baseurl }}/img/logofinal2.png" /> </a>
+                </div>
+                <div class="module widget-handle mobile-toggle right visible-sm visible-xs"> <i class="ti-menu"></i> </div>
+                <div class="module-group right">
+                    <div class="module left">
+                        <ul class="menu">
+                            <li> <a href="{{ site.baseurl }}/index.html">
+                                        Home
+                                    </a> </li>
+                            <li> <a href="{{ site.baseurl }}/features.html">
+                                        Features
+                                    </a> </li>
+                            <li> <a href="{{ site.baseurl }}/help-center.html">
+                                        Help Center
+                                    </a> </li>
+                            <li> <a href="{{ site.baseurl }}/faqs/ad-serving.html">
+                                        FAQs
+                                    </a> </li>
+                            <li> <a class="active" href="{{ site.baseurl }}/blog.html">
+                                        Blog
+                                    </a> </li>
+                            <li> <a class="btn" href="{{ site.baseurl }}/contact.html">GET IN TOUCH</a> </li>
+                        </ul>
                     </div>
                 </div>
-                <!--end of container-->
-                <a class="btn btn-sm fade-half back-to-top inner-link" href="#top">Top</a>
-            </footer>
+            </div>
+        </nav>
+    </div>
+    <section style=" ">
+        <div class="container" style="   padding: 0px;
+    width: 1044px;
+    display: flex;">
+            <div class="row" style="    margin: 0px;
+    
+        width: 702px;">
+                <div class="col-md-9  mb-xs-24" style="    padding: 0px;
+    width: 702px;">
+   
+                   
+                        <div class="post-title" style="    border-bottom: 1px solid #d5d5d5;
+    margin-bottom: 6px;"> <!-- <span class="label">{{page.dated}}</span> -->
+                            <h4 class="inline-block" style="        font-size: 26px;
+    font-family: Helvetica;
+    font-weight: 700;
+    line-height: 48px;
+    margin-bottom: 0px;">{{page.title}}</h4> </div>
+                      <!--   <ul class="post-meta">
+                            <li> <i class="ti-user"></i> <span>Written by
+                                            <a href="#">{{page.author}}</a>
+                                        </span> </li>
+                        </ul> -->
+                        <hr style=" display:none;   margin: 0px;
+    padding: 0px;
+    margin-top: 3px;
+    margin-bottom: 21px;">
+    <div id="blog-info" style="    display: flex;">
+    <div><img src= "{{page.image}}" width="32px" height="33px" style="margin-top: 6px;"></div>
+    <div style="    margin-left: 10px;">
+        <div style="   
+       font-size: 12px;
+    font-family: Helvetica;
+    font-weight: 400;
+    height: 18px;">{{page.author}}</div>
+    <div style="    font-family: Helvetica;
+    color: #999999;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 21px;">{{page.dated}}</div>
+    </div>
+  
+    </div>
+    <div >
+     {{content}}
+     </div> </div>
+                  <!--   <hr style="    padding: 0px;
+    margin: 0px;
+    border-top: 5px solid #ccc;"> --> </div>
+                <div class="col-md-3  hidden-sm" style="    padding: 0px;
+    margin-left: 40px;
+    display: flex;
+    flex: 1;">
+                    <div class="widget">
+
+                        <h6 class="title" style="    font-family: Helvetica;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 27px;
+    margin-bottom: 0px;
+    letter-spacing: 0px;
+    text-transform: none;
+        padding-top: 21px;">Recent Posts</h6>
+                     <div id="recent-posts-list">
+                     {% assign sorted_pages = (site.pages | sort: 'weight' reverse) %}
+                      {% for page in sorted_pages reversed %}
+  {% if page.categories contains 'blogs' %}
+  <a href="{{ page.url }}">
+  
+    <div class="recent-posts-block" id="{{ page.idx }}">
+                     <div class="recent-posts-title">{{page.short}}</div>
+                     <div class="recent-posts-date">{{page.dated}}</div>
+                     <div class="recent-posts-description">{{page.description}}</div>
+                     </div>
+                     </a>
+  {% endif %}
+{% endfor %}
+                   
+
+                     </div>
+                     <div id="toggle-button">Show more...</div>
+                      <h6 class="title" style="    font-family: Helvetica;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 27px;
+    margin-bottom: 0px;
+    letter-spacing: 0px;
+    text-transform: none;
+        padding-top: 21px;">Videos</h6>
+                     <div id="videos-list">
+                    <div class="video-block"><a href="/videos.html#create-campaign-v2"><img class="blog-image-video" src="/img/Create campaign thumbnail.png"></a>
+                    <div class="video-block-title">Create Campaign</div>
+                    <div class="video-block-language">English <sup> . </sup> (3:31) Min.</div>
+                    </div>
+                      <div class="video-block"><a href="/videos.html#view-and-manage-campaign-v2"><img class="blog-image-video"  src="/img/view campaigns thumbnail.png"></a>
+                       <div class="video-block-title">View and manage campaigns</div>
+                       <div class="video-block-language">English <sup> . </sup> (1:49) Min.</div></div>
+                        <div class="video-block"><a href="/videos.html#campaign-reports-v2"><img class="blog-image-video"  src="/img/Campaign reports thumbnail .png"></a>
+                         <div class="video-block-title">Track campaign performance</div>
+                         <div class="video-block-language">English <sup> . </sup> (1:05) Min.</div></div>
+                          <div class="video-block"><a href="/videos.html#add-funds-and-view-transactions-advance"><img class="blog-image-video"  src="/img/Add funds thumbnail.png"></a>
+                           <div class="video-block-title">Add funds and view transaction history</div>
+                           <div class="video-block-language">English <sup> . </sup> (2:03) Min.</div></div>
+                            <div class="video-block"><a href="/videos.html#create-campaign-v2-hindi"><img class="blog-image-video"  src="/img/Create campaign thumbnail.png"></a>
+                             <div class="video-block-title">Create Campaign</div>
+                             <div class="video-block-language">Hindi <sup> . </sup> (4:09) Min.</div></div>
+                              <div class="video-block"><a href="/videos.html#view-and-manage-campaign-v2-hindi"><img class="blog-image-video"  src="/img/view campaigns thumbnail.png"></a>
+                               <div class="video-block-title">View and manage campaigns</div>
+                               <div class="video-block-language">Hindi <sup> . </sup> (2:20) Min.</div></div>
+                                <div class="video-block"><a href="/videos.html#campaign-reports-v2-hindi"><img class="blog-image-video"  src="/img/Campaign reports thumbnail .png"></a>
+                                 <div class="video-block-title">Track campaign performance </div>
+                                 <div class="video-block-language">Hindi <sup> . </sup> (1:10) Min.</div></div>
+                                  <div class="video-block"><a href="/videos.html#add-funds-and-view-transactions-advance-hindi"><img class="blog-image-video"  src="/img/Add funds thumbnail.png"></a>
+                                   <div class="video-block-title">Add funds and view transaction history</div>
+                                   <div class="video-block-language">Hindi <sup> . </sup> (2:43) Min.</div></div>
+
+
+                     </div>
+                     <div id="toggle-button-videos">Show more...</div>
+                   
+                       
+                    </div>
+                </div>
+            </div>
         </div>
-        <script src="{{ site.baseurl }}/js/jquery.min.js"></script>
-        <script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
-        <script src="{{ site.baseurl }}/js/flickr.js"></script>
-        <script src="{{ site.baseurl }}/js/flexslider.min.js"></script>
-        <script src="{{ site.baseurl }}/js/lightbox.min.js"></script>
-        <script src="{{ site.baseurl }}/js/masonry.min.js"></script>
-        <script src="{{ site.baseurl }}/js/twitterfetcher.min.js"></script>
-        <script src="{{ site.baseurl }}/js/spectragram.min.js"></script>
-        <script src="{{ site.baseurl }}/js/ytplayer.min.js"></script>
-        <script src="{{ site.baseurl }}/js/countdown.min.js"></script>
-        <script src="{{ site.baseurl }}/js/smooth-scroll.min.js"></script>
-        <script src="{{ site.baseurl }}/js/parallax.js"></script>
-        <script src="{{ site.baseurl }}/js/scripts.js"></script>
-    </body>
-</html>
+    </section>
+    <footer class="footer-1 bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <h3>Snapdeal Ads</h3> </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h6 class="title">Recent Posts</h6>
+                        <hr>
+                        <a href="/blog/payments-go-online.html">Payments go online</a><br/>
+                <a href="/blog/seller-ads-live.html">Snapdeal Ads V2 is live for everyone</a><br/>
+                        <a href="/blog/minimum-budget-changes.html">Minimum budget changes </a><br/>
+                         <a href="/blog/help-videos-hindi.html">Help video in Hindi</a><br/>
+                        <a href="/blog/product-ads-effective.html">Make your products ads more effective </a>
+                         <a href="/blog/seller-ads-v2-preview.html">Preview of Our Seller Ads Platform V2</a>
+                        <br/> <a href="/blog/help-center-launch.html">Snapdeal Ads - Help Center Launch</a>
+                        <br/> <a href="/blog/heard-your-feedback.html">Sellers we’ve heard your feedback</a>
+                        <br/> <a href="/blog/measuring-the-roi.html">Measuring ROI</a>
+                        <br/> <a href="/blog/introducing-snapdeal-ads.html">Introducing Snapdeal Ads</a>
+                        <br/> </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h6 class="title">Important Links</h6>
+                        <hr>
+                        <ul class="link-list recent-posts">
+                            <li> <a href="{{ site.baseurl }}/index.html">Home</a> </li>
+                            <li> <a href="{{ site.baseurl }}/features.html">Features</a> </li>
+                            <li> <a href="{{ site.baseurl }}/help-center.html">Help Center</a> </li>
+                            <li> <a href="{{ site.baseurl }}/faqs/ad-serving.html">FAQs</a> </li>
+                            <li> <a href="/blog.html">Blog</a> </li>
+                            <li> <a href="{{ site.baseurl }}/Termsofuse.html">Terms and Conditions </a> </li>
+                            <li> <a href="{{ site.baseurl }}/privacypolicy.html">Privacy Policy</a> </li>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6"> <span class="sub">&copy; Copyright 2016 - Snapdeal</span> </div>
+            </div>
+        </div> <a class="btn btn-sm fade-half back-to-top inner-link" href="#top">Top</a> </footer>
+    </div>
+    <script src="{{ site.baseurl }}/js/jquery.min.js"></script>
+    <script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
+    <script src="{{ site.baseurl }}/js/flickr.js"></script>
+    <script src="{{ site.baseurl }}/js/flexslider.min.js"></script>
+    <script src="{{ site.baseurl }}/js/lightbox.min.js"></script>
+    <script src="{{ site.baseurl }}/js/masonry.min.js"></script>
+    <script src="{{ site.baseurl }}/js/twitterfetcher.min.js"></script>
+    <script src="{{ site.baseurl }}/js/spectragram.min.js"></script>
+    <script src="{{ site.baseurl }}/js/ytplayer.min.js"></script>
+    <script src="{{ site.baseurl }}/js/countdown.min.js"></script>
+    <script src="{{ site.baseurl }}/js/smooth-scroll.min.js"></script>
+    <script src="{{ site.baseurl }}/js/parallax.js"></script>
+    <script src="{{ site.baseurl }}/js/scripts.js"></script>
+</body>
+
+<script>
+console.log('page view',location.pathname);
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ 
+  ga('create', 'UA-72149438-4', 'auto');
+  ga('send', 'pageview',location.pathname);
+ 
+</script>

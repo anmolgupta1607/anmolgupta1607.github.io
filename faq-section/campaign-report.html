@@ -1,0 +1,84 @@
+<style>
+.accordion .content2 {
+    -moz-transition-property: none!important;
+    -webkit-transition-property: none!important;
+    -o-transition-property: none!important;
+    transition-property: none!important;
+}
+
+.tabs li {
+    cursor: default;
+    width: 100%;
+}
+
+.text-tabs .tabs {
+    border-bottom: none;
+}
+
+.accordion h4 {
+    font-size: 20px;
+    padding-left: 4px;
+}
+
+.accordion-2 .title {
+    padding: 10px 0;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.accordion-2 li {
+    margin-top:-7px;
+}
+</style>
+<div class="tabbed-content text-tabs">
+    <ul class="tabs">
+        <li class="active">
+            <div class="tab-content">
+                <ul class="accordion accordion-2 one-open">
+                    <li>
+                        <div class="title">
+                            <h4 class="inline mb0">How can I track performance of my campaigns?</h4> </div>
+                        <div class="content2">
+                            <p> You can track campaign performance for a selected date range in Overview tab. You can search for a product to view performance of the specific product. 
+                            <ul>
+                            <li>Impressions: The number of times this product was shown to the end user as an ad.</li>
+                            <li>Clicks: The number of times this product ad was clicked.</li>
+                            <li>CPC or Cost per click: The price you need to pay per click. Default price is Rs 2.</li>
+                            <li>Spends: The amount spent on serving the particular product ad. </li>
+                            <li>Conversion: It denotes number of products sold through advertising the product. </li>
+                            </ul> </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title">
+                            <h4 class="inline mb0">Can I view performance of a specific campaign and a specific product for a specific date range?</h4> </div>
+                        <div class="content2">
+                            <p> Yes, you need to apply appropriate filters to view the performance data. </p>
+                        </div>
+                    </li>
+                  
+                  
+                   
+                  
+                  
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
+<script>
+$('.play-button').click(function() {
+    $(this).siblings('.background-image-holder').removeClass('fadeIn');
+    $(this).siblings('.background-image-holder').css('z-index', -1);
+    $(this).css('opacity', 0);
+    $(this).siblings('video').get(0).play();
+});
+$('.background-image-holder').each(function() {
+    var imgSrc = $(this).children('img').attr('src');
+    $(this).css('background', 'url("' + imgSrc + '")');
+    $(this).children('img').hide();
+    $(this).addClass("fadeIn");
+});
+$('.accordion li').click(function() {
+    $(this).toggleClass('active');
+});
+</script>

@@ -2,620 +2,631 @@
 layout: default
 ---
 
-
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Snapdeal Ads</title>
-        <meta name="viewport" content="width=device-width, initial-scale=0.9">
-        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="css/themify-icons.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="css/flexslider.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="css/lightbox.min.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="css/ytplayer.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="css/theme-purple.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
 
-        <link href='http://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600' rel='stylesheet' type='text/css'>
-           <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-           
-        <style>
-
- #ytplayer{ 
-        height:390px; width:640px; display: block;
+<head>
+    <meta charset="utf-8">
+    <title>Snapdeal Ads</title>
+     <meta http-equiv="pragma" content="no-cache" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.9">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/themify-icons.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/flexslider.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/lightbox.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/ytplayer.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/theme-purple.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="shortcut icon" href="http://i3.sdlcdn.com/img/icons/favicon.ico" type="image/x-icon" />
+    <link rel=icon type=image/ico href="img/favicon.ico" />
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <style>
+    #ytplayer {
+        height: 390px;
+        width: 640px;
+        display: block;
         opacity: 0;
     }
+    
+    .menu li .active {
+        opacity: 1 !important;
+    }
+    </style>
+</head>
 
-      
-        </style>
-     
-       
-        
-    </head>
-    <body>
-        <div class="nav-container" style="position:relative;z-index:4" >
-            <a id="top"></a>
-            <nav>
-               
-                <div class="nav-bar">
-                    <div class="module left">
-                        <a href="home-app-landing.html">
-                            <img class="logo logo-light" alt="Foundry" src="img/logo-light.png" />
-                            <img class="logo logo-dark" alt="Foundry" src="img/sdlogo.png"  />
-                        </a>
-                    </div>
-                    <div class="module widget-handle mobile-toggle right visible-sm visible-xs">
-                        <i class="ti-menu"></i>
-                    </div>
-                    <div class="module-group right">
-                        <div class="module left">
-                            <ul class="menu">
-                                <li>
-                                    <a href="home-app-landing.html">
-                                        Home
-                                    </a>
+<body>
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-71196351-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+    <script>
+  $(document).ready(function() {
+        window.location.replace("https://ads.snapdeal.com/faqs.html#ad-serving");
+        $.ajax({
+                url: "/footer.html",
+                type:'GET',
+                success: function(data){
+                    console.log('--------------success')
                    
-                                </li>
-                              
-                                <li >
-                                    <a href="features.html">
-                                        Features
-                                    </a>
-                             
-                                </li>
-                                <li >
-                                    <a href="faq.html">
-                                        FAQs
-                                    </a>
-                              
-                                </li>
-                                <li > 
-                                <a href="{% post_url 2015-12-11-blog1 %}">
-                                        Blog
-                                    </a>
-                                  
-                                </li>
-                         
-                         
-                                <li>
-                                    <a class="btn" href="contact.html" >GET IN TOUCH</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-           
+                    $(".footer-1").html(data);
+                }
+            });
+            });
+</script>
+    <div class="nav-container" style="position:relative;z-index:4">
+        <a id="top"></a>
+        <nav>
+            <div class="nav-bar">
+                <div class="module left">
+                    <a href="index.html"> <img class="logo logo-light" alt="Foundry" src="img/logo-light.png" /> <img class="logo logo-dark" alt="Foundry" src="img/logofinal2.png" /> </a>
                 </div>
-            </nav>
-        </div>
-     
-        <div class="main-container">
-      
-          
-          <section>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8 col-md-offset-2 col-sm-12 ">
-                            <h4 class="uppercase mb80" style="color:#0A94F7">Common questions about Snapdeal Ads</h4>
-                            <div class="tabbed-content text-tabs" >
-                                <ul class="tabs" >
-                                    <li class="active" >
-                                        <div class="tab-title">
-                                            <span>Overview</span>
+                <div class="module widget-handle mobile-toggle right visible-sm visible-xs"> <i class="ti-menu"></i> </div>
+                <div class="module-group right">
+                    <div class="module left">
+                        <ul class="menu">
+                            <li> <a href="index.html">
+                                Home
+                            </a> </li>
+                            <li> <a href="features.html">
+                                Features
+                            </a> </li>
+                            <li> <a href="help-center.html">
+                                Help Center
+                            </a> </li>
+                            <li> <a class="active" href="faqs.html#overview">
+                                FAQs
+                            </a> </li>
+                            <li> <a href="/blog/seller-ads-v2-preview.html">
+                                Blog
+                            </a> </li>
+                            <li> <a class="btn" href="contact.html">GET IN TOUCH</a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="main-container">
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 col-sm-12 ">
+                        <h4 class="uppercase mb80" style="color:#0A94F7;padding-left: 19px;">Common questions about Snapdeal Ads</h4>
+                        <div class="tabbed-content text-tabs">
+                            <ul class="tabs">
+                                <li class="active">
+                                    <div class="tab-title"> <span>Overview</span> </div>
+                                    <div class="tab-content">
+                                        <div style="font-size:15px">Snapdeal Ads is an advertising platform that will help sellers to be able to reach a much larger audience, using pay per click advertising technology.</div>
+                                        <br/>
+                                        <br/>
+                                        <div class="local-video-container mb40" id="vid2" style="width:711px;height:400px">
+                                            <div class="background-image-holder"> <img alt="Background Image" class="background-image" src="img/sosbanner.jpg"> </div>
+                                            <video loop controls="" id="vid3" style="width:711px;height:400px">
+                                                <source src="video/Online-Business-Made-Easy-With-Snapdeal-Advisor.mp4" type="video/mp4"> </video>
+                                            <div class="play-button "></div>
                                         </div>
-                                        <div class="tab-content" style="height:1400px" >
-                                       
-                       <strong>Snapdeal Ads is an advertising platform that will help sellers to be able to reach a much larger audience, using pay per click advertising technology.</strong><br/><br/><br/>
-                             <div class="local-video-container mb40" id="vid2"  style="width:711px;height:400px" >
-                                <div class="background-image-holder" >
-                                    <img alt="Background Image"  class="background-image" src="img/sosbanner.jpg">
-                                </div>
-
-                                <video loop  controls="" id="vid3" style="width:711px;height:400px">
-                               
-                                        <source src="video/saree.mp4" type="video/mp4">
-                                         
-                                </video>
-                                <div class="play-button "></div>
-                            </div> 
-
-                            <ul class="accordion accordion-2 one-open">
-                            
-                                <li>
-                                    <div class="title">
-                                        <h4 class="inline-block mb0"> Why should I advertise?</h4>
+                                        <ul class="accordion accordion-2 one-open">
+                                            <li id="why-should-i-advertise">
+                                                <div class="title">
+                                                    <h4 class="inline mb0"> Why should I advertise?</h4> </div>
+                                                <div class="content2">
+                                                    <ul>
+                                                        <li>Get a guaranteed Buy button.</li>
+                                                        <li>Increase visibility of your products.</li>
+                                                        <li>Get increased Sales by promoting your listed products.</li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0">What are my advertising options on Snapdeal?
+                                        </h4> </div>
+                                                <div class="content2">
+                                                    <p> Snapdeal Ads offers native ads on various pages (listing page, PDP page and search result page) across web and moile platforms. Interested? – Sign in with your seller account and start using OR write to us at adsales@snapdeal.com. </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0">What's my minimum spending requirement and how do I pay?</h4> </div>
+                                                <div class="content2">
+                                                    <p> A Minimum of Rs 1000 is required to start ads on Snapdeal Ads. You can pay using your existing COD balance or through credit cards. Payments through credit cards will be available soon. </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0">Where will my ads be displayed?</h4> </div>
+                                                <div class="content2">
+                                                    <p> Snapdeal Product Ads targets your ads in various placements on Snapdeal website, mobile site and mobile app. Your ads may appear in search results, category listing pages and product detail pages. Actual position, look and feel depends on various factors including your ad's relevance to customers. </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0">How do my ads look on Snapdeal?</h4> </div>
+                                                <div class="content2">
+                                                    <p> <strong>Here's how your ads look</strong> <img src="img/carousel2.png"></img>
+                                                        <br/>
+                                                        <br/> </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title" style="width:760px">
+                                                    <h4 class="inline mb0">I’m already a seller on snapdeal, do I need to register as advertiser?</h4> </div>
+                                                <div class="content2">
+                                                    <p> No. You can use your existing seller login credentials to advertise on Snapdeal. </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0"> What are the criteria for running the ads?</h4> </div>
+                                                <div class="content2">
+                                                    <p> Your ads will be displayed provided you have a seller rating of 4.5. Once you exhaust your free credits, you can opt for ads by adding funds to your ads account via existing COD balance. </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0">I have added funds or received free credits, but I am unable to use &nbsp;&nbsp;&nbsp;it. Why?</h4> </div>
+                                                <div class="content2">
+                                                    <p> You may not be able to use your wallet amount in the event your seller rating has dropped. </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0"> How long do free credits last?</h4> </div>
+                                                <div class="content2">
+                                                    <p> Free credits last for a period of 30 days. </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0"> How can I buy credits to advertise?</h4> </div>
+                                                <div class="content2">
+                                                    <p> You can buy credits using COD balance. Do not have COD balance? Then you can transfer money to your advertising wallet via NEFT / Cheques. Write to us to adsales@snapdeal.com for more information. </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0"> How do I select which products can I run?</h4> </div>
+                                                <div class="content2">
+                                                    <p> Snapdeal automatically choses to run the top selling products from your inventory. If you would like to run other products, you can simply select additional products to start promoting them. </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0">Can I pause my campaign or withdraw ad credits?</h4> </div>
+                                                <div class="content2">
+                                                    <p> Yes, the campaigns can be paused and restarted at any point of time. Please note that the free credits would expire after thirty days from the day of credit. Free ad credits cannot be withdrawn. All paid credits can be withdrawn to the COD balance. </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0"> Under what circumstances I can't withdraw these credits?</h4> </div>
+                                                <div class="content2">
+                                                    <p> Only the free ad credits cannot be withdrawn. All paid credits will come with an option of refunding the unutilized credits to COD balance. </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div id="criteria-for-running-ads" class="title">
+                                                    <h4 class="inline mb0"> What are the criteria for running ads on snapdeal?</h4> </div>
+                                                <div class="content2">
+                                                    <p> A seller can start Advertising on snapdeal when the seller rating is 4.5 and above for all the fulfilment modes seller is selling in. (sd+ and non-sd+ rating is above 4.5) </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div id="faqnav2" class="title">
+                                                    <h4 class="inline mb0"> I’m already a seller selling on snapdeal, do I have to register separately for advertising?</h4> </div>
+                                                <div class="content2">
+                                                    <p> No. You can use your existing seller login credentials to advertise on Snapdeal. </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div id="add-products-and-start-advertising" class="title">
+                                                    <h4 class="inline mb0"> How can I add products and start advertising?</h4> </div>
+                                                <div class="content2">
+                                                    <p> One can add products by clicking on the Add products button. </p> <img src="img/helpnavimg11.png" />
+                                                    <br/>
+                                                    <br/>
+                                                    <br/> <img class="screenshot cast-shadow" src="img/helpnavimg12.png" />
+                                                    <br/>
+                                                    <p>Note that you will only be able to add products which are live.</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div id="how-do-my-ads-appear" class="title">
+                                                    <h4 class="inline mb0"> How do my ads appear? </h4> </div>
+                                                <div class="content2">
+                                                    <p> Your ads appear as product carousels on search pages, category pages and product display pages. Screenshots below. </p> <img class="screenshot cast-shadow" src="img/helpnavimg13.png" />
+                                                    <br/>
+                                                    <br/>
+                                                    <br/> <img class="screenshot cast-shadow" src="img/helpnavimg14.png" />
+                                                    <br/> </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0"> I have logged into the site and do not see my ads. Why is it so? </h4> </div>
+                                                <div class="content2">
+                                                    <p> Your products share the space with thousands of other sellers, so it may not appear every time you see. But be rest assured, your products are being displayed to buyers in a process that is automatic and ensures as many products as possible are promoted. </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0"> How does Snapdeal charge the seller for Advertising?</h4> </div>
+                                                <div class="content2">
+                                                    <p> Snapdeal ads charges seller on cpc basis, that is seller pays only when user clicks on the ad advertised by the seller. </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0"> Can I change the CPC of the product advertised?</h4> </div>
+                                                <div class="content2">
+                                                    <p>Yes, you can edit the cost per click anytime by clicking on the actual value and editing the value. Only constraint is that the value should be greater than Rs. 2. You should keep it higher to get more clicks as compared to your competition </p> <img class="screenshot cast-shadow" src="img/helpnavimg15.png" />
+                                                    <br/> </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0"> Can I see the performance of the ads?</h4> </div>
+                                                <div class="content2">
+                                                    <p>The Ads dashboard displays the ad related metrics of the products that have been advertised. </p> <img class="screenshot cast-shadow" src="img/helpnavimg16.png" />
+                                                    <br/>
+                                                    <p>Ad metrics that are shown include:
+                                                        <br/><strong>Impressions:</strong> The number of times this product was shown to the end user as an ad.
+                                                        <br/> <strong>Clicks:</strong> The number of times this product ad was clicked.
+                                                        <br/> <strong>CPC or Cost per click:</strong> The price you need to pay per click. Defualt price is Rs 2.per click
+                                                        <br/> <strong>Spends:</strong> The amount spent on serving the particular product ad.
+                                                        <br/> <strong>Conversion:</strong> It denotes number of products sold through advertising the product.
+                                                        <br/> </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0"> Is it possible to pause the running campaigns?</h4> </div>
+                                                <div class="content2">
+                                                    <p>Yes, Advertiser can pause the active campaigns. On clicking the status of the product one can see the drop down providing the option to pause the campains. The metrics for the paused ads are available on the dashboard. </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0"> Is it possible to see the reports of the all the products that is advertised?</h4> </div>
+                                                <div class="content2">
+                                                    <p>You can download the reports from the seller panel by clicking the download button on top right corner of the panel. </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0"> How can Add funds to the advertising account?</h4> </div>
+                                                <div class="content2">
+                                                    <p>You can download the reports from the seller panel by clicking the download button on top right corner of the panel. </p> <img class="screenshot cast-shadow" src="img/helpnavimg17.png" />
+                                                    <br/>
+                                                    <p>You can start ads by adding funds using your CoD outstandings due with Snapdeal. You simply need to click on Add Funds, enter the amount within the Ads limit and click on Add. Minimum amount per transaction should be Rs 1000.
+                                                        <br/>
+                                                        <br/> <strong>CoD outstanding</strong> is the total sales you’ve made through CoD after your last payment. This is same as the amount you see on your Seller Panel.
+                                                        <br/>
+                                                        <br/> <strong>Ads limit</strong> is 30% of CoD outstandings. This is capped to this amount to ensure that it is recoverable from your next payment.</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0">What if I do not have sufficient CoD outstandings?</h4> </div>
+                                                <div class="content2">
+                                                    <p>You can pay through NEFT or cheque at:<br/><br/>
+                                                        Name: Jasper Infotech Pvt. Ltd.<br/>
+                                                        Bank Name: HDFC Bank<br/>
+                                                        Bank Account: 00912560001809<br/>
+                                                        Branch: Punjabi Bagh (West)<br/>
+                                                        IFSC/RTGS: HDFC0000091<br/>
+                                                        MICR: 110240011<br/><br/>
+                                                        Post payment please drop a confirmation email with your transaction details to<br/>
+                                                        <a href="mailto:adsales@snapdeal.com">adsales@snapdeal.com</a>
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0"> Is it possible to withdraw the Ad balance?</h4> </div>
+                                                <div class="content2">
+                                                    <p>No, Sellers cannot withdraw the amount added to ads account. </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0">My campaigns ran for more than the amount I added. Will I be charged extra?</h4> </div>
+                                                <div class="content2">
+                                                    <p>No. You won’t be charged extra. Incase your campaigns ran for more than the amount added by you, we match the extra spends as overspends credits at the time of auditing.
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0"> Where can I see the transaction History for the account?</h4> </div>
+                                                <div class="content2">
+                                                    <p>The Transaction History option on the Nav bar on clicking displays the list of credit and debit transactions towards advertising, made by the seller. </p> <img class="screenshot cast-shadow" src="img/helpnavimg18.png" />
+                                                    <br/> </div>
+                                            </li>
+                                        </ul>
                                     </div>
-                                <div class="content2" >
-                                    <ul>
-                                         
-<li>Increase visibility of your products to the right user at the right time.</li>
-<li>Improved ROI</li>
-<li>Measure and monitor your audiences, sales and revenue in real-time.</li>
-<li>Successfully promote your newly listed products.</li>
-
-
-                                    </ul>
-                                   </div>
                                 </li>
                                 <li>
-                                    <div class="title">
-                                        <h4 class="inline-block mb0">What are my advertising options on Snapdeal?
-</h4>
+                                    <div class="tab-title"> <span>Getting Started</span> </div>
+                                    <div class="tab-content">
+                                        <ul class="accordion accordion-2 one-open">
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0" style="text-indent: -2em;
+                                    "> Can I add as many products as I want?</h4> </div>
+                                                <div class="content2">
+                                                    <p> You can select as many products as you may want to be advertised. Higher number of products increases chances of receiving clicks and subsequent sales. </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0"> I am getting lots of clicks but sales are not proportionate. Why?</h4> </div>
+                                                <div class="content2">
+                                                    <p> High number of clicks indicates that buyers find your products interesting. Lower sales could be because of multiple factors – incorrect pricing, poor product reviews, all sizes or colours not available, inadequate product description, etc. </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0">Why can’t I see my ad running on Snapdeal?</h4> </div>
+                                                <div class="content2">
+                                                    <p> In all likelihood, your ads are running on Snapdeal which you can track via your advertising dashboard. If in case your advertising dashboard shows no clicks on your products, it could be because your competing sellers have bid a higher price per click. You may want to try increasing your cost per click value. Alternately, you can wait till your products start showing up at the same per click price. </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0">How do I choose products to be promoted by me through ads?</h4> </div>
+                                                <div class="content2">
+                                                    <p> You should ideally choose your bestselling products or high potential products to benefit most from promotions. Other factors such as price point, season, etc. also need to be kept in mind. Alternately, you may let Snapdeal choose the products for you and optimize your campaign. </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0"> How do I know when my ad will show on Snapdeal?</h4> </div>
+                                                <div class="content2">
+                                                    <p> Your ad is eligible to be displayed as soon as you have advertising credits in your ad wallet. However, it could not immediately show up at times because of limited clicks purchased or a low per click price. </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0">How do I see the benefit out of advertising?</h4> </div>
+                                                <div class="content2">
+                                                    <p> You can see the benefits of advertising by directly looking at the ads panel reports. They will indicate the number of sales driven by advertising sales.
+                                                        <br/> Sometimes, these sales happen several days after you advertised, so it is good to consistently review these numbers on a daily basis for a period of 30 days after you have advertised. </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0">How do I opt-out from ADs?</h4> </div>
+                                                <div class="content2">
+                                                    <p> You can opt out of ads anytime by pausing your ads. You can also select an option to have the ad credits refunded to your COD balance. </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0"> For how many days would my ads be shown on Snapdeal?</h4> </div>
+                                                <div class="content2">
+                                                    <p> The duration of ads depends on the amount of clicks purchased. Your ads will stop running as soon as you exhaust your quota of clicks. You can befin your campaign again by adding credits to your ad wallet. </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0"> What is the validity of my ad credits?</h4> </div>
+                                                <div class="content2">
+                                                    <p> Your paid ad credits have an unlimited validity. The credits remain in your account till the committed click count is not achieved. </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0"> How do I start my campaign ?</h4> </div>
+                                                <div class="content2">
+                                                    <p>The self service panel automatically creates campaigns for the top 10 rated products for a particular seller and advertises it. The advanced seller panel enables the seller to create campaigns for products as chosen by the seller. Simple four steps to start Product campaign:
+                                                        <br/> Create campaign → Select products to advertise → Location target → Target Audience.
+                                                        <br/>
+                                                        <br/> <strong>Create campaign screen:</strong> Input budget, start date and end date for your campaign.
+                                                        <br/> </p>
+                                                    <div style="padding-left:60px !important"> <img alt="Screenshot" class="screenshot2 cast-shadow" style="width:508px;height:352px" src="img/createa.png" /> </div>
+                                                    <br/>
+                                                    <br/>
+                                                    <p> <strong>Select Products to be Advertise:</strong> The products selected by you will be displayed here.
+                                                        <br/> </p>
+                                                    <div style="padding-left:60px !important"> <img alt="Screenshot" class="screenshot2 cast-shadow" style="width:508px;height:352px" src="img/select_products.png" /> </div>
+                                                    <br/>
+                                                    <br/>
+                                                    <p> <strong>Select Location Targeting</strong></p>
+                                                    <div style="padding-left:60px !important"> <img alt="Screenshot" class="screenshot2 cast-shadow" style="width:508px;height:352px" src="img/location_target.png" /> </div>
+                                                    <br/>
+                                                    <br/>
+                                                    <p> <strong>Select your audience to Advertise:</strong> Select the kind of audience to be targeted. You can target users who have bought products (and cross sell them related products), target your products when they’re searching for similar products or simply target them by specific category which allows you to reach them when they’re in a particular category </p>
+                                                    <div style="padding-left:60px !important"> <img alt="Screenshot" class="screenshot2 cast-shadow" style="width:508px;height:352px" src="img/aud_tar.png" /> </div>
+                                                    <br/>
+                                                    <br/> </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0">How long does it take to start delivering my campaign ?
+                                            </h4> </div>
+                                                <div class="content2">
+                                                    <p> A campaign will start delivering as soon as it’s approved. It usually takes one (1) business day to approve. </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0">Can I stop my campaigns ?</h4> </div>
+                                                <div class="content2">
+                                                    <p> Yes,You can stop the campaign anytime by logging to the Advertiser Dashboard. Select the campaign and set status as “Inactive”. </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0">What do different statuses mean?</h4> </div>
+                                                <div class="content2">
+                                                    <p> <strong>Active:</strong> It means your campaign is active and running.
+                                                        <br/> <strong>Inactive:</strong> It means that your campaign is inactive or not running.
+                                                        <br/> To run the campaign at this stage, an explicit Approval is needed.
+                                                        <br/> You need to select the "Activate" option from Select Options drop down box.
+                                                        <br/> </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0">I need help with my ads campaign, what should I do? </h4> </div>
+                                                <div class="content2">
+                                                    <p> Please write to sellerads@snapdeal.com with your query or get in touch on the seller page. </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0">What are the advertising policies of Snapdeal? </h4> </div>
+                                                <div class="content2">
+                                                    <p> Read our advertising policies (which includes creative guidelines) here, our <a href="privacypolicy.html">privacy policy</a> and <a href="Termsofuse.html">terms of use</a> here. </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0"> How can I measure my results ? </h4> </div>
+                                                <div class="content2">
+                                                    <p> Reports [available in the left navigation bar] show the ROI of campaigns.
+                                                        <br/> The following things can be done from the Advertiser Dashboard:
+                                                        <br/> Track the performance (Impression, Clicks, Conversion, Sales, Ad spend) in real-time
+                                                        <br/> Download Daily Campaign report
+                                                        <br/> </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0"> Why can’t I see data or metrics for my ads?  </h4> </div>
+                                                <div class="content2">
+                                                    <p> A few reasons-
+                                                        <br/> Your ads are not yet approved and haven’t started running.
+                                                        <br/> Your ad campaigns might be inactive.
+                                                        <br/> Your selected date range and campaign scheduled dates might be mismatch.
+                                                        <br/> </p>
+                                                </div>
+                                            </li>
+                                        </ul>
                                     </div>
-                                <div class="content2" >
-                                        <p>
-                                            Display native products ads along with top organic results so that sellers and brands will get better visibility for their products. These product ads accelerate your conversions.
-                                        </p>
-                                </div>
                                 </li>
                                 <li>
-                                    <div class="title">
-                                        <h4 class="inline-block mb0">What's my minimum spending requirement and how do I pay?</h4>
-                                    </div>
-                                 <div class="content2" >
-                                        <p>
-                                            A Minimum of Rs 1000 is required to start advertising on Snapdeal Ads platform.
-You can pay using your existing COD balance or through credit cards. 
-Payments through credit cards will be available soon. 
-                                        </p>
-                                  </div>
-                                </li>
-                                <li>
-                                    <div class="title">
-                                        <h4 class="inline-block mb0">Where will my ads be displayed?</h4>
-                                    </div>
-                                <div class="content2" >
-                                        <p>
-                                            Snapdeal product Ads targets your ads in various placements on Snapdeal website, mobile 
-site and mobile app. Your ads may appear in search results, category listing pages and product detail pages. Actual position, look and feel depends on various factors including your ad's relevance to customers.
-
-                                        </p>
-                                 </div>
-                                </li>
-                                        <li>
-                                    <div class="title">
-                                        <h4 class="inline-block mb0">How do my ads look on Snapdeal?</h4>
-                                    </div>
-                                <div class="content2"  >
-                                        <p>
-                                            <strong>Here's how your ads look</strong>
-
-                                            <img src="img/carousel2.png"></img><br/><br/>
-
-                                           
-
-                                        </p>
-                                 </div>
-                                </li>
-                                        <li>
-                                    <div class="title" style="width:760px">
-                                        <h4 class="inline-block mb0">I’m already a seller on snapdeal, do I need to register as advertiser?</h4>
-                                    </div>
-                                <div class="content2" >
-                                        <p>
-                                            No. You can use your existing seller login credentials to advertise on Snapdeal.
-
-                                        </p>
-                                 </div>
-                                </li>
-                            </ul>
-                                             
-                         
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="tab-title">
-                                            <span>Getting Started</span>
-                                        </div>
-                                        <div class="tab-content" >
-                                          
-                       
-                            <ul class="accordion accordion-2 one-open" >
-                            
-                                <li>
-                                    <div class="title">
-                                        <h4 class="inline-block mb0"> How do I start my campaign ?</h4>
-                                    </div>
-                                <div class="content2"  >
-                                        <p>
-                                            Simple four steps to start Product campaign:<br/>
-Create campaign → Select products to advertise → Location target → Target Audience.<br/><br/>
-<strong>Create campaign screen:</strong> Input budget, start date and end date for your campaign.<br/></p>
-<div  style="padding-left:60px !important">
-                    <img alt="Screenshot" class="screenshot2 cast-shadow" style="width:477px;height:352px" src="img/createa.png"  />
-                </div><br/><br/>
-  <p>            
-<strong>Select Products to be Advertised:</strong>
-The products selected by you will be displayed here.<br/></p>
-<div  style="padding-left:60px !important">
-                    <img alt="Screenshot" class="screenshot2 cast-shadow" style="width:477px;height:352px" src="img/select_products.png"  />
-                </div><br/><br/>
-                <p>
-<strong>Select the locations you want to target:</strong></p>
-<div  style="padding-left:60px !important">
-                    <img alt="Screenshot" class="screenshot2 cast-shadow" style="width:477px;height:352px" src="img/location_targeting.png"  />
-                </div><br/><br/>
-<p>
-<strong>Select your audience to Advertise:</strong>
-Select the kind of audience to be targeted. You can target users who have bought products (and cross sell them related products), target your products when they’re searching for similar products or simply target them by specific category which allows you to reach them when they’re in a particular category
-</p>
-<div  style="padding-left:60px !important">
-                    <img alt="Screenshot" class="screenshot2 cast-shadow" style="width:477px;height:352px" src="img/audience_targeting.png"  />
-                </div><br/><br/>
-                                     
-                                   </div>
-                                </li>
-                                 <li>
-                                    <div class="title">
-                                        <h4 id="test" class="inline-block mb0"> How do I edit my campaign ?</h4>
-                                    </div>
-                                 
-                                <div class="content2"  >
-                                        <p>
-                                            You can edit campaigns by logging in to your advertiser dashboard. <br/>
-
-<strong> Choose your campaign which you like to edit and single click on the campaign will do.</strong> </p>
-<div  style="padding-left:60px !important">
-                    <img alt="Screenshot" class="screenshot2 cast-shadow" style="width:477px;height:352px" src="img/view_campaign.png"  />
-                </div><br/><br/>
-  <p>            
-<strong>Start edit your campaigns configuration.</strong>
-
-<div  style="padding-left:60px !important">
-                    <img alt="Screenshot" class="screenshot2 cast-shadow" style="width:473px;height:352px" src="img/createa.png"  />
-                </div><br/><br/>
-                <p>
-
-                                </li>
-                                <li>
-                                    <div class="title">
-                                        <h4 class="inline-block mb0">How long does it take to start delivering my campaign ?
-</h4>
-                                    </div>
-                                <div class="content2" >
-                                        <p>
-                                            A campaign will start delivering as soon as it’s approved. It usually takes one  (1) business day to approve.
-                                        </p>
-                                </div>
-                                </li>
-                                <li>
-                                    <div class="title">
-                                        <h4 class="inline-block mb0">Can I stop my campaigns ?</h4>
-                                    </div>
-                                 <div class="content2" >
-                                        <p>
-                                            Yes,You can stop the campaign anytime by logging to the Advertiser Dashboard.
- Select the campaign and set status as “Inactive”.
-                                        </p>
-                                  </div>
-                                </li>
-                                <li>
-                                    <div class="title">
-                                        <h4 class="inline-block mb0">What do different statuses mean?</h4>
-                                    </div>
-                                <div class="content2" >
-                                        <p>
-                                           <strong>Draft:</strong> Campaign is not yet created. You need to complete the configuration setting to start the campaign.<br/>
-<strong>Active:</strong>  It means your campaign is active and running.<br/>
-<strong>Inactive:</strong> It means that your campaign is inactive or not running.<br/>
- To run the campaign at this stage, an explicit Approval is needed.<br/> 
- You need to select the "Activate" option from Select Options drop down box.<br/>
-<strong>Delete:</strong> It means that your campaign is inactive or not running, also you cannot make these campaign active.
-                                        </p>
-                                 </div>
-                                </li>
-                                   <li>
-                                    <div class="title">
-                                        <h4 class="inline-block mb0">I need help with my ads campaign, what should I do? </h4>
-                                    </div>
-                                <div class="content2" >
-                                        <p>
-                                       Please write to adsupport@snapdeal.com with your query or get in touch on the seller page.
-                                        </p>
-                                 </div>
-                                </li>
-                                    <li>
-                                    <div class="title">
-                                        <h4 class="inline-block mb0">What are the advertising policies of Snapdeal? </h4>
-                                    </div>
-                                <div class="content2" >
-                                        <p>
-                                       Read our advertising policies (which includes creative guidelines) here, our <a href="privacypolicy.html">privacy policy</a> and <a href="Termsofuse.html">terms of use</a> here.
-                                        </p>
-                                 </div>
-                                </li>
-                                    <li>
-                                    <div class="title">
-                                        <h4 class="inline-block mb0"> How can I measure my results ? </h4>
-                                    </div>
-                                <div class="content2" >
-                                        <p>
-                                        Reports [available in the left navigation bar] shows the ROI of campaigns. <br/>
-                                       The following things can be done from the Advertiser Dashboard:<br/>
-Track the performance (Impression, Clicks, Conversion, Sales, Ad spend) in real-time<br/>
-Download Daily Campaign report<br/>
-
-                                        </p>
-                                 </div>
-                                </li>
-                                      <li>
-                                    <div class="title">
-                                        <h4 class="inline-block mb0"> Why can’t I see data or metrics for my ads?  </h4>
-                                    </div>
-                                <div class="content2" >
-                                        <p>
-                                     A few reasons-<br/>
-Your ads are not yet approved and haven’t started running. <br/>
-Your ad campaigns might be inactive.<br/>
-Your selected date range and campaign scheduled dates might be mismatch. <br/>
-
-                                        </p>
-                                 </div>
-                                </li>
-
-                            </ul>
-                    
-                     
-            
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="tab-title">
-                                            <span>AD Formats</span>
-                                        </div>
-                                        <div class="tab-content">
-                                <p>
-                                              We support JPG and PNG with size less than 1 MB. 
-             WAP Banners -  468x60 Dimensions
-             Web  Banners - 728x90,986x50 and 468x60 Dimensions.
-             For Product ads - product listing images are used as ads.
-                                        </p>
-
-
-
-                                            <table class="table">
+                                    <div class="tab-title"> <span>AD Formats</span> </div>
+                                    <div class="tab-content">
+                                        <p> We support JPG and PNG with size less than 1 MB. WAP Banners - 468x60 Dimensions Web Banners - 728x90,986x50 and 468x60 Dimensions. For Product ads - product listing images are used as ads. </p>
+                                        <table class="table">
                                             <th>Channel</th>
                                             <th>Ad Type</th>
                                             <th>Location</th>
                                             <th>Size</th>
-
                                             <tr>
-                                            <td rowspan="4">Wap</td>
-                                            <td>Banner</td>
-                                            <td>PDP page (below Key feature section)</td>
-                                            <td>468x60</td>
-                                            </tr>
-
-                                            <tr>
-                                            <td>Banner</td>
-                                            <td>Listing page1 (below pagination)</td>
-                                            <td>468x60</td>
-                                           </tr>
-                                           <tr>
-                                            <td>Banner</td>
-                                            <td>Listing page2 (below pagination)</td>
-                                            <td>468x60</td>
-                                           </tr>
-                                            <tr>
-
-                                            <td>Banner</td>
-                                            <td>Listing page3 (below pagination)</td>
-                                            <td>468x60</td>
+                                                <td rowspan="2">Web</td>
+                                                <td>Product</td>
+                                                <td>Lisiting page 3th, 8th and 13th row</td>
+                                                <td>Native listing product size</td>
                                             </tr>
                                             <tr>
-                                             <td rowspan="10">Web</td>
-                                            <td>Banner</td>
-                                            <td>Listing page 4th row</td>
-                                            <td>468x60</td>
+                                                <td>Product</td>
+                                                <td>PDP - Below Similar product widget</td>
+                                                <td>Native listing product size</td>
                                             </tr>
                                             <tr>
-                                            <td>Banner</td>
-                                            <td>Listing  page 9th row</td>
-                                            <td>468x60</td>
+                                                <td rowspan="2">Wap</td>
+                                                <td>Product</td>
+                                                <td>Listing page 5th,10th and 15th row</td>
+                                                <td>Native listing product size</td>
                                             </tr>
                                             <tr>
-                                            <td>Banner</td>
-                                            <td>Listing page 14th row</td>
-                                            <td>468x60</td>
+                                                <td>Product</td>
+                                                <td>PDP - Below Similar product widget</td>
+                                                <td>Native listing product size</td>
                                             </tr>
                                             <tr>
-                                            <td>Banner</td>
-                                            <td>PDP Page</td>
-                                            <td>728x90</td>
+                                                <td rowspan="2">App</td>
+                                                <td>Product</td>
+                                                <td>Listing page 5th,10th and 15th row</td>
+                                                <td>Native listing product size</td>
                                             </tr>
                                             <tr>
-                                            <td>Banner</td>
-                                            <td>Bronze banner - 3</td>
-                                            <td>986x50</td>
+                                                <td>Product</td>
+                                                <td>PDP - Below Similar product widget</td>
+                                                <td>Native listing product size</td>
                                             </tr>
-                                            <tr>
-                                            <td>Banner</td>
-                                            <td>Bronze banner - 4</td>
-                                            <td>986x50</td>
-                                            </tr>
-                                             <tr>
-                                            <td>Banner</td>
-                                            <td>CSF Top</td>
-                                            <td>728x90</td>
-                                            </tr>
-                                             <tr>
-                                            <td>Banner</td>
-                                            <td>CSF bottom</td>
-                                            <td>728x90</td>
-                                            </tr>
-                                             <tr>
-                                            <td>Product</td>
-                                            <td>Lisiting page 4th, 9th and 14th row</td>
-                                            <td>Native listing product  size</td>
-                                            </tr>
-                                             <tr>
-                                            <td>Product</td>
-                                            <td>PDP - 2 Slots above Floating Buy</td>
-                                            <td>Native listing product  size</td>
-                                            </tr>
-                                            
-                                            </table>
-
-
-
-
-
-
-
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="tab-title">
-                                            <span>Billing/Payments</span>
-                                        </div>
-                                        <div class="tab-content">
-                                     
-                            <ul class="accordion accordion-2 one-open">
-                            
-                                <li>
-                                    <div class="title">
-                                        <h4 class="inline-block mb0"> How does Snapdeal charge me for advertising?</h4>
+                                        </table>
                                     </div>
-                                <div class="content2" >
-                                        <p>
-                                            Snapdeal ads currently charges on pay per click (PPC) basis.
-                                        </p>
-                                   </div>
                                 </li>
                                 <li>
-                                    <div class="title">
-                                        <h4 class="inline-block mb0"> How is the amount debited from the COD balance?
-</h4>
+                                    <div class="tab-title"> <span>Billing/Payments</span> </div>
+                                    <div class="tab-content">
+                                        <ul class="accordion accordion-2 one-open">
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0"> How does Snapdeal charge me for advertising?</h4> </div>
+                                                <div class="content2">
+                                                    <p> Snapdeal ads currently charges on pay per click (PPC) basis. </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0"> How is the amount debited from the COD balance?
+                        </h4> </div>
+                                                <div class="content2">
+                                                    <p> Depending upon how much you’d like to add to your ad balance, you can debit your COD balance and credit to your advertising budget / balance. </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0">What happens if I don't spend all the money in my ad balance?</h4> </div>
+                                                <div class="content2">
+                                                    <p> Free credits expire in 30 days. Payments you made remain as long as you have not used it </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">
+                                                    <h4 class="inline mb0">Where do I check my account balance ? 
+                </h4> </div>
+                                                <div class="content2">
+                                                    <p> Your account balance is available on the top right corner of the ads panel and within the payments section. </p>
+                                                </div>
+                                            </li>
+                                        </ul>
                                     </div>
-                                <div class="content2" >
-                                        <p>
-                                           Depending upon how much you’d like to add to your ad balance, you can debit your COD balance and credit to your advertising budget / balance.
-
-                                        </p>
-                                </div>
-                                </li>
-                                <li>
-                                    <div class="title">
-                                        <h4 class="inline-block mb0">What happens if I don't spend all the money in my ad balance?</h4>
-                                    </div>
-                                 <div class="content2" >
-                                        <p>
-                                            Based on your request ad balance can be refunded 30 days after you added. These refunds are returned to your COD balance and paid as a part of your normal  seller payment cycle. To make a request for refund, please write to us on adsupport@snapdeal.com
-                                        </p>
-                                  </div>
-                                </li>
-                                <li>
-                                    <div class="title">
-                                        <h4 class="inline-block mb0">Where do I check my account balance ? 
-</h4>
-                                    </div>
-                                <div class="content2" >
-                                        <p>
-                                            Your account balance is available on the top right corner of the ads panel and within the payments section.   
-                                        </p>
-                                 </div>
                                 </li>
                             </ul>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        
                         </div>
-                    </div>
-              
-                </div>
-
-
-
-
-
-
-
-                
-            </section>
-     <footer class="footer-1 bg-dark">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-3 col-sm-6">
-                            <h3>Snapdeal Ads</h3>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="widget">
-                                <h6 class="title">Recent Posts</h6>
-                                <hr>
-                             <a href="{% post_url 2015-12-11-blog1 %}">Introducing Snapdeal Ads</a>
-                            </div>
-                          
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="widget">
-                                <h6 class="title">Important Links</h6>
-                                <hr>
-                                 <ul class="link-list recent-posts">
-                                    <li>
-                                        <a href="home-app-landing.html">Home</a>
-                                        
-                                    </li>
-                                   
-                                    <li>
-                                        <a href="features.html">Features</a>
-                                       
-                                    </li>
-                                    <li>
-                                        <a href="faq.html">FAQs</a>
-                                        
-                                    </li>
-                                     <li>
-                                        <a href="{% post_url 2015-12-11-blog1 %}">Blog</a>
-                                        
-                                    </li>
-                                    <li>
-                                        <a href="Termsofuse.html">Terms and Conditions </a>
-                                        
-                                    </li>
-                                    <li>
-                                        <a href="privacypolicy.html">Privacy Policy</a>
-                                        
-                                    </li>
-                                          <li >
-                                  
-                                    <a href="{% post_url 2015-12-11-intro %}">
-    
-     Help
-    </a>
-                                  
-                                </li>
-                                </ul>
-                            </div>
-                      
-                        </div>
-                   
-                    </div>
-              
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <span class="sub">&copy; Copyright 2015 - Snapdeal</span>
-                        </div>
-                    
                     </div>
                 </div>
-
-                <a class="btn btn-sm fade-half back-to-top inner-link" href="#top">Top</a>
+            </div>
+        </section>
+        <footer class="footer-1 bg-dark">
             </footer>
-        </div>
-        <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/flickr.js"></script>
-        <script src="js/flexslider.min.js"></script>
-        <script src="js/lightbox.min.js"></script>
-        <script src="js/masonry.min.js"></script>
-        <script src="js/twitterfetcher.min.js"></script>
-        <script src="js/spectragram.min.js"></script>
-        <script src="js/ytplayer.min.js"></script>
-        <script src="js/countdown.min.js"></script>
-        <script src="js/smooth-scroll.min.js"></script>
-        <script src="js/parallax.js"></script>
-        <script src="js/scripts.js"></script>
-    </body>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/flickr.js"></script>
+    <script src="js/flexslider.min.js"></script>
+    <script src="js/lightbox.min.js"></script>
+    <script src="js/masonry.min.js"></script>
+    <script src="js/twitterfetcher.min.js"></script>
+    <script src="js/spectragram.min.js"></script>
+    <script src="js/ytplayer.min.js"></script>
+    <script src="js/countdown.min.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/scripts.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        if(window.location.hash) {
+            $(window.location.hash).parent().click();
+        }
+    });
+    </script>
+</body>
+
 </html>

@@ -1,0 +1,98 @@
+<style>
+.accordion .content2 {
+    -moz-transition-property: none!important;
+    -webkit-transition-property: none!important;
+    -o-transition-property: none!important;
+    transition-property: none!important;
+}
+
+.tabs li {
+    cursor: default;
+    width: 100%;
+}
+
+.text-tabs .tabs {
+    border-bottom: none;
+}
+
+.accordion h4 {
+    font-size: 20px;
+    padding-left: 4px;
+}
+
+.accordion-2 .title {
+    padding: 10px 0;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.accordion-2 li {
+    margin-top:-7px;
+}
+</style>
+<div class="tabbed-content text-tabs">
+    <ul class="tabs">
+        <li class="active">
+            <div class="tab-content">
+                <ul class="accordion accordion-2 one-open">
+                    <li>
+                        <div class="title">
+                            <h4 class="inline mb0">How can I Add funds to the advertising account?</h4> </div>
+                        <div class="content2">
+                            <p> You can start ads by adding funds using your CoD outstandings due with Snapdeal. You simply need to click on Add Funds, enter the amount within the Ads limit and click on Add. 
+                            <strong>CoD outstanding</strong> is the total sales you’ve made through CoD after your last payment. This is same as the amount you see on your Seller Panel.<br/>
+                            <strong>Ads limit</strong> is 30% of CoD outstandings. This is capped to this amount to ensure that it is recoverable from your next payment. </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title">
+                            <h4 class="inline mb0">Is it possible to withdraw the Ad balance?</h4> </div>
+                        <div class="content2">
+                            <p> No, Sellers cannot withdraw the amount added to ads account.  </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title">
+                            <h4 class="inline mb0">My campaigns ran for more than the amount I added. Will I be charged extra? </h4> </div>
+                        <div class="content2">
+                            <p>No. you won’t be charged extra. Incase your campaigns ran for more than the amount added by you, we match the extra spends as overspends credits at the time of auditing. As campaigns may go slightly more than the budget of the campaign, if you have sufficient funds to run the campaign, campaign would overburn and there is no compensation for same.  </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title">
+                            <h4 class="inline mb0">Where can I see the transaction History for the account?</h4> </div>
+                        <div class="content2">
+                            <p> You can see the transaction history in billing tab.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title">
+                            <h4 class="inline mb0">How can I see how much money I added to ads account?</h4> </div>
+                        <div class="content2">
+                            <p> In Transaction History tab you can change the date range to track all your transactions for the selected date range. </p>
+                        </div>
+                    </li>
+                    
+                  
+                  
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
+<script>
+$('.play-button').click(function() {
+    $(this).siblings('.background-image-holder').removeClass('fadeIn');
+    $(this).siblings('.background-image-holder').css('z-index', -1);
+    $(this).css('opacity', 0);
+    $(this).siblings('video').get(0).play();
+});
+$('.background-image-holder').each(function() {
+    var imgSrc = $(this).children('img').attr('src');
+    $(this).css('background', 'url("' + imgSrc + '")');
+    $(this).children('img').hide();
+    $(this).addClass("fadeIn");
+});
+$('.accordion li').click(function() {
+    $(this).toggleClass('active');
+});
+</script>

@@ -1,0 +1,145 @@
+<style>
+.accordion .content2 {
+    -moz-transition-property: none!important;
+    -webkit-transition-property: none!important;
+    -o-transition-property: none!important;
+    transition-property: none!important;
+}
+
+.tabs li {
+    cursor: default;
+    width: 100%;
+}
+
+.text-tabs .tabs {
+    border-bottom: none;
+}
+
+.accordion h4 {
+    font-size: 20px;
+    padding-left: 4px;
+}
+
+.accordion-2 .title {
+    padding: 10px 0;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.accordion-2 li {
+    margin-top:-7px;
+}
+</style>
+<div class="tabbed-content text-tabs">
+    <ul class="tabs">
+        <li class="active">
+            <div class="tab-content">
+                <ul class="accordion accordion-2 one-open">
+                    <li>
+                        <div class="title">
+                            <h4 class="inline mb0">Can I edit the campaign details anytime?</h4> </div>
+                        <div class="content2">
+                            <p> Yes. You can edit the values anytime except start date if your campaign has already started. </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title">
+                            <h4 class="inline mb0">Is there any limit to Daily budget and Total budget?</h4> </div>
+                        <div class="content2">
+                            <p> No. You can set it to be anything greater than 0. Your ads would stop serving once your budget is exhausted. </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title">
+                            <h4 class="inline mb0">What happens if I increase my bid price? </h4> </div>
+                        <div class="content2">
+                            <p>Higher is your bid price, higher are the chances of your ad showing up.   </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title">
+                            <h4 class="inline mb0">Can I add multiple products in a campaign?</h4> </div>
+                        <div class="content2">
+                            <p> Yes, you can add as many products as you want in a campaign by simply clicking on each product.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title">
+                            <h4 class="inline mb0">Can I advertise a product which is not listed on Snapdeal?</h4> </div>
+                        <div class="content2">
+                            <p> No. You can only advertise products listed on Snapdeal. </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title">
+                            <h4 class="inline mb0">Do I need to manually pause my ads if product goes out of stock or is not live?</h4> </div>
+                        <div class="content2">
+                            <p> We automatically pause your product ad as soon as it either goes goes out of stock or is not live on Snapdeal anymore. This helps you save clicks. </p>
+                        </div>
+                    </li>
+                      <li>
+                        <div class="title">
+                            <h4 class="inline mb0">Which all products should I group in a campaign?</h4> </div>
+                        <div class="content2">
+                            <p> Products for which you want to set same bid price and same targeting should be grouped in one campaign. Typically it is better if all products in a campaign are of same category. For higher GMV products, you may want to bid higher. </p>
+                        </div>
+                    </li>
+                      <li>
+                        <div class="title">
+                            <h4 class="inline mb0">Can I remove products from the campaign?</h4> </div>
+                        <div class="content2">
+                            <p> You can anytime delete products from the campaign by re-clicking on already selected products. </p>
+                        </div>
+                    </li>
+                      <li>
+                        <div class="title">
+                            <h4 class="inline mb0">How can I search a product?</h4> </div>
+                        <div class="content2">
+                            <p> You can search product by SUPC or by product name. </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title">
+                            <h4 class="inline mb0">Can I view all the products I have selected in a campaign?</h4> </div>
+                        <div class="content2">
+                            <p> Yes, “View Selected Products” helps you view currently selected products in the campaign. </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title">
+                            <h4 class="inline mb0">What if I don’t select any location?</h4> </div>
+                        <div class="content2">
+                            <p> Your ads would serve across all India by default. </p>
+                        </div>
+                    </li>
+                       <li>
+                        <div class="title">
+                            <h4 class="inline mb0">How do I know how much should I bid?</h4> </div>
+                        <div class="content2">
+                            <p> Right side widget gives you a suggestive CPC price. You should bid aroundthis price to ensure more clicks. </p>
+                        </div>
+                    </li>
+                   
+                  
+                  
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
+<script>
+$('.play-button').click(function() {
+    $(this).siblings('.background-image-holder').removeClass('fadeIn');
+    $(this).siblings('.background-image-holder').css('z-index', -1);
+    $(this).css('opacity', 0);
+    $(this).siblings('video').get(0).play();
+});
+$('.background-image-holder').each(function() {
+    var imgSrc = $(this).children('img').attr('src');
+    $(this).css('background', 'url("' + imgSrc + '")');
+    $(this).children('img').hide();
+    $(this).addClass("fadeIn");
+});
+$('.accordion li').click(function() {
+    $(this).toggleClass('active');
+});
+</script>

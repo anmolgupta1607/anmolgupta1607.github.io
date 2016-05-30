@@ -1,0 +1,354 @@
+---
+layout: default
+---
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Snapdeal Ads</title>
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.9">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/themify-icons.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/flexslider.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/lightbox.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/ytplayer.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/theme-purple.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="shortcut icon" href="http://i3.sdlcdn.com/img/icons/favicon.ico" type="image/x-icon" />
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script type="text/javascript">
+    (function(e,t){var n=e.amplitude||{_q:[]};var r=t.createElement("script");r.type="text/javascript";
+      r.async=true;r.src="https://d24n15hnbwhuhn.cloudfront.net/libs/amplitude-2.9.1-min.gz.js";
+      r.onload=function(){e.amplitude.runQueuedFunctions()};var i=t.getElementsByTagName("script")[0];
+      i.parentNode.insertBefore(r,i);var s=function(){this._q=[];return this};function o(e){
+        s.prototype[e]=function(){this._q.push([e].concat(Array.prototype.slice.call(arguments,0)));
+          return this}}var a=["add","append","clearAll","prepend","set","setOnce","unset"];for(var c=0;c<a.length;c++){
+        o(a[c])}n.Identify=s;var u=["init","logEvent","logRevenue","setUserId","setUserProperties","setOptOut","setVersionName","setDomain","setDeviceId","setGlobalUserProperties","identify","clearUserProperties"];
+      function p(e){function t(t){e[t]=function(){e._q.push([t].concat(Array.prototype.slice.call(arguments,0)));
+      }}for(var n=0;n<u.length;n++){t(u[n])}}p(n);e.amplitude=n})(window,document);
+
+       amplitude.init("1de18a5af79a36376d3600b19da9f5aa", null, {
+
+    includeReferrer: true
+
+});
+  </script>
+    <style>
+    #ytplayer {
+        height: 390px;
+        width: 640px;
+        display: block;
+        opacity: 0;
+    }
+    
+    .tile {
+        border-radius: 3px;
+        background-color: #61b9f7;
+        box-shadow: 0px 1px 2.00px 0.16px rgba(0, 0, 0, 0.35);
+        width: 490px;
+        height: 270px;
+        margin: 10px;
+        float: left;
+    }
+    
+    .tile .icon {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .tile .icon img {
+        width: 50px;
+        margin-top: 20px;
+    }
+    
+    .tile .icon img:hover {
+        transform: scale(1.05);
+    }
+    
+    .tile .heading {
+        padding: 5px;
+        height: 155px;
+        background: #fbfbfb;
+        border-bottom: 1px solid rgba(153, 153, 153, 0.45);
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+    }
+    
+    .tile a.heading {
+        text-decoration: none;
+        display: block;
+        outline: none;
+        background-color: none;
+    }
+    
+    .tile .heading:hover {
+        cursor: pointer;
+    }
+    
+    .tile .heading .title {
+        text-align: center;
+    }
+    
+    .tile .heading .title h1 {
+        color: #666666;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 31.989px;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .tile .heading .title p {
+        line-height: 16.5px;
+        color: rgb(102, 102, 102);
+    }
+    
+    .tile .posts {
+        background: url('img/background-light.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 15px;
+        background-size: 371px 151px;
+        background-position-y: -90px;
+    }
+    
+    .tile .posts a {
+        margin: 0;
+        padding: 0;
+        color: #FFF;
+        display: inline-block;
+        font-weight: lighter;
+        padding-bottom: 5px;
+        font-size: 14px;
+    }
+    
+    .tile .posts a:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    
+    .tile .posts img {
+        width: 4px;
+        float: right;
+        margin-top: 9px;
+    }
+    
+    #container {
+        margin: 0px auto;
+        width: 1024px !important;
+    }
+    
+    #meta-container {
+        background-color: #f2f2f2;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    
+    #header {
+        padding-top: 50px;
+    }
+    
+    #header .title {
+        color: #0a94f7;
+        font-size: 30px;
+        font-weight: 300;
+        line-height: 25px;
+        text-transform: uppercase;
+    }
+    
+    #header .sub-title {
+        color: rgb(102, 102, 102) !important;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 25px;
+        text-align: center;
+    }
+    
+    .border-bottom {
+        background: url('img/border-bottom.png');
+        height: 0.4pt;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 101;
+        margin-top: -1px;
+    }
+    
+    .menu-active {
+        opacity: 1 !important;
+    }
+    @media (max-width: 890px) {
+  .menu-hidden{
+    overflow: hidden!important;
+  }
+  .menu-visible{
+    overflow: visible!important;
+  }
+}
+    </style>
+    <script>
+        $(document).ready(function() {
+            $.ajax({
+                url: "/footer.html",
+                type: 'GET',
+                success: function(data) {
+                    $(".footer-1").html(data);
+                }
+            });
+            $.ajax({
+                url: "/header.html",
+                type: 'GET',
+                success: function(data) {
+                    $(".nav-container").html(data);
+                }
+            });
+            setTimeout(function() {
+                $('.nav-container #help-center').addClass('menu-active');
+            }, 100);
+            setTimeout(function () {
+        
+      var menuDropdown = $(".ti-menu")[0];      
+      menuDropdown.addEventListener('click', function () {
+          if($(".nav-bar").hasClass("menu-hidden")){
+            $(".nav-bar").removeClass("menu-hidden");
+            $(".nav-bar").addClass("menu-visible")
+          }else{
+            $(".nav-bar").removeClass("menu-visible");
+            $(".nav-bar").addClass("menu-hidden");
+          }
+      });
+      }, 400);
+        });
+    </script>
+</head>
+
+<body>
+    <div class="nav-container" style="position:relative;z-index:4">
+        
+    </div>
+    <div>
+        <div class="container" style="margin-top:50px">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <div id="header">
+                        <h1 class="title">ADS HELP CENTER</h1>
+                        <p class="sub-title">Learn how to use the ad platform using <strong>help center</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="meta-container">
+            <div class="target row">
+                <div id="container">
+                    <div class="tile">
+                        <a href="/help/getting-started-with-snapdeal-ads.html">
+                            <div class="heading">
+                                <div class="icon">
+                                    <center> <img src="img/help.png" /> </center>
+                                </div>
+                                <div class="title">
+                                    <h1 style="font-weight: 500;">Help</h1>
+                                    <p>All the help related to your portal usage.</p>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="border-bottom"></div>
+                        <div class="posts">
+                            <div class="title"> <a href="/help/getting-started-with-snapdeal-ads.html">Getting started with Snapdeal Ads</a> </div>
+                            <div class="title"> <a href="/help/create-campaign.html">Create campaigns</a> </div>
+                            <div class="title"> <a href="/help/view-campaigns.html">View and manage campaigns</a> </div>
+                        </div>
+                    </div>
+                    <div class="tile">
+                        <a href="videos.html#create-campaign-v2">
+                            <div class="heading">
+                                <div class="icon">
+                                    <center> <img style="margin-top: 31px;" src="img/videos.png" /> </center>
+                                </div>
+                                <div class="title">
+                                    <h1 style="font-weight: 500;">Videos</h1>
+                                    <p>To guide you through our ads panel utility.</p>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="border-bottom"></div>
+                        <div class="posts">
+                            <div class="title"> <a href="videos.html#create-campaign-v2">Create campaigns</a> </div>
+                            <div class="title"> <a href="videos.html#view-and-manage-campaign-v2">View and manage campaigns</a> </div>
+                            <div class="title"> <a href="videos.html#campaign-reports-v2-hindi">Track campaign performance (Hindi)</a> </div>
+                        </div>
+                    </div>
+                    <div class="tile">
+                        <a href="faqs/ad-serving.html">
+                            <div class="heading">
+                                <div class="icon">
+                                    <center> <img src="img/documents.png" /> </center>
+                                </div>
+                                <div class="title">
+                                    <h1 style="font-weight: 500;">Frequently Asked Questions</h1>
+                                    <p>Find answers to all your queries and issues here.</p>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="border-bottom"></div>
+                        <div class="posts">
+                            <div class="title"> <a href="faqs/ad-serving.html">Ad serving</a> </div>
+                            <div class="title"> <a href="faqs/campaign-creation.html">Campaign creation</a> </div>
+                            <div class="title"> <a href="faqs/campaign-state.html">Campaign state management</a> </div>
+                        </div>
+                    </div>
+                    <div class="tile">
+                        <a href="contact.html">
+                            <div class="heading">
+                                <div class="icon">
+                                    <center> <img src="img/faq.png" /> </center>
+                                </div>
+                                <div class="title">
+                                    <h1 style="font-weight: 500;">Contact Us</h1>
+                                    <p>Get in touch with us for any query related to Ads.</p>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="border-bottom"></div>
+                        <div class="posts">
+                            <div class="title"> <a href="mailto:adsales@snapdeal.com">For sales related queries reach out 
+                                    to us at - adsales@snapdeal.com</a> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer-1 bg-dark">
+       </footer>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/flickr.js"></script>
+    <script src="js/flexslider.min.js"></script>
+    <script src="js/lightbox.min.js"></script>
+    <script src="js/masonry.min.js"></script>
+    <script src="js/twitterfetcher.min.js"></script>
+    <script src="js/spectragram.min.js"></script>
+    <script src="js/ytplayer.min.js"></script>
+    <script src="js/countdown.min.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ 
+  ga('create', 'UA-72149438-4', 'auto');
+  ga('send', 'pageview',location.pathname);
+ 
+</script>
+
+</html>

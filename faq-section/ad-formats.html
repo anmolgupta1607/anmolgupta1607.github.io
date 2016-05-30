@@ -1,0 +1,96 @@
+<style>
+.accordion .content2 {
+    -moz-transition-property: none!important;
+    -webkit-transition-property: none!important;
+    -o-transition-property: none!important;
+    transition-property: none!important;
+}
+
+.tabs li {
+    cursor: default;
+    width: 100%;
+}
+
+.text-tabs .tabs {
+    border-bottom: none;
+}
+
+.accordion h4 {
+    font-size: 20px;
+    padding-left: 4px;
+}
+
+.accordion-2 .title {
+    padding: 10px 0;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.accordion-2 li {
+    margin-top:-7px;
+}
+</style>
+<div class="tabbed-content text-tabs">
+    <ul class="tabs">
+        <li class="active">
+            <div class="tab-content">
+                <p> Product listing images are used as ads.</p>
+                <table class="table">
+                    <th>Channel</th>
+                    <th>Ad Type</th>
+                    <th>Location</th>
+                    <th>Size</th>
+                    <tr>
+                        <td rowspan="2">Web</td>
+                        <td>Product</td>
+                        <td>Lisiting page 3th, 8th and 13th row</td>
+                        <td>Native listing product size</td>
+                    </tr>
+                    <tr>
+                        <td>Product</td>
+                        <td>PDP - Below Similar product widget</td>
+                        <td>Native listing product size</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Wap</td>
+                        <td>Product</td>
+                        <td>Listing page 5th,10th and 15th row</td>
+                        <td>Native listing product size</td>
+                    </tr>
+                    <tr>
+                        <td>Product</td>
+                        <td>PDP - Below Similar product widget</td>
+                        <td>Native listing product size</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">App</td>
+                        <td>Product</td>
+                        <td>Listing page 5th,10th and 15th row</td>
+                        <td>Native listing product size</td>
+                    </tr>
+                    <tr>
+                        <td>Product</td>
+                        <td>PDP - Below Similar product widget</td>
+                        <td>Native listing product size</td>
+                    </tr>
+                </table>
+            </div>
+        </li>
+    </ul>
+</div>
+<script>
+$('.play-button').click(function() {
+    $(this).siblings('.background-image-holder').removeClass('fadeIn');
+    $(this).siblings('.background-image-holder').css('z-index', -1);
+    $(this).css('opacity', 0);
+    $(this).siblings('video').get(0).play();
+});
+$('.background-image-holder').each(function() {
+    var imgSrc = $(this).children('img').attr('src');
+    $(this).css('background', 'url("' + imgSrc + '")');
+    $(this).children('img').hide();
+    $(this).addClass("fadeIn");
+});
+$('.accordion li').click(function() {
+    $(this).toggleClass('active');
+});
+</script>

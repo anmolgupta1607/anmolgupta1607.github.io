@@ -2,309 +2,378 @@
 layout: default
 ---
 
-
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Snapdeal Ads</title>
-        <meta name="viewport" content="width=device-width, initial-scale=0.9">
-        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="css/themify-icons.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="css/flexslider.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="css/lightbox.min.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="css/ytplayer.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="css/theme-purple.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
 
-        <link href='http://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600' rel='stylesheet' type='text/css'>
-           <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-            
-        <style>
-
-           
-
- #ytplayer{ 
-        height:390px; width:640px; display: block;
-        opacity: 0;
+<head>
+    <meta charset="utf-8">
+    <title>Snapdeal Ads</title>
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.9">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/themify-icons.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/lightbox.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/ytplayer.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/theme-purple.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="shortcut icon" href="http://i3.sdlcdn.com/img/icons/favicon.ico" type="image/x-icon" />
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <style>
+    .header {
+        /*background-color: #f9f9f9;*/
+        width: 100%;
+        height: 40px;
+        padding: 5px;
+        padding-left: 38px;
+        padding-top: 8px;
+        margin-bottom: 1px;
+        display: inline-flex;
+        box-shadow: -2px 0px 4px #b0b0b0;
+        -webkit-box-shadow: -2px 0px 2px 0px rgba(196, 196, 196, 1);
+        -moz-box-shadow: -2px 0px 2px 0px rgba(196, 196, 196, 1);
+        box-shadow: -2px 0px 2px 0px rgba(196, 196, 196, 1);
+    }
+    
+    .header .help-text {
+        color: #333333;
+        font-size: 15px;
+        font-weight: 500;
+        padding-left: 15px;
+        padding-bottom: 5px;
+        line-height: 26px;
+    }
+    
+    .flex-container {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+    }
+    
+    #flex-item-right-nav {
+        width: 280px;
+        max-width: 280px;
+        min-width: 280px;
+        border-left: 1px solid #e1e1e1;
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .flex-item-center {
+        width: 100%;
+        padding: 30px;
+    }
+    
+    #left-nav {
+        background-color: #f5f5f5;
+        width: 240px;
+    }
+    
+    .left-nav-style {
+        color: #1e81f7;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1px;
+    }
+    
+    .left-nav-header-style {
+        color: #333333;
+        font-size: 21px;
+        font-weight: 500;
+        height: 72px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #EEE;
+        background-color: #fafafa;
+    }
+    
+    .left-nav-text-style {
+        font-weight: 400;
+        font-size: 18px;
+        margin-bottom: 0px;
+        margin-left: 38px;
+        width: 136px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .left-nav-header-text-style {
+        font-weight: 600;
+        font-size: 19px;
+        margin-bottom: 0px;
+        margin-left: 38px;
+    }
+    
+    .left-nav-style:hover {
+        color: #ffffff;
+        background-color: #1e81f7;
+        cursor: pointer;
+    }
+    
+    #searchQuery {
+        border-radius: 3px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #dbdbdb;
+        box-sizing: border-box;
+        background-color: #ffffff;
+    }
+    
+    .centre-div {
+        flex: 1;
+        display: flex;
+    }
+    
+    .selected {
+        color: #ffffff;
+        background-color: #1e81f7;
+    }
+    
+    #contentHeading {
+        font-weight: 800;
+        font-size: 24px;
+        height: 54px;
+        color: #333333;
+    }
+    
+    .arrow-right {
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-left: 10px solid #1e81f7;
+    }
+    
+    .related-docs {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        padding-left: 30px;
+        font-weight: 400;
+        color: #1e81f7;
+        font-size: 15px;
     }
 
-      
-        </style>
-      
-    </head>
-    <body>
-        <div class="nav-container" style="position:relative;z-index:4" >
-            <a id="top"></a>
-            <nav>
-               
-                <div class="nav-bar">
-                    <div class="module left">
-                        <a href="home-app-landing.html">
-                            <img class="logo logo-light" alt="Foundry" src="img/logo-light.png" />
-                            <img class="logo logo-dark" alt="Foundry" src="img/sdlogo.png"  />
-                        </a>
-                    </div>
-                    <div class="module widget-handle mobile-toggle right visible-sm visible-xs">
-                        <i class="ti-menu"></i>
-                    </div>
-                    <div class="module-group right">
-                        <div class="module left">
-                            <ul class="menu">
-                                <li>
-                                    <a href="home-app-landing.html">
-                                        Home
-                                    </a>
-                   
-                                </li>
-                              
-                                <li >
-                                    <a href="features.html">
-                                        Features
-                                    </a>
-                             
-                                </li>
-                                <li >
-                                    <a href="faq.html">
-                                        FAQs
-                                    </a>
-                              
-                                </li>
-                                <li > 
-                                <a href="{% post_url 2015-12-11-blog1 %}">
-                                        Blog
-                                    </a>
-                                  
-                                </li>
-                         
-                         
-                                <li>
-                                    <a class="btn" href="contact.html" >GET IN TOUCH</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-  
-                </div>
-            </nav>
+    .related-docs a {
+        font-weight: 400;
+    }
+    
+    #right-nav-heading {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        padding-left: 30px;
+        font-size: 20px;
+        font-weight: 600;
+        color: #333333;
+    }
+    
+    .left-horizontal {
+        margin-bottom: -0.7px;
+        width: 67%;
+        border-top: 1px solid #e1e1e1;
+        margin-left: 38px !important;
+    }
+    
+    .horizontal {
+        width: 70%;
+        margin-left: 30px;
+        margin-bottom: 0px;
+        border-top: 1px solid #e1e1e1;
+    }
+    
+    .content-arrow {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .menu-active {
+        opacity: 1 !important;
+    }
+    @media (max-width: 890px) {
+  .menu-hidden{
+    overflow: hidden!important;
+  }
+  .menu-visible{
+    overflow: visible!important;
+  }
+}
+    </style>
+    <script>
+    $(document).ready(function() {
+        $.ajax({
+            url: "/footer.html",
+            type: 'GET',
+            success: function(data) {
+                $(".footer-1").html(data);
+            }
+        });
+        $.ajax({
+            url: "/header.html",
+            type: 'GET',
+            success: function(data) {
+                $(".nav-container").html(data);
+            }
+        });
+        setTimeout(function() {
+            $('.nav-container #help-center').addClass('menu-active');
+        }, 100);
+        setTimeout(function () {
+        
+      var menuDropdown = $(".ti-menu")[0];      
+      menuDropdown.addEventListener('click', function () {
+          if($(".nav-bar").hasClass("menu-hidden")){
+            $(".nav-bar").removeClass("menu-hidden");
+            $(".nav-bar").addClass("menu-visible")
+          }else{
+            $(".nav-bar").removeClass("menu-visible");
+            $(".nav-bar").addClass("menu-hidden");
+          }
+      });
+      }, 400);
+
+        function addNode() {
+            var i, len = populate.length,
+                markup = [];
+            for(i = 0; i < len; i++) {
+                markup.push("<div id ='" + populate[i].step_url + "'class='left-nav-style' ");
+                markup.push("data-step-url=" + populate[i].step_content + ">");
+                markup.push("<div class='left-nav-text-style'>");
+                markup.push(populate[i].step_name);
+                markup.push("</div><hr class='left-horizontal'></div>");
+            }
+            return markup.join('');
+        }
+        document.getElementById("left-nav").innerHTML += addNode();
+        $.ajax({
+            url: "/help-section/" + populate[0].step_content,
+            type: 'GET',
+            success: function(data) {
+                var content = $("#mainContent")[0];
+                content.innerHTML = data;
+            }
+        });
+        $('#contentHeading').text(populate[0].step_name);
+
+        setTimeout(function() {
+             console.log('-0----9---0');
+            if(window.location.hash) {
+                console.log('-0----9---0---1');
+                $(window.location.hash).click();
+            }
+            else{
+                console.log('-0----9---');
+               // $('#getting-started-with-snapdeal-ads-v2').click();
+                window.location.replace("https://ads.snapdeal.com/help.html#getting-started-with-snapdeal-ads");
+            }
+        }, 5);
+        $(".left-nav-style").click(function(e) {
+            var url = $(this).attr("data-step-url");
+            var id = $(this).attr('id');
+            var i, len = populate.length,
+                markup = [];
+            var arrow = "<div class='arrow-right'></div>";
+            for(i = 0; i < len; i++) {
+                if(populate[i].step_url == id) {
+                    var doclen = populate[i].documents.length;
+                    for(j = 0; j < doclen; j++) {
+                        markup.push("<div class='related-docs' id='" + populate[i].documents[j].document_id + "'>");
+                        markup.push("<a target='_blank' href='" + populate[i].documents[j].document_url + "'>");
+                        markup.push(populate[i].documents[j].document_name);
+                        markup.push("</a></div><hr class='horizontal'/>");
+                    }
+                    document.getElementById("right-nav-links").innerHTML = markup.join('');
+                    $('#contentHeading').text(populate[i].step_name);
+                    var marginValue = 13 + 100 * (i + 1);
+                    $("#arrow-container").html(arrow);
+                    $(".arrow-right").css("margin-top", marginValue);
+                    break;
+                }
+            }
+            $(".left-nav-style").removeClass("selected");
+            $("#" + id).addClass("selected");
+            $.ajax({
+                url: "/help-section/" + url,
+                type: 'GET',
+                success: function(data) {
+                    $('#mainContent').html(data);
+                }
+            });
+            var url_split = url.split('.');
+            window.location.hash = url_split[0];
+            document.body.scrollTop = 0;
+        });
+    });
+
+    function locationHashChanged() {
+        if(window.location.hash) {
+            $(window.location.hash).click();
+        };
+    }
+    window.onhashchange = locationHashChanged;
+    </script>
+</head>
+
+<body>
+    <div class="nav-container" style="position:relative;z-index:4">
+        
+    </div>
+    <div class="flex-container">
+        <div class="header">
+            <a href="help-center.html"><img src="img/help-center-img.png" height=15px;/></a>
+            <h4 class="help-text">Help</h4> </div>
+    </div>
+    <div class="flex-container">
+        <div id="left-nav">
+            <div class="left-nav-header-style">
+                <p class="left-nav-header-text-style">Help Categories</p>
+            </div>
         </div>
-     
-        <section>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-9 col-md-push-3 mb-xs-24">
-                            <div class="post-snippet mb64">
-                                    <div class="post-title">
-                                    
-                                            <h4 class="inline-block">Introduction to Snapdeal Advertising</h4>
-                                </div>
-                       <hr>
-                               
-                                <p class="lead">
-                                   The Snapdeal Advertising platform caters to the need of the Sellers and Brand to reach out to the customers through Ad delivery. It provides customized ad delivery to user there by pursuing them to buy the product they are interested in. It adopts a data driven method to deliver ads there by  
+        <div class="centre-div">
+            <div id="arrow-container">
+                <div class='arrow-right'></div>
+            </div>   
+            <div class="flex-item-center"> 
+                <div id="contentHeading"></div>
+                <div id="mainContent"></div>
+            </div>
+            <div id="flex-item-right-nav">
+                <div id="right-nav-heading">Related Videos</div>
+                <hr class="horizontal" />
+                <div id="right-nav-links"></div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer-1 bg-dark"> </footer>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/flickr.js"></script>
+    <script src="js/lightbox.min.js"></script>
+    <script src="js/masonry.min.js"></script>
+    <script src="js/twitterfetcher.min.js"></script>
+    <script src="js/spectragram.min.js"></script>
+    <script src="js/ytplayer.min.js"></script>
+    <script src="js/countdown.min.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/model.js"></script>
+</body>
 
-The Snapdeal Advertising aims to increase the ROI for Sellers through Ad delivery.
-                                </p>
-                                <p>
-                                   <h6> Performance Terms Summary</h6>
-
-    <strong>Ad Request:</strong> An ad request occurs when a user's requests an ad from us. There is one request per ad slot on a given user interface.<br/>
-
-    <strong>Impression:</strong> An impression is generated every time an ad is delivered and the user is exposed to it.<br/>
-    <strong>Click:</strong> The act of clicking on an ad that has been served.<br/>
-    <strong>Conversion:</strong>  An Conversion is generated every time when purchase happens through ad delivery. <br/>
-    <strong>CPM (Cost Per Mille):</strong> CPM ads, also known as CPI (Cost Per Impression), are paying per impression. Such campaigns are formed on the basis of what it pays to show the ad to one thousand viewers. <br/>
-    <strong>CPC (Cost Per Click):</strong> The price an advertiser pays for each click on their ad
-    CTR (Click Through Rate): The percentage of overall impressions that resulted in a click on an advertisement.<br/>
-    <strong>eCPM (effective Cost Per Mille):</strong> eCPM is a performance indicator. It indicates how much revenue is generated for the advertiser, on average, per 1000 impressions. In short it is earnings divided by the number of impressions, multiplied by 1000.
-                                </p>
-                              
-                            </div>
-                      
-                            <hr>
-                         
-                   
-                        </div>
-     
-                        <div class="col-md-3 col-md-pull-9 hidden-sm">
-                            
-                         
-                            <div class="widget">
-                                <h6 class="title">Documentation</h6>
-                                <hr>
-                                <p>
-                                    Welcome to Snapdeal Ads! We want to make sure you feel comfortable getting around our ads platform. Take a few minutes to explore the documentation.
-                                </p>
-                            </div>
-
-                              <div class="widget">
-                               <a href="{% post_url 2015-12-11-typesofads %}"><h6 class="title">Types Of Ads</h6></a>
-                        
-                               <hr>
-                            </div>
-                 
-                    <div class="widget" >
-                                <h6 class="title">Ad-serving Integration</h6>
-                                <hr>
-                                <ul class="menu">
-                              
-    <li style="width:255px !important">
-    <a href="{% post_url 2015-06-11-productads %}">
-    
-      Product Ads 
-    </a>
-  </li>
-    <li style="width:255px !important">
-    <a href="{% post_url 2015-06-11-carouselads %}">
-    
-      Carousel Ads 
-    </a>
-  </li>
-    <li style="width:255px !important">
-    <a href="{% post_url 2015-06-11-bannerads %}">
-    
-      Banner Ads 
-    </a>
-  </li>
-    <li style="width:255px !important">
-    <a href="{% post_url 2015-06-11-similarrelated %}">
-    
-      Similar and Related Products
-    </a>
-  </li>
-    <li style="width:255px !important">
-    <a href="{% post_url 2015-06-11-dmppixel %}">
-    
-      DMP Pixel Integration
-    </a>
-  </li>
-  <li style="width:255px !important">
-    <a href="{% post_url 2015-10-11-metrics %}">
-    
-      Metrics Measured
-    </a>
-  </li>
-                                  
-                                </ul>
-                            </div>
-
-                            <div class="widget" style="margin-top:120px">
-                                <h6 class="title">API Specifications</h6>
-                                <hr>
-                                <ul class="menu">
-                                 
-  <li style="width:255px !important">
-    <a href="{% post_url 2015-06-11-productapi %}">
-    
-      Product Ads Api
-    </a>
-  </li>
-  <li style="width:255px !important">
-    <a href="{% post_url 2015-06-11-carouselapi %}">
-    
-      Carousel Ads Api
-    </a>
-  </li>
-   <li style="width:255px !important">
-    <a href="{% post_url 2015-06-11-dmppixelapi %}">
-    
-      DMP Pixel Api
-    </a>
-  </li>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
  
-                                  
-                                </ul>
-                            </div>
-                           
-                        </div>
-                   
-                    </div>
-          
-                </div>
-           
-            </section>
-     <footer class="footer-1 bg-dark">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-3 col-sm-6">
-                            <h3>Snapdeal Ads</h3>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="widget">
-                                <h6 class="title">Recent Posts</h6>
-                                <hr>
-                            
-                            </div>
-                   
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="widget">
-                                <h6 class="title">Important Links</h6>
-                                <hr>
-                                 <ul class="link-list recent-posts">
-                                    <li>
-                                        <a href="home-app-landing.html">Home</a>
-                                        
-                                    </li>
-                                   
-                                    <li>
-                                        <a href="features.html">Features</a>
-                                       
-                                    </li>
-                                    <li>
-                                        <a href="faq.html">FAQs</a>
-                                        
-                                    </li>
-                                     <li>
-                                        <a href="{% post_url 2015-12-11-blog1 %}">Blog</a>
-                                        
-                                    </li>
-                                    <li>
-                                        <a href="Termsofuse.html">Terms and Conditions </a>
-                                        
-                                    </li>
-                                    <li>
-                                        <a href="privacypolicy.html">Privacy Policy</a>
-                                        
-                                    </li>
-                                          <li >
-                                  
-                                    <a href="{% post_url 2015-12-11-intro %}">
-    
-     Help
-    </a>
-                                  
-                                </li>
-                                </ul>
-                            </div>
-                  
-                        </div>
-                   
-                    </div>
-                
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <span class="sub">&copy; Copyright 2015 - Snapdeal</span>
-                        </div>
-                    
-                    </div>
-                </div>
-     
-                <a class="btn btn-sm fade-half back-to-top inner-link" href="#top">Top</a>
-            </footer>
-        </div>
-        <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/flickr.js"></script>
-        <script src="js/flexslider.min.js"></script>
-        <script src="js/lightbox.min.js"></script>
-        <script src="js/masonry.min.js"></script>
-        <script src="js/twitterfetcher.min.js"></script>
-        <script src="js/spectragram.min.js"></script>
-        <script src="js/ytplayer.min.js"></script>
-        <script src="js/countdown.min.js"></script>
-        <script src="js/smooth-scroll.min.js"></script>
-        <script src="js/parallax.js"></script>
-        <script src="js/scripts.js"></script>
-    </body>
+  ga('create', 'UA-72149438-4', 'auto');
+  ga('send', 'pageview');
+ 
+</script>
+
 </html>

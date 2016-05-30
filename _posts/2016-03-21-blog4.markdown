@@ -1,0 +1,21 @@
+---
+layout: blognav
+title:  "Snapdeal Ads - Help Center Launch"
+author: "Asif Ali"
+dated: "21 Mar"
+---
+
+<p class="lead" style="font-weight:800;">
+In our effort to help Sellers use self service to meet their business needs, Snapdeal Ads announces the launch of Ads help center - a fully self service help desk for Snapdeal Ads customers.  </p>
+
+<p>Through this help center, you will be able to access help documentation, videos, FAQs and more.<br/><strong>Help center is accessible within your ads panel</strong></p>
+<img class="screenshot cast-shadow" style="width:45em" src="{{ site.baseurl }}/img/blognavimg1.jpg"><br/>
+
+<p>You can also access the help centre home page from ads.snapdeal.com web site.</p>
+<img class="screenshot cast-shadow" style="width:45em" src="{{ site.baseurl }}/img/blognavimg2.png" height="300px;"><br/><br/><br/>
+<img class="screenshot cast-shadow" style="width:45em" src="{{ site.baseurl }}/img/blognavimg3.png" height="200px;"><br/>
+<p>The help centre provides you help docs, videos, guided tours and more to help you quickly learn the ads panel. </p>
+<p>You can quickly learn to use the ads panel by <strong>taking a tour (available from within your panel).</strong></p>
+<img class="screenshot cast-shadow" style="width:45em" src="{{ site.baseurl }}/img/blognavimg4.jpg"><br/><br/>
+<p><strong style="font-size:18px" >Still have open questions?</strong><br/>
+If your questions are still unanswered, you can write to us at <a href="mailto:adsales@snapdeal.com">adsales@snapdeal.com</a> and we will revert back to <br/>your questions within 1 business day.<br/><br/></p>

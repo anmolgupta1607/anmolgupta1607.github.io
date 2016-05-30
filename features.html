@@ -2,303 +2,240 @@
 layout: default
 ---
 
-
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Snapdeal Ads</title>
-        <meta name="viewport" content="width=device-width, initial-scale=0.9">
-        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="css/themify-icons.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="css/flexslider.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="css/lightbox.min.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="css/ytplayer.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="css/theme-purple.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
 
-        <link href='http://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600' rel='stylesheet' type='text/css'>
-           <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-          
-        <style>
+<head>
+    <meta charset="utf-8">
+    <title>Snapdeal Ads</title>
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.9">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/themify-icons.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/flexslider.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/lightbox.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/ytplayer.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/theme-purple.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="shortcut icon" href="http://i3.sdlcdn.com/img/icons/favicon.ico" type="image/x-icon" />
+    <link rel=icon type=image/ico href="img/favicon.ico" />
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+     <script type="text/javascript">
+    (function(e,t){var n=e.amplitude||{_q:[]};var r=t.createElement("script");r.type="text/javascript";
+      r.async=true;r.src="https://d24n15hnbwhuhn.cloudfront.net/libs/amplitude-2.9.1-min.gz.js";
+      r.onload=function(){e.amplitude.runQueuedFunctions()};var i=t.getElementsByTagName("script")[0];
+      i.parentNode.insertBefore(r,i);var s=function(){this._q=[];return this};function o(e){
+        s.prototype[e]=function(){this._q.push([e].concat(Array.prototype.slice.call(arguments,0)));
+          return this}}var a=["add","append","clearAll","prepend","set","setOnce","unset"];for(var c=0;c<a.length;c++){
+        o(a[c])}n.Identify=s;var u=["init","logEvent","logRevenue","setUserId","setUserProperties","setOptOut","setVersionName","setDomain","setDeviceId","setGlobalUserProperties","identify","clearUserProperties"];
+      function p(e){function t(t){e[t]=function(){e._q.push([t].concat(Array.prototype.slice.call(arguments,0)));
+      }}for(var n=0;n<u.length;n++){t(u[n])}}p(n);e.amplitude=n})(window,document);
 
-           
+       amplitude.init("1de18a5af79a36376d3600b19da9f5aa", null, {
 
- #ytplayer{ 
-        height:390px; width:640px; display: block;
+    includeReferrer: true
+
+});
+  </script>
+    <style>
+    #header {
+        padding-top: 50px;
+            padding-bottom: 30px;
+    }
+    
+    #header .title {
+        color: #0a94f7;
+        font-size: 30px;
+        font-weight: 300;
+        line-height: 25px;
+        text-transform: uppercase;
+    }
+    
+    #header .sub-title {
+        color: rgb(102, 102, 102) !important;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 25px;
+        text-align: center;
+    }
+    #ytplayer {
+        height: 390px;
+        width: 640px;
+        display: block;
         opacity: 0;
     }
-
-        </style>
-  
-    </head>
-    <body>
-        <div class="nav-container" style="position:relative;z-index:4" >
-            <a id="top"></a>
-            <nav>
-               
-                <div class="nav-bar">
-                    <div class="module left">
-                        <a href="home-app-landing.html">
-                            <img class="logo logo-light" alt="Foundry" src="img/logo-light.png" />
-                            <img class="logo logo-dark" alt="Foundry" src="img/sdlogo.png"  />
-                        </a>
-                    </div>
-                    <div class="module widget-handle mobile-toggle right visible-sm visible-xs">
-                        <i class="ti-menu"></i>
-                    </div>
-                    <div class="module-group right">
-                        <div class="module left">
-                            <ul class="menu">
-                                <li>
-                                    <a href="home-app-landing.html">
-                                        Home
-                                    </a>
-                   
-                                </li>
-                              
-                                <li >
-                                    <a href="features.html">
-                                        Features
-                                    </a>
-                             
-                                </li>
-                                <li >
-                                    <a href="faq.html">
-                                        FAQs
-                                    </a>
-                              
-                                </li>
-                                <li > 
-                                <a href="{% post_url 2015-12-11-blog1 %}">
-                                        Blog
-                                    </a>
-                                  
-                                </li>
-                         
-                         
-                                <li>
-                                    <a class="btn" href="contact.html" >GET IN TOUCH</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-        
-                </div>
-            </nav>
-        </div>
-     
-        <div class="main-container">
-         <section class="image-edge pt120 pb120 pt-xs-40 pb-xs-40">
-                 <div class="row">
-                        <div class="col-sm-12 text-center">
-                            <h4 class="uppercase mb16" style="color:#0A94F7">Features</h4>
-                         
-                        </div>
-                    </div>
-                    <br/>
-                    <br/>
-                    <br/>
-
-                <div class="col-md-6 col-sm-4 p0" style="padding-left:50px !important">
-                    <img alt="Screenshot" class=" screenshot cast-shadow mb-xs-24" src="img/createa.png" style="width:100%"  />
-                </div>
-                <div class="container" style="margin-top:20px">
-                    <div class="col-md-5 col-md-offset-1 col-sm-7 col-sm-offset-1 v-align-transform right">
-                        <h3 class="mb40 mb-xs-16">Simple Campaign Tool, helps you get started in seconds</h3>
-                      
-                        <div class="feature feature-3" style="min-height:10px;height:30px !important">
-                            <div class="left" style="width:25px">
-                                <img src="img/rupee1.png" style="width:15px;height:15px;margin-top:4px" ></img>
-                            </div>
-                            <div class="right" style="width:80%">
-                                <h4 class="mb16" style="font-size:20px">Use your existing COD balance</h4>
-                            </div>
-                        </div>
-              
-                        <div class="feature feature-3" style="min-height:50px !important">
-                            <div class="left" style="width:25px">
-                               <img src="img/click10.png" style="width:15px;height:15px;margin-top:4px"></img>
-                            </div>
-                            <div class="right" style="width:80%">
-                                <h4 class="mb16" style="font-size:20px">Pay per click</h4>
-                            </div>
-                        </div>
-                        
-  
-                    </div>
-                </div>
-         
-            </section>
-                     <section class="image-edge pt120 pb120 pt-xs-40 pb-xs-40">
-                <div class="col-md-6 col-sm-4 p0 col-md-push-6 col-sm-push-8" style="padding-left:60px;padding-right:40px !important">
-                    <img alt="Screenshot" class="screenshot cast-shadow mb-xs-24" src="img/targeta.png"  />
-                </div>
-                <div class="container">
-                    <div class="col-md-5 col-md-pull-0 col-sm-7 col-sm-pull-4 v-align-transform">
-                        <h3 class="mb40 mb-xs-16">Reach the right user</h3>
-                            <div class="feature feature-3" style="min-height:10px;height:30px !important">
-                            <div class="left" style="width:25px">
-                               <img src="img/pin56.png" style="width:15px;height:15px;margin-top:4px"  ></img>
-                            </div>
-                            <div class="right" style="width:80%">
-                                <h4 class="mb16" style="font-size:20px">Target by location</h4>
-                            </div>
-                        </div>
-                        <!--end of feature-->
-                        <div class="feature feature-3" style="min-height:10px;height:30px !important">
-                            <div class="left" style="width:25px">
-                                   <img src="img/shopping122.png" style="width:15px;height:15px;margin-top:4px"  ></img>
-                            </div>
-                            <div class="right" style="width:80%">
-                                <h4 class="mb16" style="font-size:20px">Target by buying history</h4>
-                            </div>
-                        </div>
-                         <div class="feature feature-3" style="min-height:10px;height:30px !important">
-                            <div class="left" style="width:25px">
-                                <img src="img/add185.png" style="width:15px;height:15px;margin-top:4px"  ></img>
-                            </div>
-                            <div class="right" style="width:80%">
-                                <h4 class="mb16" style="font-size:20px">Target by user intent</h4>
-                            </div>
-                        </div>
-                     
-                    </div>
-                </div>
-  
-            </section>
-                <section class="image-edge pt120 pb120 pt-xs-40 pb-xs-40">
-                <div class="col-md-6 col-sm-4 p0" style="padding-left:50px">
-                    <img alt="Screenshot" class="screenshot cast-shadow mb-xs-24" src="img/reporta.png"  />
-                </div>
-                <div class="container">
-                    <div class="col-md-5 col-md-offset-1 col-sm-7 col-sm-offset-1 v-align-transform right">
-                        <h3 class="mb40 mb-xs-16">Measure results instantly</h3>
-                      <p class="lead mb40">
-                            Our reporting tool helps you instantly understand what is the impact of your ad spends.
-                        </p>
-                      
-                    
-                    </div>
-                </div>
-           
-            </section>
-               
-           
-     <footer class="footer-1 bg-dark">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-3 col-sm-6">
-                            <h3>Snapdeal Ads</h3>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="widget">
-                                <h6 class="title">Recent Posts</h6>
-                                <hr>
-                             <a href="{% post_url 2015-12-11-blog1 %}">Introducing Snapdeal Ads</a>
-                            </div>
-                      
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="widget">
-                                <h6 class="title">Important Links</h6>
-                                <hr>
-                                 <ul class="link-list recent-posts">
-                                    <li>
-                                        <a href="home-app-landing.html">Home</a>
-                                        
-                                    </li>
-                                   
-                                    <li>
-                                        <a href="features.html">Features</a>
-                                       
-                                    </li>
-                                    <li>
-                                        <a href="faq.html">FAQs</a>
-                                        
-                                    </li>
-                                     <li>
-                                        <a href="{% post_url 2015-12-11-blog1 %}">Blog</a>
-                                        
-                                    </li>
-                                    <li>
-                                        <a href="Termsofuse.html">Terms and Conditions </a>
-                                        
-                                    </li>
-                                    <li>
-                                        <a href="privacypolicy.html">Privacy Policy</a>
-                                        
-                                    </li>
-                                          <li >
-                                  
-                                    <a href="{% post_url 2015-12-11-intro %}">
     
-     Help
-    </a>
-                                  
-                                </li>
-                                </ul>
-                            </div>
-       
-                        </div>
-                   
+    .menu-active {
+        opacity: 1 !important;
+    }
+    @media (max-width: 890px) {
+  .menu-hidden{
+    overflow: hidden!important;
+  }
+  .menu-visible{
+    overflow: visible!important;
+  }
+}
+    </style>
+    <script>
+    $(document).ready(function() {
+        $.ajax({
+            url: "/footer.html",
+            type: 'GET',
+            success: function(data) {
+                $(".footer-1").html(data);
+            }
+        });
+        $.ajax({
+            url: "/header.html",
+            type: 'GET',
+            success: function(data) {
+                $(".nav-container").html(data);
+            }
+        });
+        setTimeout(function() {
+            $('.nav-container #features').addClass('menu-active');
+        }, 100);
+        setTimeout(function () {
+        
+      var menuDropdown = $(".ti-menu")[0];      
+      menuDropdown.addEventListener('click', function () {
+          if($(".nav-bar").hasClass("menu-hidden")){
+            $(".nav-bar").removeClass("menu-hidden");
+            $(".nav-bar").addClass("menu-visible")
+          }else{
+            $(".nav-bar").removeClass("menu-visible");
+            $(".nav-bar").addClass("menu-hidden");
+          }
+      });
+      }, 400);
+    });
+    </script>
+</head>
+
+<body>
+    <div class="nav-container" style="position:relative;z-index:4">
+        
+    </div>
+    <div class="main-container">
+    <div class="container" style="    margin-top: 50px;
+   
+    width: 100%;">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <div id="header">
+                        <h1 class="title">FEATURES</h1>
+                         <hr style="width:30px;margin:auto;    border: 1px solid #0a94f7;"/>
+                        <p class="sub-title" style="margin-bottom:0px;display:none">Here what we offer</p>
                     </div>
-               
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <span class="sub">&copy; Copyright 2015 - Snapdeal</span>
+
+                </div>
+            </div>
+        </div>
+        <section class="image-edge pt120 pb120 pt-xs-40 pb-xs-40" style="padding-top:50px">
+            
+            <div class="col-md-6 col-sm-4 p0" style="padding-left:50px !important"> <img alt="Screenshot" class=" screenshot cast-shadow mb-xs-24" src="img/basic1.jpg" style="width:100%" /> </div>
+            <div class="container" style="margin-top:20px">
+                <div class="col-md-5 col-md-offset-1 col-sm-7 col-sm-offset-1 v-align-transform right">
+                    <h3 class="mb40 mb-xs-16">Get Started in Minutes</h3>
+                    <div class="feature feature-3" style="min-height:10px;height:55px !important">
+                        <div class="left" style="width: 30px;"> <img src="img/ic-1.png" style="    width: 20px;
+    height: 20px;margin-top:4px"></img>
                         </div>
-                    
+                        <div class="right" style="width:80%">
+                            <h4 class="mb16" style="font-size:20px">Select products to advertise</h4> </div>
+                    </div>
+                    <div class="feature feature-3" style="min-height:50px !important">
+                        <div class="left" style="width: 30px;"> <img src="img/ic-2.png" style="    width: 20px;
+    height: 20px;margin-top:4px"></img>
+                        </div>
+                        <div class="right" style="width:80%">
+                            <h4 class="mb16" style="font-size:20px">Set campaign budget, CPC Bid etc. </h4> </div>
+                    </div>
+                     <div class="feature feature-3" style="min-height:50px !important">
+                        <div class="left" style="width: 30px;"> <img src="img/ic-3.png" style="    width: 20px;
+    height: 20px;margin-top:4px"></img>
+                        </div>
+                        <div class="right" style="width:80%">
+                            <h4 class="mb16" style="font-size:20px">Target by geographic regions </h4> </div>
                     </div>
                 </div>
-   
-                <a class="btn btn-sm fade-half back-to-top inner-link" href="#top">Top</a>
-            </footer>
-        </div>
-        <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/flickr.js"></script>
-        <script src="js/flexslider.min.js"></script>
-        <script src="js/lightbox.min.js"></script>
-        <script src="js/masonry.min.js"></script>
-        <script src="js/twitterfetcher.min.js"></script>
-        <script src="js/spectragram.min.js"></script>
-        <script src="js/ytplayer.min.js"></script>
-        <script src="js/countdown.min.js"></script>
-        <script src="js/smooth-scroll.min.js"></script>
-        <script src="js/parallax.js"></script>
-        <script src="js/scripts.js"></script>
-    </body>
+            </div>
+        </section>
+        <section class="image-edge pt120 pb120 pt-xs-40 pb-xs-40">
+            <div class="col-md-6 col-sm-4 p0 col-md-push-6 col-sm-push-8" style="padding-right:40px !important"> <img alt="Screenshot" class="screenshot cast-shadow mb-xs-24" src="img/basic2.jpg" /> </div>
+            <div class="container">
+                <div class="col-md-5 col-md-pull-0 col-sm-7 col-sm-pull-4 v-align-transform">
+                    <h3 class="mb40 mb-xs-16">Easily Maintain Funds</h3>
+                    <div class="feature feature-3" style="min-height:10px;height:65px !important">
+                        <div class="left" style="width: 30px;"> <img src="img/ic-4.png" style="    width: 20px;
+    height: 20px;margin-top:4px"></img>
+                        </div>
+                        <div class="right" style="width:80%">
+                            <h4 class="mb16" style="font-size:20px">One click payment using your existing COD balance</h4> </div>
+                    </div>
+                    <div class="feature feature-3" style="min-height:10px;height:65px !important">
+                        <div class="left" style="width: 30px;"> <img src="img/ic-5.png" style="    width: 20px;
+    height: 20px;margin-top:4px"></img>
+                        </div>
+                        <div class="right" style="width:80%">
+                            <h4 class="mb16" style="font-size:20px">Quickly add funds online quickly using Freecharge payment gateway</h4> </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="image-edge pt120 pb120 pt-xs-40 pb-xs-40">
+            <div class="col-md-6 col-sm-4 p0" style="padding-left:50px"> <img alt="Screenshot" class="screenshot cast-shadow mb-xs-24" src="img/reporta.png" /> </div>
+            <div class="container">
+                <div class="col-md-5 col-md-offset-1 col-sm-7 col-sm-offset-1 v-align-transform right">
+                    <h3 class="mb40 mb-xs-16">Monitor Results Instantly</h3>
+                    <div class="feature feature-3" style="min-height:10px;height:65px !important">
+                        <div class="left" style="width: 30px;"> <img src="img/ic-6.png" style="    width: 20px;
+    height: 20px;margin-top:4px"></img>
+                        </div>
+                        <div class="right" style="width:80%">
+                            <h4 class="mb16" style="font-size:20px">Reports dashboards gives complete performance report over selected time frame</h4> </div>
+                    </div>
+                    <div class="feature feature-3" style="min-height:10px;height:65px !important">
+                        <div class="left" style="width: 30px;"> <img src="img/ic-7.png" style="    width: 20px;
+    height: 20px;margin-top:4px"></img>
+                        </div>
+                        <div class="right" style="width:80%">
+                            <h4 class="mb16" style="font-size:20px">Daily summary mails to keep you updated on campaign progress</h4> </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer-1 bg-dark"> </footer>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/flickr.js"></script>
+    <script src="js/flexslider.min.js"></script>
+    <script src="js/lightbox.min.js"></script>
+    <script src="js/masonry.min.js"></script>
+    <script src="js/twitterfetcher.min.js"></script>
+    <script src="js/spectragram.min.js"></script>
+    <script src="js/ytplayer.min.js"></script>
+    <script src="js/countdown.min.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ 
+  ga('create', 'UA-72149438-4', 'auto');
+  ga('send', 'pageview',location.pathname);
+ 
+</script>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -1,0 +1,377 @@
+---
+layout: default
+---
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Snapdeal Ads</title>
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.9">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/themify-icons.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/lightbox.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/ytplayer.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/theme-purple.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="shortcut icon" href="http://i3.sdlcdn.com/img/icons/favicon.ico" type="image/x-icon" />
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <style>
+    .header {
+        /*background-color: #f9f9f9;*/
+        width: 100%;
+        height: 40px;
+        padding: 5px;
+        padding-left: 38px;
+        padding-top: 8px;
+        margin-bottom: 1px;
+        display: inline-flex;
+        box-shadow: -2px 0px 4px #b0b0b0;
+        -webkit-box-shadow: -2px 0px 2px 0px rgba(196, 196, 196, 1);
+        -moz-box-shadow: -2px 0px 2px 0px rgba(196, 196, 196, 1);
+        box-shadow: -2px 0px 2px 0px rgba(196, 196, 196, 1);
+    }
+    
+    .header .help-text {
+        color: #333333;
+        font-size: 15px;
+        font-weight: 500;
+        padding-left: 15px;
+        padding-bottom: 5px;
+        line-height: 26px;
+    }
+    
+    .flex-container {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+    }
+    
+    #flex-item-right-nav {
+        width: 280px;
+        max-width: 280px;
+        min-width: 280px;
+        border-left: 1px solid #e1e1e1;
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .flex-item-center {
+        width: 100%;
+        padding: 30px;
+    }
+    
+    #left-nav {
+        background-color: #f5f5f5;
+        width: 240px;
+    }
+    
+    .left-nav-style {
+        color: #1e81f7;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1px;
+    }
+    
+    .left-nav-header-style {
+        color: #333333;
+        font-size: 21px;
+        font-weight: 500;
+        height: 72px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #EEE;
+        background-color: #fafafa;
+    }
+    
+    .left-nav-text-style {
+        font-weight: 400;
+        font-size: 18px;
+        margin-bottom: 0px;
+        margin-left: 38px;
+        width: 136px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .left-nav-header-text-style {
+        font-weight: 600;
+        font-size: 19px;
+        margin-bottom: 0px;
+        margin-left: 38px;
+    }
+    
+    .left-nav-style:hover {
+        color: #ffffff;
+        background-color: #1e81f7;
+        cursor: pointer;
+    }
+    
+    #searchQuery {
+        border-radius: 3px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #dbdbdb;
+        box-sizing: border-box;
+        background-color: #ffffff;
+    }
+    
+    .centre-div {
+        flex: 1;
+        display: flex;
+    }
+    
+    .selected {
+        color: #ffffff;
+        background-color: #1e81f7;
+    }
+    
+    #contentHeading {
+        font-weight: 800;
+        font-size: 24px;
+        height: 54px;
+        color: #333333;
+    }
+    
+    .arrow-right {
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-left: 10px solid #1e81f7;
+    }
+    
+    .related-docs {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        padding-left: 30px;
+        font-weight: 400;
+        color: #1e81f7;
+        font-size: 15px;
+    }
+
+    .related-docs a {
+        font-weight: 400;
+    }
+    
+    #right-nav-heading {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        padding-left: 30px;
+        font-size: 20px;
+        font-weight: 600;
+        color: #333333;
+    }
+    
+    .left-horizontal {
+        margin-bottom: -0.7px;
+        width: 67%;
+        border-top: 1px solid #e1e1e1;
+        margin-left: 38px !important;
+    }
+    
+    .horizontal {
+        width: 70%;
+        margin-left: 30px;
+        margin-bottom: 0px;
+        border-top: 1px solid #e1e1e1;
+    }
+    
+    .content-arrow {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .menu-active {
+        opacity: 1 !important;
+    }
+
+    @media (max-width: 890px) {
+          .menu-hidden{
+            overflow: hidden!important;
+        }
+        .menu-visible{
+            overflow: visible!important;
+        }
+        #shift-header {
+            margin-top: 270px;
+        }
+    }
+    </style>
+    <script>
+    $(document).ready(function() {
+        $.ajax({
+            url: "/footer.html",
+            type: 'GET',
+            success: function(data) {
+                $(".footer-1").html(data);
+            }
+        });
+        $.ajax({
+            url: "/header.html",
+            type: 'GET',
+            success: function(data) {
+                $(".nav-container").html(data);
+            }
+        });
+        setTimeout(function () {
+        
+      var menuDropdown = $(".ti-menu")[0];      
+      menuDropdown.addEventListener('click', function () {
+          if($(".nav-bar").hasClass("menu-hidden")){
+            $(".nav-bar").removeClass("menu-hidden");
+            $(".nav-bar").addClass("menu-visible")
+          }else{
+            $(".nav-bar").removeClass("menu-visible");
+            $(".nav-bar").addClass("menu-hidden");
+          }
+      });
+      }, 400);
+        setTimeout(function() {
+            $('.nav-container #faqs').addClass('menu-active');
+        }, 100);
+        function addNode() {
+            var i, len = populate_faq.length,
+                markup = [];
+            for(i = 0; i < len; i++) {
+                markup.push("<div id ='" + populate_faq[i].step_url + "'class='left-nav-style' ");
+                markup.push("data-step-url=" + populate_faq[i].step_content + ">");
+                markup.push("<div class='left-nav-text-style'>");
+                markup.push(populate_faq[i].step_name);
+                markup.push("</div><hr class='left-horizontal'></div>");
+            }
+            return markup.join('');
+        }
+        document.getElementById("left-nav").innerHTML += addNode();
+        function loadClickEvent() {
+            console.log("ABC")
+            $('.accordion li').click(function() {
+                console.log("clicked");
+                if($(this).hasClass('active')) {
+                    $(this).toggleClass('active');
+                } else {
+                    $(this).closest('.accordion').find('li').removeClass('active');
+                    $(this).toggleClass('active');
+                }
+            });
+        }
+        $.ajax({
+            url: "/faq-section/" + populate_faq[0].step_content,
+            type: 'GET',
+            success: function(data) {
+                var content = $("#mainContent")[0];
+                content.innerHTML = data;
+            }
+        });
+        $('#contentHeading').text(populate_faq[0].step_name);
+        setTimeout(function() {
+            if(window.location.hash) {
+                $(window.location.hash).click();
+            }
+            else{
+                $('#ad-serving').click();
+            }
+        }, 5);
+        $(".left-nav-style").click(function(e) {
+            console.log('---------------------------------kl');
+            var url = $(this).attr("data-step-url");
+            var id = $(this).attr('id');
+            var i, len = populate_faq.length,
+                markup = [];
+            var arrow = "<div class='arrow-right'></div>";
+            for(i = 0; i < len; i++) {
+                if(populate_faq[i].step_url == id) {
+                    $('#contentHeading').text(populate_faq[i].step_name);
+                    var marginValue = 13 + 100 * (i + 1);
+                    $("#arrow-container").html(arrow);
+                    $(".arrow-right").css("margin-top", marginValue);
+                    break;
+                }
+            }
+            $(".left-nav-style").removeClass("selected");
+            $("#" + id).addClass("selected");
+            $.ajax({
+                url: "/faq-section/" + url,
+                type: 'GET',
+                success: function(data) {
+                    $('#mainContent').html(data);
+                }
+            });
+            var url_split = url.split('.');
+            window.location.hash = url_split[0];
+            document.body.scrollTop = 0;
+        });
+    });
+
+    function locationHashChanged() {
+        if(window.location.hash) {
+            $(window.location.hash).click();
+        };
+    }
+    window.onhashchange = locationHashChanged;
+    </script>
+</head>
+
+<body>
+    <div class="nav-container" style="position:relative;z-index:4">
+        
+    </div>
+    <div id="shift-header" class="flex-container">
+        <div class="header">
+            <a href="help-center.html"><img src="img/help-center-img.png" height=15px;/></a>
+            <h4 class="help-text">FAQs</h4> </div>
+    </div>
+    <div class="flex-container">
+        <div id="left-nav">
+            <div class="left-nav-header-style">
+                <p class="left-nav-header-text-style">FAQ Categories</p>
+            </div>
+        </div>
+        <div class="centre-div">
+            <div id="arrow-container">
+                <div class='arrow-right'></div>
+            </div>
+            <div class="flex-item-center">
+                <div id="contentHeading"></div>
+                <div id="mainContent"></div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer-1 bg-dark"> </footer>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/flickr.js"></script>
+    <script src="js/lightbox.min.js"></script>
+    <script src="js/masonry.min.js"></script>
+    <script src="js/twitterfetcher.min.js"></script>
+    <script src="js/spectragram.min.js"></script>
+    <script src="js/ytplayer.min.js"></script>
+    <script src="js/countdown.min.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/model.js"></script>
+</body>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ 
+  ga('create', 'UA-72149438-4', 'auto');
+  ga('send', 'pageview');
+ 
+</script>
+
+</html>

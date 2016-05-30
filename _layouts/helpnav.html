@@ -1,0 +1,541 @@
+---
+layout: default
+---
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Snapdeal Ads</title>
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.9">
+    <link href="{{ site.baseurl }}/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="{{ site.baseurl }}/css/themify-icons.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="{{ site.baseurl }}/css/flexslider.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="{{ site.baseurl }}/css/lightbox.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="{{ site.baseurl }}/css/ytplayer.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="{{ site.baseurl }}/css/theme-purple.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="{{ site.baseurl }}/css/custom.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="shortcut icon" href="https://i3.sdlcdn.com/img/icons/favicon.ico" type="image/x-icon" />
+    <link rel=icon type=image/ico href="{{ site.baseurl }}/img/favicon.ico" />
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+     <script type="text/javascript">
+    (function(e,t){var n=e.amplitude||{_q:[]};var r=t.createElement("script");r.type="text/javascript";
+      r.async=true;r.src="https://d24n15hnbwhuhn.cloudfront.net/libs/amplitude-2.9.1-min.gz.js";
+      r.onload=function(){e.amplitude.runQueuedFunctions()};var i=t.getElementsByTagName("script")[0];
+      i.parentNode.insertBefore(r,i);var s=function(){this._q=[];return this};function o(e){
+        s.prototype[e]=function(){this._q.push([e].concat(Array.prototype.slice.call(arguments,0)));
+          return this}}var a=["add","append","clearAll","prepend","set","setOnce","unset"];for(var c=0;c<a.length;c++){
+        o(a[c])}n.Identify=s;var u=["init","logEvent","logRevenue","setUserId","setUserProperties","setOptOut","setVersionName","setDomain","setDeviceId","setGlobalUserProperties","identify","clearUserProperties"];
+      function p(e){function t(t){e[t]=function(){e._q.push([t].concat(Array.prototype.slice.call(arguments,0)));
+      }}for(var n=0;n<u.length;n++){t(u[n])}}p(n);e.amplitude=n})(window,document);
+
+       amplitude.init("1de18a5af79a36376d3600b19da9f5aa", null, {
+
+    includeReferrer: true
+
+});
+  </script>
+    <script>
+    $(document).ready(function() {
+           $(".recent-posts-block:gt(2)").hide();
+            $(".recent-posts-block:eq(2)").css("border","none");
+            $("#toggle-button").click(function(){
+                if($("#toggle-button").text()=="Show more..."){
+                 $(".recent-posts-block:gt(2)").slideDown();
+                     $(".recent-posts-block:last()").css("border","none");
+                 $("#toggle-button").text("Show less...");
+             }
+             else if($("#toggle-button").text()=="Show less..."){
+                $(".recent-posts-block:gt(2)").slideUp();
+                 $("#toggle-button").text("Show more...");
+             }
+            });
+
+            $(".video-block:gt(2)").hide();
+              $("#toggle-button-videos").click(function(){
+                if($("#toggle-button-videos").text()=="Show more..."){
+                 $(".video-block:gt(2)").slideDown();
+                     $(".video-block:last()").css("border","none");
+                 $("#toggle-button-videos").text("Show less...");
+             }
+             else if($("#toggle-button-videos").text()=="Show less..."){
+                $(".video-block:gt(2)").slideUp();
+                 $("#toggle-button-videos").text("Show more...");
+             }
+            });
+
+        setTimeout(function() {
+          /*  var path = window.location.pathname;
+            var xpath = path.substring(path.lastIndexOf("/") + 1, path.indexOf(".html"));
+            $("#" + xpath).addClass("arrow");*/
+
+            console.log('----------******',window.location.pathname.substr(window.location.pathname.lastIndexOf('/')+1,window.location.pathname.indexOf('.')));
+            console.log('--8888',window.location.pathname.indexOf('.'));
+            var start=window.location.pathname.lastIndexOf('/')+1;
+            var end=window.location.pathname.indexOf('.');
+            console.log(start,end);
+            var identifier=window.location.pathname.substr(start,end-start);
+            console.log('-----',$('#'+identifier));
+            $('#'+identifier).css({"background-color":"#419bf9","color":"white"});
+          
+        }, 5);
+
+    });
+    </script>
+
+    <style>
+    .menu li .active {
+        opacity: 1 !important;
+    }
+    
+    .nav-blog:after {
+        content: "" !important;
+    }
+    .recent-posts-block{
+         
+    width: 300px;
+    min-height: 130px;
+    border-bottom: 1px solid #d5d5d5 !important;
+    padding-left: 13px;
+    padding-top: 21px;
+    background-color: white;
+    }
+     .recent-posts-date{
+          font-family: Helvetica;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+    }
+     .recent-posts-title{
+      font-family: Helvetica;
+    color: #333333;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 22px;
+    }
+     .recent-posts-description{
+             font-family: Georgia;
+    color: #333333;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    margin-top: 10px;
+    }
+    .recent-posts-block:hover{
+        background-color: #f7f7f7;
+    }
+
+    #toggle-button{
+        background-color: #f7f7f7;
+        height: 41px;
+     
+        font-family: Helvetica;
+color:  rgba(0, 0, 0, 0.5);
+font-size: 14px;/* Approximation due to font substitution */
+font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    }
+      #toggle-button-videos{
+        background-color: #f7f7f7;
+        height: 41px;
+     
+        font-family: Helvetica;
+color:  rgba(0, 0, 0, 0.5);
+font-size: 14px;/* Approximation due to font substitution */
+font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    }
+    
+   p{
+    margin-bottom: 0px;
+   }
+
+   .blog-heading{
+     margin-top: 40px;
+    font-family: Helvetica;
+    color: #999999;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 5px;
+    padding-left: 10px;
+    border-left: 5px solid #999999;
+   }
+
+   .blog-section-heading{
+font-family: Helvetica;
+color:  #333333;
+font-size: 26px;
+font-weight: 700;
+line-height: 32px;
+margin-top:40px;
+   }
+
+   .blog-section-subheading{
+    font-family: Helvetica;
+    color: #333333;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
+    margin:0px;
+    margin-top: 30px;
+   }
+
+   .blog-content{
+    font-family: Georgia;
+    color: #141414;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    margin-top: 3px;
+    text-align: justify;
+   }
+
+   .blog-image{
+    margin-top: 30px;
+   webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+   }
+
+   .blog-image-video{
+     webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+   }
+
+   .faq-image{
+     webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+
+   }
+   .table{
+    margin-top: 30px;
+   }
+   .video-block{
+   border-top: 1px solid #f5f5f5;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+   }
+
+   .video-block-title{
+   font-family: Helvetica;
+    color: #333333;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 22px;
+    margin-top: 10px;
+   }
+
+   .video-block-language{
+ font-family: Helvetica;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+   }
+   .video-block sup{
+        font-weight: 800 !important;
+    font-size: 9px;
+    
+    padding: 0px 3px;
+   }
+   #faq-container{
+    display: flex;
+    width: 1044px;
+    background-color:white;
+     min-height: 400px;
+   }
+
+   #faq-left-nav{
+    display: flex;
+    flex-direction:column;
+    
+    width: 219px;
+    min-width: 219px;
+    background-color:  #fff;
+    /*border-right: 1px solid #d5d5d5;*/
+
+   }
+   #faq-categories{
+    height: 50px;
+    color: #cccccc;
+    display: none;
+    padding-left:20px;
+    align-items:center;
+    font-size:15px;
+   }
+   #topics-list{
+    display: flex;
+    flex-direction:column;
+        border: 1px solid #F1F1F1;
+   }
+
+   .topic-block{
+    display: flex;
+    align-items:center;
+    padding-left:20px;
+    height:41px;
+    color: #989898;
+    font-weight: 800;
+   }
+     .topic-block:hover{
+    background-color: #419bf9;
+    color: white;
+   }
+
+   #page-title{
+        font-size: 26px;
+    font-family: Helvetica;
+    line-height: 48px;
+    margin-top: 24px;
+    color: #333333;
+    border-bottom: 1px solid #d5d5d5;
+    margin-bottom: 30px;
+}
+   
+
+   #page-content{
+    margin-top:0px;
+     margin-bottom: 40px;
+
+   }
+
+   #faq-content{
+    display: flex;
+    flex-direction:column;
+    padding-left: 30px;
+    padding-right: 30px;
+   }
+
+   .faq-line{
+    border-width: 1px;
+border-color:  #eeeeee;
+border-style: solid;
+
+margin-top: 40px;
+   }
+
+   .faq-video-heading{
+    color:#999999;
+        margin-top: 40px;
+    font-weight: 800;
+   }
+
+   .faq-video-list{
+       display: flex;
+    margin-bottom: 40px;
+    margin-top: 40px;
+
+   }
+
+   .faq-video-block{
+    display: flex;
+    flex-direction:column;
+   }
+
+   .faq-video-title{
+    font-family: Helvetica;
+    color: #333333;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 22px;
+    margin-top: 10px;
+   }
+
+   .faq-video-title a{
+    color: #333333;
+   }
+
+   .faq-video-title a:hover{
+    color: #1e81f7;
+   }
+    .faq-image{
+        border: 1px solid #E9E9E9;
+   }
+
+   .faq-image:hover{
+    border: 1px solid;
+   }
+
+    .faq-video-language{
+ font-family: Helvetica;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+   }
+   .faq-video-block sup{
+        font-weight: 800 !important;
+    font-size: 9px;
+    
+    padding: 0px 3px;
+   }
+       #header .title {
+        color: #0a94f7;
+        font-size: 30px;
+        font-weight: 300;
+        line-height: 25px;
+        text-transform: uppercase;
+            margin-top: 100px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="nav-container">
+        <a id="top"></a>
+        <nav>
+            <div class="nav-bar">
+                <div class="module left">
+                    <a href="{{ site.baseurl }}/index.html"> <img class="logo logo-light" alt="Foundry" src="img/logo-light.png" /> <img class="logo logo-dark" alt="Foundry" src="{{ site.baseurl }}/img/logofinal2.png" /> </a>
+                </div>
+                <div class="module widget-handle mobile-toggle right visible-sm visible-xs"> <i class="ti-menu"></i> </div>
+                <div class="module-group right">
+                    <div class="module left">
+                        <ul class="menu">
+                            <li> <a href="{{ site.baseurl }}/index.html">
+                                        Home
+                                    </a> </li>
+                            <li> <a href="{{ site.baseurl }}/features.html">
+                                        Features
+                                    </a> </li>
+                            <li> <a class="active" href="{{ site.baseurl }}/help-center.html">
+                                        Help Center
+                                    </a> </li>
+                            <li> <a  href="{{ site.baseurl }}/faqs/ad-serving.html">
+                                        FAQs
+                                    </a> </li>
+                            <li> <a  href="{{ site.baseurl }}/blog.html">
+                                        Blog
+                                    </a> </li>
+                            <li> <a class="btn" href="{{ site.baseurl }}/contact.html">GET IN TOUCH</a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+       <div class="row">
+                <div class="col-sm-12 text-center">
+                    <div id="header">
+                        <h1 class="title">HELP</h1>
+                         <hr style="width:30px;margin:auto;    border: 1px solid #0a94f7;"/>
+                        <p class="sub-title" style="margin-bottom:0px;display:none">Here what we offer</p>
+                    </div>
+
+                </div>
+            </div>
+    <section  style="display:flex;justify-content:center;padding:0px;background-color:#fff;margin-top:50px">
+   
+       <div id="faq-container" >
+       <div id="faq-left-nav">
+        <div id="faq-categories">Topics</div>
+        <div id="topics-list">
+             {% assign sorted_pages = (site.pages | sort: 'weight' reverse) %}
+                      {% for page in sorted_pages reversed %}
+  {% if page.categories contains 'help' %}
+<a href="{{ page.url }}"><div class="topic-block" id="{{ page.idx }}">{{ page.short }}</div></a>
+
+  {% endif %}
+{% endfor %}
+        </div>
+       </div>
+      <div id="faq-content">
+        
+        <div id="page-content">
+          {{content}}
+
+        </div>
+
+
+      </div>
+
+       </div>
+        
+    </section>
+    <footer class="footer-1 bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <h3>Snapdeal Ads</h3> </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h6 class="title">Recent Posts</h6>
+                        <hr>
+                        <a href="/blog/payments-go-online.html">Payments go online</a><br/>
+                <a href="/blog/seller-ads-live.html">Snapdeal Ads V2 is live for everyone</a><br/>
+                        <a href="/blog/minimum-budget-changes.html">Minimum budget changes </a><br/>
+                         <a href="/blog/help-videos-hindi.html">Help video in Hindi</a><br/>
+                        <a href="/blog/product-ads-effective.html">Make your products ads more effective </a>
+                         <a href="/blog/seller-ads-v2-preview.html">Preview of Our Seller Ads Platform V2</a>
+                        <br/> <a href="/blog/help-center-launch.html">Snapdeal Ads - Help Center Launch</a>
+                        <br/> <a href="/blog/heard-your-feedback.html">Sellers we’ve heard your feedback</a>
+                        <br/> <a href="/blog/measuring-the-roi.html">Measuring ROI</a>
+                        <br/> <a href="/blog/introducing-snapdeal-ads.html">Introducing Snapdeal Ads</a>
+                        <br/> </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h6 class="title">Important Links</h6>
+                        <hr>
+                        <ul class="link-list recent-posts">
+                            <li> <a href="{{ site.baseurl }}/index.html">Home</a> </li>
+                            <li> <a href="{{ site.baseurl }}/features.html">Features</a> </li>
+                            <li> <a href="{{ site.baseurl }}/help-center.html">Help Center</a> </li>
+                            <li> <a href="{{ site.baseurl }}/faqs/ad-serving.html">FAQs</a> </li>
+                            <li> <a href="/blog.html">Blog</a> </li>
+                            <li> <a href="{{ site.baseurl }}/Termsofuse.html">Terms and Conditions </a> </li>
+                            <li> <a href="{{ site.baseurl }}/privacypolicy.html">Privacy Policy</a> </li>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6"> <span class="sub">&copy; Copyright 2016 - Snapdeal</span> </div>
+            </div>
+        </div> <a class="btn btn-sm fade-half back-to-top inner-link" href="#top">Top</a> </footer>
+    </div>
+    <script src="{{ site.baseurl }}/js/jquery.min.js"></script>
+    <script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
+    <script src="{{ site.baseurl }}/js/flickr.js"></script>
+    <script src="{{ site.baseurl }}/js/flexslider.min.js"></script>
+    <script src="{{ site.baseurl }}/js/lightbox.min.js"></script>
+    <script src="{{ site.baseurl }}/js/masonry.min.js"></script>
+    <script src="{{ site.baseurl }}/js/twitterfetcher.min.js"></script>
+    <script src="{{ site.baseurl }}/js/spectragram.min.js"></script>
+    <script src="{{ site.baseurl }}/js/ytplayer.min.js"></script>
+    <script src="{{ site.baseurl }}/js/countdown.min.js"></script>
+    <script src="{{ site.baseurl }}/js/smooth-scroll.min.js"></script>
+    <script src="{{ site.baseurl }}/js/parallax.js"></script>
+    <script src="{{ site.baseurl }}/js/scripts.js"></script>
+</body>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ 
+  ga('create', 'UA-72149438-4', 'auto');
+  ga('send', 'pageview',location.pathname);
+ 
+</script>

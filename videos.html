@@ -1,0 +1,635 @@
+---
+layout: default
+---
+
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Snapdeal Ads</title>
+        <meta http-equiv="pragma" content="no-cache" />
+        <meta name="viewport" content="width=device-width, initial-scale=0.9">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/themify-icons.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/flexslider.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/lightbox.min.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/ytplayer.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/theme-purple.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
+        <link rel="shortcut icon" href="http://i3.sdlcdn.com/img/icons/favicon.ico" type="image/x-icon" />
+        <link rel=icon type=image/ico href="img/favicon.ico" />
+        <link href='https://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600'
+        rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="masterslider/style/masterslider.css" />
+        <link href='masterslider/style/ms-partialview.css' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="masterslider/skins/default/style.css" />
+        <link rel="stylesheet" href="masterslider/skins/light-3/style.css" />
+        <script src="masterslider/masterslider.min.js"></script>
+          <script type="text/javascript">
+    (function(e,t){var n=e.amplitude||{_q:[]};var r=t.createElement("script");r.type="text/javascript";
+      r.async=true;r.src="https://d24n15hnbwhuhn.cloudfront.net/libs/amplitude-2.9.1-min.gz.js";
+      r.onload=function(){e.amplitude.runQueuedFunctions()};var i=t.getElementsByTagName("script")[0];
+      i.parentNode.insertBefore(r,i);var s=function(){this._q=[];return this};function o(e){
+        s.prototype[e]=function(){this._q.push([e].concat(Array.prototype.slice.call(arguments,0)));
+          return this}}var a=["add","append","clearAll","prepend","set","setOnce","unset"];for(var c=0;c<a.length;c++){
+        o(a[c])}n.Identify=s;var u=["init","logEvent","logRevenue","setUserId","setUserProperties","setOptOut","setVersionName","setDomain","setDeviceId","setGlobalUserProperties","identify","clearUserProperties"];
+      function p(e){function t(t){e[t]=function(){e._q.push([t].concat(Array.prototype.slice.call(arguments,0)));
+      }}for(var n=0;n<u.length;n++){t(u[n])}}p(n);e.amplitude=n})(window,document);
+
+    amplitude.init("1de18a5af79a36376d3600b19da9f5aa", null, {
+
+    includeReferrer: true
+
+});
+
+
+  </script>
+        <style>
+            .find-all {
+                text-align: center;
+                color: #333333;
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+            
+            .header-text {
+                margin-left: 40px;
+                display: inline-flex;
+                margin-bottom: -24px;
+                padding-bottom: 12px;
+                padding-top: 12px;
+            }
+            
+            .video-tiles img:hover {
+                cursor: pointer;
+            }
+            
+            .menu-active {
+                opacity: 1 !important;
+            }
+            
+            .clear-before:before {
+                content: none!important;
+            }
+            
+            .video-tiles table tr {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            .header {
+            	/*background-color: #f9f9f9;*/
+            	width: 100%;
+            	height: 40px;
+            	padding: 5px;
+            	padding-left: 38px;
+            	padding-top: 8px;
+            	margin-bottom: 1px;
+            	display: inline-flex;
+            	box-shadow: -2px 0px 4px #b0b0b0;
+            	-webkit-box-shadow: -2px 0px 2px 0px rgba(196, 196, 196, 1);
+            	-moz-box-shadow: -2px 0px 2px 0px rgba(196, 196, 196, 1);
+            	box-shadow: -2px 0px 2px 0px rgba(196, 196, 196, 1);
+            }
+
+            .header .help-text {
+            	color: #333333;
+            	font-size: 15px;
+            	font-weight: 500;
+            	padding-left: 15px;
+            	padding-bottom: 5px;
+            	line-height: 26px;
+            }
+            .video-block-title{
+   font-family: Helvetica;
+    color: #333333;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 22px;
+    margin-top: 10px;
+   }
+
+   .video-block-language{
+ font-family: Helvetica;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+   }
+   .video-block-title a{
+    font-family: Helvetica;
+    color: #333333;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 22px;
+    margin-top: 10px;
+   }
+    .video-block-title a:hover{
+
+     color:#1e81f7;
+      text-decoration: none !important;
+      transition: color 0.4s ease !important;
+     
+   }
+
+   .videos-desc{
+        text-align: left;
+    padding-left: 22px;
+   }
+
+   .video-screenshot{
+    border: 1px solid #e9e9e9;
+   }
+
+   .video-screenshot:hover{
+    border: 1px solid #0a94f7;
+   }
+            
+            @media (max-width: 890px) {
+                .menu-hidden {
+                    overflow: hidden!important;
+                }
+                .menu-visible {
+                    overflow: visible!important;
+                }
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="nav-container" style="position:relative;z-index:4">
+        </div>
+        <div class="main-container" style="margin-top:50px">
+            <div class="flex-container">
+            	<div class="header">
+            		<a href="help-center.html"><img src="img/help-center-img.png" height=15px;/>
+            		</a>
+            		<h4 class="help-text">Videos</h4> </div>
+            	</div>
+            <div class="ms-partialview-template" id="partial-view-1" style="padding-top: 20px; padding-bottom: 40px; background: #333333;">
+                <div class="master-slider ms-skin-default" id="masterslider">
+                    <div class="ms-slide" id="create-campaign-v2"> <img src="/img/Create campaign screen overlay.png" height="350px" ;width=800px;/>
+                        <a href="https://www.youtube.com/embed/tEqNHdczeIQ?rel=0" data-type="video"></a>
+                        <div class="ms-info">
+                            <h4 style="color:#0a94f7;font-size: 21px; text-transform: uppercase; font-weight: 500;">Create campaign in V2</h4>
+                            <p>Get more control over your Ads</p>
+                        </div>
+                    </div>
+                    <div class="ms-slide" id="view-and-manage-campaign-v2"> <img src="/img/View campaign screen overlay.png" height="350px" ;width=800px;/>
+                        <a href="https://www.youtube.com/embed/2oU9m22GcHE?rel=0" data-type="video"></a>
+                        <div class="ms-info">
+                            <h4 style="color:#0a94f7;font-size: 21px; text-transform: uppercase; font-weight: 500;">View and manage campaigns in V2</h4>
+                            <p>Filter and change status of your campaigns</p>
+                        </div>
+                    </div>
+                    <div class="ms-slide" id="campaign-reports-v2"> <img src="/img/Campaign reports screen overlay.png" height="350px" ;width=800px;/>
+                        <a href="https://www.youtube.com/embed/5jV4q1Vlt4A?rel=0" data-type="video"></a>
+                        <div class="ms-info">
+                            <h4 style="color:#0a94f7;font-size: 21px; text-transform: uppercase; font-weight: 500;">Track campaign Performance in V2</h4>
+                            <p>Keep a check on how are your campaigns performing</p>
+                        </div>
+                    </div>
+                    <div class="ms-slide" id="add-funds-and-view-transactions-advance"> <img src="/img/Add funds screen overlay.png" height="350px" ;width=800px;/>
+                        <a href="https://www.youtube.com/embed/-cFMoumCciw?rel=0" data-type="video"></a>
+                        <div class="ms-info">
+                            <h4 style="color:#0a94f7;font-size: 21px; text-transform: uppercase; font-weight: 500;">Add Funds and View Transaction History in V2</h4>
+                            <p>Track your daily summary of payments and spends</p>
+                        </div>
+                    </div>
+                    <div class="ms-slide" id="create-campaign-v2-hindi"> <img src="/img/Create campaign screen overlay.png" height="350px" ;width=800px;/>
+                        <a href="https://www.youtube.com/embed/h7qclinNUlY?rel=0" data-type="video"></a>
+                        <div class="ms-info">
+                            <h4 style="color:#0a94f7;font-size: 21px; text-transform: uppercase; font-weight: 500;">Create campaign in V2 (Hindi)</h4>
+                            <p>Get more control over your Ads</p>
+                        </div>
+                    </div>
+                    <div class="ms-slide" id="view-and-manage-campaign-v2-hindi"> <img src="/img/View campaign screen overlay.png" height="350px" ;width=800px;/>
+                        <a href="https://www.youtube.com/embed/al27z4sXwtU?rel=0" data-type="video"></a>
+                        <div class="ms-info">
+                            <h4 style="color:#0a94f7;font-size: 21px; text-transform: uppercase; font-weight: 500;">View and manage campaigns in V2 (Hindi)</h4>
+                            <p>Filter and change status of your campaigns</p>
+                        </div>
+                    </div>
+                    <div class="ms-slide" id="campaign-reports-v2-hindi"> <img src="/img/Campaign reports screen overlay.png" height="350px" ;width=800px;/>
+                        <a href="https://www.youtube.com/embed/iY-p_ZzqdOY?rel=0" data-type="video"></a>
+                        <div class="ms-info">
+                            <h4 style="color:#0a94f7;font-size: 21px; text-transform: uppercase; font-weight: 500;">Track campaign Performance in V2 (Hindi)</h4>
+                            <p>Keep a check on how are your campaigns performing</p>
+                        </div>
+                    </div>
+                    <div class="ms-slide" id="add-funds-and-view-transactions-advance-hindi"> <img src="/img/Add funds screen overlay.png" height="350px" ;width=800px;/>
+                        <a href="https://www.youtube.com/embed/o7OJGHBA81o?rel=0" data-type="video"></a>
+                        <div class="ms-info">
+                            <h4 style="color:#0a94f7;font-size: 21px; text-transform: uppercase; font-weight: 500;">Add Funds and View Transaction History in V2 (Hindi)</h4>
+                            <p>Track your daily summary of payments and spends</p>
+                        </div>
+                    </div>
+                    <!-- <div class="ms-slide" id="set-location-targeting-v2-hindi"> <img src="/img/Campaign reports screen overlay.png" height="350px" ;width=800px;/>
+                        <a href="https://www.youtube.com/embed/jYTsXIfH024?rel=0" data-type="video"></a>
+                        <div class="ms-info">
+                            <h4 style="color:#0a94f7;font-size: 21px; text-transform: uppercase; font-weight: 500;">Set Location and Basic Category Targeting in V2 (Hindi)</h4>
+                            <p>Know how to set targeting location for your ads</p>
+                        </div>
+                    </div>
+                    <div class="ms-slide" id="set-behaviour-targeting-v2-hindi"> <img src="/img/Campaign reports screen overlay.png" height="350px" ;width=800px;/>
+                        <a href="https://www.youtube.com/embed/lMonDFa5vnI?rel=0" data-type="video"></a>
+                        <div class="ms-info">
+                            <h4 style="color:#0a94f7;font-size: 21px; text-transform: uppercase; font-weight: 500;">Set Targeting Based on User Behavior in V2 (Hindi)</h4>
+                            <p>Know how to set targeting based on user behaviour</p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="find-all row">
+                <h3 style="font-size: 25px;">Find all videos here</h3> </div>
+            <div class="video-tiles">
+                <table width="80%" style="margin-left:10%; margin-right:10%">
+                    <tr>
+                        <td align="center">
+                            <div width="20%"> <img id="tile1" class="screenshot cast-shadow video-screenshot" src="/img/Create campaign thumbnail.png" height="160px"
+                                ;width=280px;/>
+                                </div>
+                                <div class="videos-desc">
+                                 <div class="video-block-title"><a id="atile1" href="/videos.html#create-campaign-v2">Create Campaign</a></div>
+                    <div class="video-block-language">English <sup> . </sup> (3:31) Min.</div>
+                    </div>
+                        </td>
+                        <td align="center">
+                            <div width="20%"> <img id="tile2" class="screenshot cast-shadow video-screenshot" src="/img/view campaigns thumbnail.png" height="160px"
+                                ;width=280px;/>
+                                 </div>
+                                      <div class="videos-desc">
+                                 <div class="video-block-title"><a id="atile2" href="/videos.html#view-and-manage-campaign-v2">View and manage campaigns</a></div>
+                       <div class="video-block-language">English <sup> . </sup> (1:49) Min.</div></div>
+                    </div>
+                        </td>
+                        <td align="center">
+                            <div width="20%"> <img id="tile3" class="screenshot cast-shadow video-screenshot" src="/img/Campaign reports thumbnail .png" height="160px"
+                                ;width=280px;/>
+                                 </div>
+                                      <div class="videos-desc">
+                                 <div class="video-block-title"><a id="atile3" href="/videos.html#campaign-reports-v2">Track campaign performance</a></div>
+                         <div class="video-block-language">English <sup> . </sup> (1:05) Min.</div>
+                    </div>
+                        </td>
+                        <tr>
+                            <td align="center" style="    padding-top: 20px;">
+                                <div width="20%"> <img id="tile4" class="screenshot cast-shadow video-screenshot" src="/img/Add funds thumbnail.png" height="160px"
+                                    ;width=280px;/>
+                                     </div>
+                                          <div class="videos-desc">
+                                 <div class="video-block-title"><a id="atile4" href="/videos.html#add-funds-and-view-transactions-advance">Add funds and view transaction history</a></div>
+                           <div class="video-block-language">English <sup> . </sup> (2:03) Min.</div>
+                    </div>
+                            </td>
+                            <td align="center" style="    padding-top: 20px;">
+                                <div width="20%"> <img id="tile5" class="screenshot cast-shadow video-screenshot" src="/img/Create campaign thumbnail.png"
+                                    height="160px" ;width=280px;/>
+                                     </div>
+                                          <div class="videos-desc">
+                                 <div class="video-block-title"><a id="atile5" href="/videos.html#create-campaign-v2-hindi">Create Campaign </a> </div>
+                             <div class="video-block-language">Hindi <sup> . </sup> (4:09) Min.</div>
+                    </div>
+                            </td>
+                            <td align="center" style="    padding-top: 20px;">
+                                <div width="20%"> <img id="tile6" class="screenshot cast-shadow video-screenshot" src="/img/view campaigns thumbnail.png"
+                                    height="160px" ;width=280px;/>
+                                     </div>
+                                          <div class="videos-desc">
+                                 <div class="video-block-title"><a id="atile6" href="/videos.html#view-and-manage-campaign-v2-hindi">View and manage campaigns</a></div>
+                               <div class="video-block-language">Hindi <sup> . </sup> (2:20) Min.</div>
+                    </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" style="    padding-top: 20px;">
+                                <div width="20%"> <img id="tile7" class="screenshot cast-shadow video-screenshot" src="/img/Campaign reports thumbnail .png" height="160px"
+                                ;width=280px;/>
+                                 </div>
+                                          <div class="videos-desc">
+                                 <div class="video-block-title"><a id="atile7" href="/videos.html#campaign-reports-v2-hindi">Track campaign performance</a> </div>
+                                 <div class="video-block-language">Hindi <sup> . </sup> (1:10) Min.</div>
+                    </div>
+                            </td>
+                            <td align="center" style="    padding-top: 20px;">
+                                <div width="20%"> <img id="tile8" class="screenshot cast-shadow video-screenshot" src="/img/Add funds thumbnail.png" height="160px"
+                                    ;width=280px;/>
+                                     </div>
+                                          <div class="videos-desc">
+                                  <div class="video-block-title"><a id="atile8" href="/videos.html#add-funds-and-view-transactions-advance-hindi">Add funds and view transaction history</a></div>
+                                   <div class="video-block-language">Hindi <sup> . </sup> (2:43) Min.</div>
+                    </div>
+                            </td>
+                            <!-- <td align="center">
+                                <div width="20%"> <img id="tile9" class="screenshot cast-shadow" src="/img/view campaigns thumbnail.png" height="160px"
+                                    ;width=280px;/>
+                                    <h5 style="text-align: center; padding-top: 5px">Set Location and Basic Category Targeting V2 <br/>(Hindi)</h5> </div>
+                            </td> -->
+                        </tr>
+                        <!-- <tr>
+                            <td align="center">
+                                <div width="20%"> <img id="tile10" class="screenshot cast-shadow" src="/img/Add funds thumbnail.png" height="160px"
+                                    ;width=280px;/>
+                                    <h5 style="text-align: center; padding-top: 5px">Set Targeting Based on User Behavior V2 <br/>(Hindi)</h5> </div>
+                            </td>
+                        </tr> -->
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <footer class="footer-1 bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <h3>Snapdeal Ads</h3> </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="widget">
+                            <h6 class="title">Recent Posts</h6>
+                            <hr> <a href="/blog/help-center-launch.html">Snapdeal Ads - Help Center Launch</a>
+                            <br/> <a href="/blog/heard-your-feedback.html">Sellers we’ve heard your feedback</a>
+                            <br/> <a href="/blog/measuring-the-roi.html">Measuring ROI</a>
+                            <br/> <a href="/blog/introducing-snapdeal-ads.html">Introducing Snapdeal Ads</a>
+                            <br/> </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="widget">
+                            <h6 class="title">Important Links</h6>
+                            <hr>
+                            <ul class="link-list recent-posts">
+                                <li> <a href="home-app-landing.html">Home</a> </li>
+                                <li> <a href="features.html">Features</a> </li>
+                                <li> <a href="help-center.html">Help Center</a> </li>
+                                <li> <a href="faq.html">FAQs</a> </li>
+                                <li> <a href="/blog/introducing-snapdeal-ads.html">Blog</a> </li>
+                                <li> <a href="Termsofuse.html">Terms and Conditions </a> </li>
+                                <li> <a href="privacypolicy.html">Privacy Policy</a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6"> <span class="sub">&copy; Copyright 2015 - Snapdeal</span> </div>
+                </div>
+            </div> <a class="btn btn-sm fade-half back-to-top inner-link" href="#top">Top</a> </footer>
+        </div>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/flickr.js"></script>
+        <script src="js/flexslider.min.js"></script>
+        <script src="js/lightbox.min.js"></script>
+        <script src="js/masonry.min.js"></script>
+        <script src="js/twitterfetcher.min.js"></script>
+        <script src="js/spectragram.min.js"></script>
+        <script src="js/ytplayer.min.js"></script>
+        <script src="js/countdown.min.js"></script>
+        <script src="js/smooth-scroll.min.js"></script>
+        <script src="js/parallax.js"></script>
+        <script src="js/scripts.js"></script>
+        <script src="/masterslider/jquery.easing.min.js"></script>
+        <script>
+            var slider = new MasterSlider();
+            slider.control('arrows', {
+                autohide: false
+            });
+            slider.control('slideinfo', {
+                insertTo: "#partial-view-1"
+                , autohide: false
+                , align: 'bottom'
+                , size: 80
+                , inset: true
+                , margin: 100
+                , overVideo: false
+            });
+            slider.control('bullets', {
+                autohide: false
+                , dir: "h"
+                , align: "bottom"
+                , overVideo: false
+            });
+            slider.setup('masterslider', {
+                width: 800
+                , height: 450
+                , space: 40
+                , loop: true
+                , view: 'wave'
+                , layout: 'partialview'
+                , filters: {
+                    grayscale: 0
+                    , opacity: 1
+                    , brightness: 0.5
+                }
+            });
+            MSScrollParallax.setup(slider, 50, 80, true);
+            $(document).ready(function () {
+                $.ajax({
+                    url: "/footer.html"
+                    , type: 'GET'
+                    , success: function (data) {
+                        console.log('--------------success')
+                        $(".footer-1").html(data);
+                    }
+                });
+                $.ajax({
+                    url: "/header.html"
+                    , type: 'GET'
+                    , success: function (data) {
+                        $(".nav-container").html(data);
+                    }
+                });
+                setTimeout(function () {
+                	if(!window.location.hash) {
+                		window.location.replace("https://ads.snapdeal.com/videos.html#create-campaign-v2");
+                	}
+                },500);
+                setTimeout(function () {
+                    $('.nav-container #help-center').addClass('menu-active');
+                }, 100);
+                setTimeout(function () {
+
+                    var menuDropdown = $(".ti-menu")[0];
+                    menuDropdown.addEventListener('click', function () {
+                        if ($(".nav-bar").hasClass("menu-hidden")) {
+                            $(".nav-bar").removeClass("menu-hidden");
+                            $(".nav-bar").addClass("menu-visible")
+                        } else {
+                            $(".nav-bar").removeClass("menu-visible");
+                            $(".nav-bar").addClass("menu-hidden");
+                        }
+                    });
+                }, 400);
+
+                /*	if(window.location.hash == "#add-products") {
+                		slider.api.gotoSlide(0);
+                		console.log('-------------',slider.api.index());
+                		window.enableDynamicSliderHash = false;
+                	} else if(window.location.hash == "#track-ads-performance") {
+                		slider.api.gotoSlide(1);
+                		window.enableDynamicSliderHash = false;
+                	} else if(window.location.hash == "#add-funds-and-view-transactions") {
+                		slider.api.gotoSlide(2);
+                		window.enableDynamicSliderHash = false;
+                	}*/
+
+                if (window.location.hash == "#create-campaign-v2") {
+                    slider.api.gotoSlide(0);
+                    window.enableDynamicSliderHash = false;
+                } else if (window.location.hash == "#view-and-manage-campaign-v2") {
+                    slider.api.gotoSlide(1);
+                    window.enableDynamicSliderHash = false;
+                } else if (window.location.hash == "#campaign-reports-v2") {
+                    slider.api.gotoSlide(2);
+                    window.enableDynamicSliderHash = false;
+                } else if (window.location.hash == "#add-funds-and-view-transactions-advance") {
+                    slider.api.gotoSlide(3);
+                    window.enableDynamicSliderHash = false;
+                } else if (window.location.hash == "#create-campaign-v2-hindi") {
+                    slider.api.gotoSlide(4);
+                    window.enableDynamicSliderHash = false;
+                } else if (window.location.hash == "#view-and-manage-campaign-v2-hindi") {
+                    slider.api.gotoSlide(5);
+                    window.enableDynamicSliderHash = false;
+                } else if (window.location.hash == "#campaign-reports-v2-hindi") {
+                    slider.api.gotoSlide(6);
+                    window.enableDynamicSliderHash = false;
+                } else if (window.location.hash == "#add-funds-and-view-transactions-advance-hindi") {
+                    slider.api.gotoSlide(7);
+                    window.enableDynamicSliderHash = false;
+                } 
+                // else if (window.location.hash == "#set-location-targeting-v2-hindi") {
+                //     slider.api.gotoSlide(8);
+                //     window.enableDynamicSliderHash = false;
+                // } else if (window.location.hash == "#set-behaviour-targeting-v2-hindi") {
+                //     slider.api.gotoSlide(9);
+                //     window.enableDynamicSliderHash = false;
+                // }
+            });
+            /*	$('#tile1').click(function() {
+            		slider.api.gotoSlide(0);
+            		$('#add-products .ms-slide-vpbtn').trigger('click');
+            	});
+            	$('#tile2').click(function() {
+            		slider.api.gotoSlide(1);
+            		$('#track-ads-performance .ms-slide-vpbtn').trigger('click');
+            	});
+            	$('#tile3').click(function() {
+            		slider.api.gotoSlide(2);
+            		$('#add-funds-and-view-transactions .ms-slide-vpbtn').trigger('click');
+            	});*/
+            $('#tile1').click(function () {
+                slider.api.gotoSlide(0);
+                $('#create-campaign-v2 .ms-slide-vpbtn').trigger('click');
+            });
+            $('#tile2').click(function () {
+                slider.api.gotoSlide(1);
+                $('#view-and-manage-campaign-v2 .ms-slide-vpbtn').trigger('click');
+            });
+            $('#tile3').click(function () {
+                slider.api.gotoSlide(2);
+                $('#campaign-reports-v2 .ms-slide-vpbtn').trigger('click');
+            });
+            $('#tile4').click(function () {
+                slider.api.gotoSlide(3);
+                $('#add-funds-and-view-transactions-advance .ms-slide-vpbtn').trigger('click');
+            });
+            $('#tile5').click(function () {
+                slider.api.gotoSlide(4);
+                $('#create-campaign-v2-hindi .ms-slide-vpbtn').trigger('click');
+            });
+            $('#tile6').click(function () {
+                slider.api.gotoSlide(5);
+                $('#view-and-manage-campaign-v2-hindi .ms-slide-vpbtn').trigger('click');
+            });
+            $('#tile7').click(function () {
+                slider.api.gotoSlide(6);
+                $('#campaign-reports-v2-hindi .ms-slide-vpbtn').trigger('click');
+            });
+            $('#tile8').click(function () {
+                slider.api.gotoSlide(7);
+                $('#add-funds-and-view-transactions-advance-hindi .ms-slide-vpbtn').trigger('click');
+            });
+            $('#atile8').click(function () {
+                slider.api.gotoSlide(7);
+                $('#add-funds-and-view-transactions-advance-hindi .ms-slide-vpbtn').trigger('click');
+            });
+            $('#atile7').click(function () {
+                slider.api.gotoSlide(6);
+                $('#campaign-reports-v2-hindi .ms-slide-vpbtn').trigger('click');
+            });
+            $('#atile6').click(function () {
+                slider.api.gotoSlide(5);
+                $('#view-and-manage-campaign-v2-hindi .ms-slide-vpbtn').trigger('click');
+            });
+            $('#atile5').click(function () {
+                slider.api.gotoSlide(4);
+                $('#create-campaign-v2-hindi .ms-slide-vpbtn').trigger('click');
+            });
+            $('#atile4').click(function () {
+                slider.api.gotoSlide(3);
+                $('#add-funds-and-view-transactions-advance .ms-slide-vpbtn').trigger('click');
+            });
+            $('#atile3').click(function () {
+                slider.api.gotoSlide(2);
+                $('#campaign-reports-v2 .ms-slide-vpbtn').trigger('click');
+            });
+             $('#atile2').click(function () {
+                slider.api.gotoSlide(1);
+                $('#view-and-manage-campaign-v2 .ms-slide-vpbtn').trigger('click');
+            });
+             $('#atile1').click(function () {
+                slider.api.gotoSlide(0);
+                $('#create-campaign-v2 .ms-slide-vpbtn').trigger('click');
+            });
+            // $('#tile9').click(function () {
+            //     slider.api.gotoSlide(8);
+            //     $('#set-location-targeting-v2-hindi .ms-slide-vpbtn').trigger('click');
+            // });
+            // $('#tile10').click(function () {
+            //     slider.api.gotoSlide(9);
+            //     $('#set-behaviour-targeting-v2-hindi .ms-slide-vpbtn').trigger('click');
+            // });
+            var videoHashArray = [
+                'create-campaign-v2', 'view-and-manage-campaign-v2', 'campaign-reports-v2'
+                , 'add-funds-and-view-transactions-advance'
+                , 'create-campaign-v2-hindi', 'view-and-manage-campaign-v2-hindi', 'campaign-reports-v2-hindi'
+                , 'add-funds-and-view-transactions-advance-hindi'
+                // , 'set-location-targeting-v2-hindi', 'set-behaviour-targeting-v2-hindi'
+            ];
+            slider.api.addEventListener(MSSliderEvent.CHANGE_START, function (e) {
+                // dispatches when the slider's current slide change starts.    	
+                if (window.enableDynamicSliderHash === false) window.enableDynamicSliderHash = true;
+                if (window.enableDynamicSliderHash == true) {
+                    var index = slider.api.index();
+                    var element = e.target.view["$element"][0];
+                    element = ((element.children)[0]).children;
+                    window.location.hash = videoHashArray[index];
+                    document.body.scrollTop = 0;
+                    console.log(index);
+                }
+            });
+
+        </script>
+    </body>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o)
+                , m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-72149438-4', 'auto');
+        ga('send', 'pageview',location.pathname);
+
+    </script>
+
+</html>
