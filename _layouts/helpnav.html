@@ -397,6 +397,121 @@ margin-top: 40px;
         text-transform: uppercase;
             margin-top: 100px;
     }
+           #footer-block{
+        display: flex;
+        flex:1;
+        height: 231px;
+background-color: black;
+box-shadow: 0 1px 0 #eeeff2;
+padding-left: 100px;
+padding-right: 100px;
+padding-top: 50px;
+justify-content:center;
+
+    }
+
+    #footer-logo{
+color: #525558;
+
+font-size: 26px;
+font-weight: 600;
+line-height: 32px;
+    }
+
+    #footer-about{
+        margin-left: 60px;
+        display: flex;
+        flex-direction:column;
+        width: 251px;
+    }
+
+    #about-heading{
+color: #525558;
+font-size: 14px;
+font-weight: 600;
+line-height: 32px;
+text-transform: uppercase;
+    }
+
+    #about-content{
+color: #525558;
+font-size: 13px;
+font-weight: 400;
+line-height: 22px;
+    }
+
+    #footer-links{
+                margin-left: 80px;
+        display: flex;
+        flex-direction:column;
+    
+    }
+
+    #links-heading{
+color: #525558;
+font-size: 14px;
+font-weight: 600;
+line-height: 32px;
+text-transform: uppercase;
+    }
+
+    #links-column1{
+        display: flex;
+        flex-direction:column;
+    }
+
+    #links-column2{
+        margin-left:60px;
+        display: flex;
+        flex-direction:column;
+    }
+
+    .links-entries{
+color: #525558;
+
+font-size: 13px;
+font-weight: 400;
+line-height: 24px;
+    }
+
+    #links-content{
+        display: flex;
+        width:250px;
+
+    }
+
+    #footer-contact{
+        display: flex;
+        flex-direction:column;
+        margin-left: 80px;
+    }
+
+    #contact-heading{
+        color: #525558;
+font-size: 14px;
+font-weight: 600;
+line-height: 32px;
+text-transform: uppercase;
+    }
+
+    #contact-content{
+        display: flex;
+        flex-direction:column;
+    }
+
+    .contact-entries{
+        color: #525558;
+font-size: 13px;
+font-weight: 400;
+line-height: 24px;
+    }
+
+    #links-content a :hover{
+        color:white;
+    }
+     .footer-class{
+        padding:0px;
+    }
     </style>
 </head>
 
@@ -415,9 +530,8 @@ margin-top: 40px;
                             <li> <a href="{{ site.baseurl }}/index.html">
                                         Home
                                     </a> </li>
-                            <li> <a href="{{ site.baseurl }}/features.html">
-                                        Features
-                                    </a> </li>
+                              <li> <a  href="{{site.baseurl }}/brand.html">Brand Ads</a> </li>
+                    <li> <a href="{{site.baseurl }}/seller.html">Seller Ads</a> </li>
                             <li> <a class="active" href="{{ site.baseurl }}/help-center.html">
                                         Help Center
                                     </a> </li>
@@ -472,49 +586,43 @@ margin-top: 40px;
        </div>
         
     </section>
-    <footer class="footer-1 bg-dark">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <h3>Snapdeal Ads</h3> </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="widget">
-                        <h6 class="title">Recent Posts</h6>
-                        <hr>
-                        <a href="/blog/ad-benefits.html">How Advertising Benefits New Sellers Grow Quickly</a>
-                        <a href="/blog/payments-go-online.html">Payments go online</a><br/>
-                <a href="/blog/seller-ads-live.html">Snapdeal Ads V2 is live for everyone</a><br/>
-                        <a href="/blog/minimum-budget-changes.html">Minimum budget changes </a><br/>
-                         <a href="/blog/help-videos-hindi.html">Help video in Hindi</a><br/>
-                        <a href="/blog/product-ads-effective.html">Make your products ads more effective </a>
-                         <a href="/blog/seller-ads-v2-preview.html">Preview of Our Seller Ads Platform V2</a>
-                        <br/> <a href="/blog/help-center-launch.html">Snapdeal Ads - Help Center Launch</a>
-                        <br/> <a href="/blog/heard-your-feedback.html">Sellers we’ve heard your feedback</a>
-                        <br/> <a href="/blog/measuring-the-roi.html">Measuring ROI</a>
-                        <br/> <a href="/blog/introducing-snapdeal-ads.html">Introducing Snapdeal Ads</a>
-                        <br/> </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="widget">
-                        <h6 class="title">Important Links</h6>
-                        <hr>
-                        <ul class="link-list recent-posts">
-                            <li> <a href="{{ site.baseurl }}/index.html">Home</a> </li>
-                            <li> <a href="{{ site.baseurl }}/features.html">Features</a> </li>
-                            <li> <a href="{{ site.baseurl }}/help-center.html">Help Center</a> </li>
-                            <li> <a href="{{ site.baseurl }}/faqs/ad-serving.html">FAQs</a> </li>
-                            <li> <a href="/blog.html">Blog</a> </li>
-                            <li> <a href="{{ site.baseurl }}/Termsofuse.html">Terms and Conditions </a> </li>
-                            <li> <a href="{{ site.baseurl }}/privacypolicy.html">Privacy Policy</a> </li>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6"> <span class="sub">&copy; Copyright 2016 - Snapdeal</span> </div>
-            </div>
-        </div> <a class="btn btn-sm fade-half back-to-top inner-link" href="#top">Top</a> </footer>
+ <footer class="footer-class" >
+            <div id="footer-block">
+<div id="footer-logo">
+    Snapdeal Ads
+</div>
+<div id="footer-about">
+    <div id="about-heading">About</div>
+    <div id="about-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.
+</div>
+</div>
+<div id="footer-links">
+    <div id="links-heading">Snapdeal Ads</div>
+    <div id="links-content">
+        <div id="links-column1">
+            <a href="{{site.baseurl }}/brand.html"><div class="links-entries">Brand Ads</div></a>
+            <a href="{{site.baseurl }}/seller.html"><div class="links-entries">Seller Ads
+</div></a>
+            <a href="{{site.baseurl }}/help-center.html"><div class="links-entries">Help Center</div></a>
+            <a href="{{site.baseurl }}/blog.html"><div class="links-entries">Blogs</div></a>
+        </div>
+        <div id="links-column2">
+            <a href="{{site.baseurl }}/Termsofuse.html"><div class="links-entries">Legal</div></a>
+            <a href="{{site.baseurl }}/privacypolicy.html"><div class="links-entries">Privacy</div></a>
+            <a href="{{site.baseurl }}/faqs/brand-serving.html"><div class="links-entries">Faqs</div></a>
+            <div class="links-entries">©Copyright 2016</div>
+        </div>
+    </div>
+</div>
+<div id="footer-contact">
+    <div id="contact-heading">Sales</div>
+    <div id="contact-content">
+        <div class="contact-entries">0-92126-92126</div>
+        <div class="contact-entries">adsales@snapdeal.com</div>
+    </div>
+</div>
+</div>
+            </footer>
     </div>
     <script src="{{ site.baseurl }}/js/jquery.min.js"></script>
     <script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>

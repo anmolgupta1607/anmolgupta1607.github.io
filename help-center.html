@@ -188,14 +188,17 @@ layout: default
     overflow: visible!important;
   }
 }
+  .footer-class{
+        padding:0px;
+    }
     </style>
     <script>
         $(document).ready(function() {
             $.ajax({
-                url: "/footer.html",
+                url: "/footer2.html",
                 type: 'GET',
                 success: function(data) {
-                    $(".footer-1").html(data);
+                    $(".footer-class").html(data);
                 }
             });
             $.ajax({
@@ -322,8 +325,9 @@ layout: default
             </div>
         </div>
     </div>
-    <footer class="footer-1 bg-dark">
-       </footer>
+       <footer class="footer-class" >
+              
+            </footer>
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

@@ -47,17 +47,20 @@ layout: default
     overflow: visible!important;
   }
 }
+  .footer-class{
+        padding:0px;
+    }
 
            </style>
             <script>
   $(document).ready(function() {
         $.ajax({
-                url: "/footer.html",
+                url: "/footer2.html",
                 type:'GET',
                 success: function(data){
                     console.log('--------------success')
                    
-                    $(".footer-1").html(data);
+                    $(".footer-class").html(data);
                 }
             });
         $.ajax({
@@ -192,7 +195,7 @@ provides for reasonable security practices and procedures
             </div>
          
           
-    <footer class="footer-1 bg-dark">
+    <footer class="footer-class" >
               
             </footer>
         </div>

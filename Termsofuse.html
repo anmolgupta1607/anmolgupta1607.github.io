@@ -55,6 +55,9 @@ layout: default
     overflow: visible!important;
   }
 }
+  .footer-class{
+        padding:0px;
+    }
        
         </style>
     
@@ -66,12 +69,12 @@ layout: default
   $(document).ready(function() {
         
         $.ajax({
-                url: "/footer.html",
+                url: "/footer2.html",
                 type:'GET',
                 success: function(data){
                     console.log('--------------success')
                    
-                    $(".footer-1").html(data);
+                    $(".footer-class").html(data);
                 }
             });
         $.ajax({
@@ -195,8 +198,8 @@ While we try to maintain the security of the Website, we do not guarantee that t
             </div>
        
           
-            <footer class="footer-1 bg-dark">
-            
+           <footer class="footer-class" >
+              
             </footer>
         </div>
         <script src="js/jquery.min.js"></script>

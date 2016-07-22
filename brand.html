@@ -1,0 +1,781 @@
+---
+layout: default
+---
+
+
+<!doctype html>
+<html lang="en">
+    <head>
+    
+
+        <meta charset="utf-8">
+        <title>Snapdeal Ads</title>
+        <meta http-equiv="pragma" content="no-cache" />
+        <meta name="viewport" content="width=device-width, initial-scale=0.9">
+       
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/themify-icons.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/flexslider.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/lightbox.min.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/ytplayer.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/theme-purple.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="shortcut icon" href="https://i3.sdlcdn.com/img/icons/favicon.ico" type="image/x-icon" />
+
+<link rel=icon type=image/ico href="img/favicon.ico" />
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600' rel='stylesheet' type='text/css'>
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+             <script type="text/javascript">
+    (function(e,t){var n=e.amplitude||{_q:[]};var r=t.createElement("script");r.type="text/javascript";
+      r.async=true;r.src="https://d24n15hnbwhuhn.cloudfront.net/libs/amplitude-2.9.1-min.gz.js";
+      r.onload=function(){e.amplitude.runQueuedFunctions()};var i=t.getElementsByTagName("script")[0];
+      i.parentNode.insertBefore(r,i);var s=function(){this._q=[];return this};function o(e){
+        s.prototype[e]=function(){this._q.push([e].concat(Array.prototype.slice.call(arguments,0)));
+          return this}}var a=["add","append","clearAll","prepend","set","setOnce","unset"];for(var c=0;c<a.length;c++){
+        o(a[c])}n.Identify=s;var u=["init","logEvent","logRevenue","setUserId","setUserProperties","setOptOut","setVersionName","setDomain","setDeviceId","setGlobalUserProperties","identify","clearUserProperties"];
+      function p(e){function t(t){e[t]=function(){e._q.push([t].concat(Array.prototype.slice.call(arguments,0)));
+      }}for(var n=0;n<u.length;n++){t(u[n])}}p(n);e.amplitude=n})(window,document);
+
+       amplitude.init("1de18a5af79a36376d3600b19da9f5aa", null, {
+
+    includeReferrer: true
+
+});
+  </script>
+           <style>
+           @media (max-width: 890px) {
+  .menu-hidden{
+    overflow: hidden!important;
+  }
+  .menu-visible{
+    overflow: visible!important;
+  }
+}
+
+           </style>
+            <script>
+  $(document).ready(function() {
+        $.ajax({
+                url: "/footer2.html",
+                type:'GET',
+                success: function(data){
+                    console.log('--------------success')
+                   
+                    $(".footer-class").html(data);
+                }
+            });
+        $.ajax({
+            url: "/header.html",
+            type: 'GET',
+            success: function(data) {
+                $(".nav-container").html(data);
+            }
+        });
+
+                $('#btn-new').click(function(){
+                $.ajax({
+        url: "//formspree.io/anmol.gupta@snapdeal.com", 
+        method: "POST",
+        data: {message: "hellobby"},
+        dataType: "json"
+    });
+    alert('Thanks for the email, we\'ll be in touch promptly.');
+            console.log('hello clicked');
+return false;
+        });
+        setTimeout(function () {
+        
+      var menuDropdown = $(".ti-menu")[0];      
+      menuDropdown.addEventListener('click', function () {
+          if($(".nav-bar").hasClass("menu-hidden")){
+            $(".nav-bar").removeClass("menu-hidden");
+            $(".nav-bar").addClass("menu-visible")
+          }else{
+            $(".nav-bar").removeClass("menu-visible");
+            $(".nav-bar").addClass("menu-hidden");
+          }
+      });
+      }, 400);
+            });
+</script>
+  <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
+
+     <script>
+        jssor_1_slider_init = function() {
+            
+    
+            
+            var jssor_1_options = {
+              $AutoPlay: true,
+              $SlideDuration: 800,
+              $SlideEasing: $Jease$.$OutQuint,
+
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $BulletNavigatorOptions: {
+                $Class: $JssorBulletNavigator$
+              }
+            };
+            
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+            
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizing
+            function ScaleSlider() {
+                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    refSize = Math.min(refSize, 1920);
+                    jssor_1_slider.$ScaleWidth(refSize);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+            ScaleSlider();
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            //responsive code end
+        };
+    </script>
+        <style>
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300');
+        /* jssor slider bullet navigator skin 05 css */
+        /*
+        .jssorb05 div           (normal)
+        .jssorb05 div:hover     (normal mouseover)
+        .jssorb05 .av           (active)
+        .jssorb05 .av:hover     (active mouseover)
+        .jssorb05 .dn           (mousedown)
+        */
+        .jssorb05 {
+            position: absolute;
+        }
+        .jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
+            position: absolute;
+            /* size of bullet elment */
+            width: 16px;
+            height: 16px;
+            background: url('img/b05.png') no-repeat;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .jssorb05 div { background-position: -7px -7px; }
+        .jssorb05 div:hover, .jssorb05 .av:hover { background-position: -37px -7px; }
+        .jssorb05 .av { background-position: -67px -7px; }
+        .jssorb05 .dn, .jssorb05 .dn:hover { background-position: -97px -7px; }
+
+        /* jssor slider arrow navigator skin 22 css */
+        /*
+        .jssora22l                  (normal)
+        .jssora22r                  (normal)
+        .jssora22l:hover            (normal mouseover)
+        .jssora22r:hover            (normal mouseover)
+        .jssora22l.jssora22ldn      (mousedown)
+        .jssora22r.jssora22rdn      (mousedown)
+        */
+        .jssora22l, .jssora22r {
+            display: block;
+            position: absolute;
+            /* size of arrow element */
+            width: 40px;
+            height: 58px;
+            cursor: pointer;
+            background: url('img/a22.png') center center no-repeat;
+            overflow: hidden;
+        }
+        .jssora22l { background-position: -10px -31px; }
+        .jssora22r { background-position: -70px -31px; }
+        .jssora22l:hover { background-position: -130px -31px; }
+        .jssora22r:hover { background-position: -190px -31px; }
+        .jssora22l.jssora22ldn { background-position: -250px -31px; }
+        .jssora22r.jssora22rdn { background-position: -310px -31px; }
+
+        #type-selection{
+            display: flex;
+            flex:1;
+         
+            height: 330px;
+background-color: #20a2f1;
+margin-top:50px;
+        }
+
+        .selection{
+            display: flex;
+            flex:1;
+            flex-direction:column;
+            border:1px solid #fff;
+        }
+
+     
+        .selection-image{
+
+        }
+
+        .selection-text{
+            display: flex;
+            flex-direction:column;
+
+        }
+
+        .selection-arrow{
+    margin: auto;
+    margin-top: -29px;
+        }
+
+        .selection-text1{
+            color: white;
+            font-size: 38px;
+font-weight: 700;
+line-height: 32px;
+text-shadow: 0.5px 0.9px 0 black;
+margin: auto;
+margin-top: 29px;
+
+        }
+
+        .selection-text2{
+            color: white;
+font-size: 18px;
+font-weight: 600;
+line-height: 32px;
+text-shadow: 0.5px 0.9px 0 black;
+margin: auto;
+        }
+
+       .section-heading{
+           /* font-size: 34px;*/
+/*font-weight: 600;*/
+line-height: 32px;
+margin: auto;
+/*color: #525558;*/
+margin-top: 59px;
+margin-bottom: 41px;
+display: flex;
+justify-content:center;
+ /*   margin-top: 0px;*/
+    color: #525558;
+    font-size: 32px;
+    font-weight: 300;
+
+        }
+
+.case{
+display: flex;
+margin-left: 100px;
+margin-right: 100px;
+
+        }
+
+        .case-block{
+            height: 319px;
+background-color: white;
+border: 1px solid #cecece;
+border-radius: 4px;
+display: flex;
+flex:1;
+flex-direction:column;
+margin-left: 10px;
+overflow: hidden;
+        }
+
+        .case-logo{
+            margin-top:40px;
+            margin-left: 40px;
+            margin-bottom: 30px;
+            height: 30px;
+        }
+
+        .case-content{
+            margin-left: 40px;
+            margin-right: 50px;
+            color: #525558;
+
+font-size: 16px;
+font-weight: 400;
+line-height: 28px;
+display: flex;
+flex:1;
+        }
+
+        .case-download{
+display: flex;
+    background-color: #20a2f1;
+    height: 30px;
+    /* background-image: -webkit-linear-gradient(85deg, #20a2f1 63%, #fff 23%); */
+    /* flex: 1; */
+    align-items: center;
+    /* padding-top: 25px; */
+        }
+
+
+
+        .download-img{
+margin-left: 40px;
+
+        }
+
+        .download-text{
+font-size: 14px;
+font-weight: 600;
+line-height: 28px;
+color: white;
+margin-left: 10px;
+        }
+
+        .download-arrow{
+margin-left: 5px;
+/*margin-top: -4px;*/
+        }
+
+        .associated{
+            height: 157px;
+            display: flex;
+margin-left: 100px;
+margin-right: 100px;
+border: 1px solid #cecece;
+border-radius: 4px;
+padding-right: 50px;
+        }
+
+        .associated-block{
+            display: flex;
+            flex:1;
+        }
+
+        .section-custom{
+            height: 562px;
+background-color: #fafafa;
+box-shadow: 0 1px 0 #eeeff2;
+margin-top: 70px;
+padding-top: 50px;
+        }
+            .test-area{
+        display: flex;
+    height: 315px;
+    justify-content: center;
+    margin-top: 60px;
+    }
+
+    .test-block{
+          display: flex;
+    flex-direction: column;
+    width: 331px;
+      
+
+
+    }
+
+    .test-first{
+    
+    background-color: #0A94F7;
+    
+       display: flex;
+    height: 73px;
+     
+
+
+    }
+
+    .test-second{
+        
+     
+    background-color: #fff;
+    font-size: 15px;
+    color: #333;
+    padding: 20px;
+    padding-top: 50px;
+    justify: ce;
+    text-align: center;
+    font-size: 16px;
+font-weight: 400;
+line-height: 28px;
+display: flex;
+flex:1;
+
+    }
+
+    .test-img{
+      display: flex;
+    align-items: flex-end;
+    margin-bottom: -30px;
+    z-index: 5;
+    padding-left: 20px;
+    padding-right: 20px;
+    }
+
+    .test-first-block{
+          display: flex;
+    flex-direction: column;
+    align-self: center;
+    }
+    .test-author{
+      color: white;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+
+    .test-company{
+      color: white;
+      font-size: 15px;
+      text-align: center;
+    }
+
+    .double-quotes{
+      font-size: 20px;
+          margin-top: -10px;
+
+
+    }
+
+    .form-block{
+        display: flex;
+        flex-direction:column;
+    }
+
+    .form-row{
+        display: flex;
+        
+    }
+    input[type="text"], input[type="email"], input[type="password"]{
+        background-color: white !important;
+    }
+
+    .footer-class{
+        padding:0px;
+    }
+
+    #brand-banner{
+background-image: url(img/brand-banner.png);
+    background-size: 100% 300px;
+    height: 300px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    padding-left: 285px;
+    }
+    #banner-title{
+    color: white;
+    width: 414px;
+    font-size: 68px;
+    font-weight: 300;
+    line-height: 80px;
+    }
+
+    #banner-subtitle{
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 51px;
+    }
+
+    #power-container{
+      display: flex;
+      justify-content:center;
+      margin-top: 85px;
+    }
+
+    .power-list{
+      display: flex;
+      flex-direction:column;
+    }
+    .power-block{
+      display: flex;
+      margin-top: 60px;
+    }
+
+    .power-text{
+      display: flex;
+      flex-direction:column;
+      width: 230px;
+      margin-left: 32px;
+    }
+
+    .power-title{
+color: #333;
+font-size: 20px;
+font-weight: 600;
+line-height: 28px;
+    }
+
+    .power-subtitle{
+    color: #555;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 26px;
+    margin-top: 10px;
+    }
+
+    #power-center{
+      padding-left: 70px;
+      padding-right: 70px;
+    }
+
+#advantages-container{
+  height: 770px;
+  background-color: #20a2f1;
+  margin-top: 90px;
+  display: flex;
+ 
+  justify-content:center;
+}
+
+#advt-list{
+  display: flex;
+  flex-direction:column;
+  padding-top: 165px;
+
+}
+
+.advt-block{
+  color: white;
+font-size: 18px;
+font-weight: 600;
+line-height: 54px;
+display: flex;
+    border-bottom: 1px solid #90d1f8;
+}
+
+#advt-title{
+  color: white;
+font-size: 32px;
+    font-weight: 400;
+line-height: 32px;
+}
+
+#advt-img{
+ padding-top: 105px;
+padding-right: 120px;
+}
+
+.advt-tick{
+padding-right: 9px;
+}
+
+    #try {
+    width: 0px;
+    height: 0px;
+    /* background-color: #000; */
+    border-bottom: 40px solid #20a2f1;
+    border-right: 490px solid transparent;
+}
+
+.download-content{
+    display: flex;
+    margin-top: -30px;
+}
+    </style>
+    </head>
+    <body style="padding:0px; margin:0px;">
+        <div class="nav-container" style="position:relative;z-index:4" >
+
+
+     
+          </div>
+          <div id="brand-banner">
+                        <div id="banner-title">Introducing
+Promo Ads</div>
+            <div id="banner-subtitle">Reach millions of active buyers every day</div>
+        </div>
+        <div class="section-heading">Powerful Capabilities</div>
+        <div id="power-container">
+          <div class="power-list">
+            <div class="power-block" style="margin-top:0px">
+              <div class="power-icon"><img src="img/power1.png"></div>
+              <div class="power-text">
+                <div class="power-title">Varied Ad Formats</div>
+                <div class="power-subtitle">Create greater engagement through varied ad formats - Banner, Story etc.</div>
+              </div>
+            </div>
+            <div class="power-block">
+              <div class="power-icon"><img src="img/power2.png"></div>
+              <div class="power-text">
+                <div class="power-title">Segment Targeting </div>
+                <div class="power-subtitle">Target audience based on purchase intent, geographic location, time of the day</div>
+              </div>
+            </div>
+            <div class="power-block">
+              <div class="power-icon"><img src="img/power3.png"></div>
+              <div class="power-text">
+                <div class="power-title">Efficient Self-Serve </div>
+                <div class="power-subtitle">Use self-serve to manage and monitor multiple campaigns</div>
+              </div>
+            </div>
+
+          </div>
+          <div id="power-center"><img src="img/iphone1.png"></div>
+                   <div class="power-list">
+            <div class="power-block" style="margin-top:0px">
+              <div class="power-icon" ><img src="img/power4.png"></div>
+              <div class="power-text">
+                <div class="power-title">Multiple Billing Options </div>
+                <div class="power-subtitle">Pay in suitable options CPM,  CPD</div>
+              </div>
+            </div>
+            <div class="power-block">
+              <div class="power-icon"><img src="img/power5.png"></div>
+              <div class="power-text">
+                <div class="power-title">Redirection Flexibility </div>
+                <div class="power-subtitle">Link visitors to your digital store, product page etc.</div>
+              </div>
+            </div>
+            <div class="power-block">
+              <div class="power-icon"><img src="img/power6.png"></div>
+              <div class="power-text">
+                <div class="power-title">Numerous Ad Spaces </div>
+                <div class="power-subtitle">Strategically choose ad spaces across web and mobile 
+platforms.</div>
+              </div>
+            </div>
+
+          </div>
+
+
+        </div>
+
+
+        <div id="advantages-container">
+          <div id="advt-img"><img src="img/iphone2.png"></div>
+          <div id="advt-list">
+            <div id="advt-title">With Snapdeal get Advantages</div>
+            <div class="advt-block" style=" margin-top: 45px;"><div class="advt-tick"><img src="img/tick-blue.png"></div><div>Trusted commerce platform in India.</div></div>
+            <div class="advt-block"><div class="advt-tick"><img src="img/tick-blue.png"></div><div>12 MN Active monthly users</div></div>
+            <div class="advt-block"><div class="advt-tick"><img src="img/tick-blue.png"></div><div>Digital estate of more than 50 different ad spaces</div></div>
+            <div class="advt-block"><div class="advt-tick"><img src="img/tick-blue.png"></div><div>Strongest reach in tier 2 and 3 cities</div></div>
+          </div>
+        </div>
+                <div class="section-heading">Trusted Brands</div>
+        <div class="associated">
+            <div class="associated-block"><div style="margin:auto"><img style="max-width:90%" src="img/dabur.png"></div></div>
+            <div class="associated-block"><div style="margin:auto"><img style="max-width:90%" src="img/p&g.png"></div></div>
+            <div class="associated-block"><div style="margin:auto"><img style="max-width:90%" src="img/microsoft.png"></div></div>
+            <div class="associated-block"><div style="margin:auto"><img style="max-width:90%" src="img/intex.png"></div></div>
+            <div class="associated-block"><div style="margin:auto"><img style="max-width:90%" src="img/intel.png"></div></div>
+            <div class="associated-block"><div style="margin:auto"><img style="max-width:90%" src="img/hindustan.png"></div></div>
+
+        </div>
+
+     <div class="section-heading">Case Study</div>
+     <div class="case">
+         <div class="case-block">
+             <div class="case-logo"><img src="img/micromax.png"></div>
+             <div class="case-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+
+</div>
+<div id="try"></div>
+             <div class="case-download">
+             <div class="download-content">
+                 <div class="download-img"><img src="img/export.png"></div>
+                 <a href="http://www.adobe.com/content/dam/Adobe/en/devnet/acrobat/pdfs/pdf_open_parameters.pdf" target="_blank" download><div class="download-text">Download</div></a>
+                 <div class="download-arrow"><img src="img/arrow-export.png"></div>
+             </div>
+             </div>
+         </div>
+         <div class="case-block">
+             <div class="case-logo"><img src="img/lenovo.png"></div>
+             <div class="case-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+</div>
+<div id="try"></div>
+             <div class="case-download">
+             <div class="download-content">
+                 <div class="download-img"><img src="img/export.png"></div>
+                 <a href="http://www.adobe.com/content/dam/Adobe/en/devnet/acrobat/pdfs/pdf_open_parameters.pdf" target="_blank" download><div class="download-text">Download</div></a>
+                 <div class="download-arrow"><img src="img/arrow-export.png"></div>
+             </div>
+         </div>
+         </div>
+         <div class="case-block">
+             <div class="case-logo"><img src="img/samsung.png"></div>
+             <div class="case-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+</div>
+             <div id="try"></div>
+             <div class="case-download">
+             <div class="download-content">
+                 <div class="download-img"><img src="img/export.png"></div>
+                 <a href="http://www.adobe.com/content/dam/Adobe/en/devnet/acrobat/pdfs/pdf_open_parameters.pdf" target="_blank" download><div class="download-text">Download</div></a>
+                 <div class="download-arrow"><img src="img/arrow-export.png"></div>
+             </div>
+         </div>
+         </div>
+     </div>
+        
+
+
+              
+      
+         
+ <div style=" text-align:center;padding-top:60px;padding-bottom:50px;   background-image: url(img/video-bg.jpg);height:462px;margin-top:60px">
+          <div style="font-size: 32px;
+    font-weight: 300;
+line-height: 32px;
+margin:auto;
+color:white;
+margin-bottom:50px">Contact Us</div>
+          <div style="width:620px;    margin: auto;">
+                 <form  
+                           method="POST">
+                           <div class="form-block">
+
+                          <!--  <input  type="hidden" name="_next" value="indexv2.html" /> -->
+                           <input type="hidden" name="_subject" value="New submission!" />
+                             <div class="form-row">
+                           <input style="width:300px;border: 1px solid #cecece;
+border-radius: 4px;" type="text" class="validate-required" name="name" id="name1" placeholder="Name" required />
+                           <input style="width:300px;border: 1px solid #cecece;
+border-radius: 4px;;margin-left:20px" type="email" class="validate-required validate-email" id="email1"  name="_replyto" placeholder="E-mail ID" required />
+                            </div>
+                            <div class="form-row">
+                           <input style="width:300px;border: 1px solid #cecece;
+border-radius: 4px;" type="text" class="validate-required" name="mobile" id="mobile1" placeholder="Mobile No" required />
+                           <input style="width:300px;margin-left:20px;border: 1px solid #cecece;
+border-radius: 4px;" type="text" class="validate-required" name="company" id="company1" placeholder="Company Name" required />
+                            </div>
+                            <div>
+                           <button id="btn-new" style="width: 240px;
+height: 52px;
+background-color: #20a2f1;font-size: 16px;
+font-weight: 700;
+line-height: 23px;
+text-transform: uppercase;
+color:white;
+border: none;
+    border-radius: 2px !important;" type="submit">SUBMIT</button>
+                           </div>
+                           </div>
+                       </form> 
+                       </div>
+          </div>
+    <footer class="footer-class" >
+              
+            </footer>
+        </div>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/flickr.js"></script>
+        <script src="js/flexslider.min.js"></script>
+        <script src="js/lightbox.min.js"></script>
+        <script src="js/masonry.min.js"></script>
+        <script src="js/twitterfetcher.min.js"></script>
+        <script src="js/spectragram.min.js"></script>
+        <script src="js/ytplayer.min.js"></script>
+        <script src="js/countdown.min.js"></script>
+        <script src="js/smooth-scroll.min.js"></script>
+        <script src="js/parallax.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ 
+  ga('create', 'UA-72149438-4', 'auto');
+  ga('send', 'pageview');
+ 
+</script>
+
+</html>

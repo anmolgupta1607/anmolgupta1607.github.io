@@ -19,9 +19,9 @@ layout: default
     <link href="{{ site.baseurl }}/css/custom.css" rel="stylesheet" type="text/css" media="all" />
     <link rel="shortcut icon" href="https://i3.sdlcdn.com/img/icons/favicon.ico" type="image/x-icon" />
     <link rel=icon type=image/ico href="{{ site.baseurl }}/img/favicon.ico" />
-    <link href='https://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,300italic,300,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-     <script type="text/javascript">
+      <script type="text/javascript">
     (function(e,t){var n=e.amplitude||{_q:[]};var r=t.createElement("script");r.type="text/javascript";
       r.async=true;r.src="https://d24n15hnbwhuhn.cloudfront.net/libs/amplitude-2.9.1-min.gz.js";
       r.onload=function(){e.amplitude.runQueuedFunctions()};var i=t.getElementsByTagName("script")[0];
@@ -67,6 +67,52 @@ layout: default
              }
             });
 
+              $('#brand-nav').click(function(){
+                window.location.href = "{{ site.baseurl}}/faqs/brand-serving.html";
+                $('#brand-nav').css({"background":"#20a2f1 url({{ site.baseurl }}/img/brand-nav.png) no-repeat ","background-size":"100% 210px"});
+                $('#seller-nav').css({"background":"#eee url({{ site.baseurl }}/img/seller-nav.png) no-repeat ","background-size":"100% 210px"});
+                $('#brand-img').css("display","initial");
+                $('#seller-img').css("display","none");
+              });
+              $('#seller-nav').click(function(){
+                window.location.href = "{{ site.baseurl}}/faqs/ad-serving.html";
+                $('#seller-nav').css({"background":"#20a2f1 url({{ site.baseurl }}/img/seller-nav.png) no-repeat ","background-size":"100% 210px"});
+                $('#brand-nav').css({"background":"#eee url({{ site.baseurl }}/img/brand-nav.png) no-repeat ","background-size":"100% 210px"});
+                $('#seller-img').css("display","initial");
+                $('#brand-img').css("display","none");
+              });
+
+              $(".topic-block").hover(function(){
+                var idx=$(this).attr('id');
+                console.log(idx);
+                var image=$("#"+idx+" img").attr('src');
+                console.log(image);
+                image=image.substr(0,7)+".png";
+                $("#"+idx+" img").attr('src',image);
+                console.log( $("#"+idx).children());
+
+                $("#"+idx).children().css("color","#419bf9");
+
+              },function() {
+               var idx=$(this).attr('id');
+                console.log(idx);
+                    var start=window.location.pathname.lastIndexOf('/')+1;
+            var end=window.location.pathname.indexOf('.');
+            console.log(start,end);
+            var identifier=window.location.pathname.substr(start,end-start);
+            console.log('identifier is',identifier);
+            console.log('idx is',idx);
+            if(idx!=identifier){
+                var image=$("#"+idx+" img").attr('src');
+                console.log(image);
+                image=image.substr(0,7)+".2.png";
+                $("#"+idx+" img").attr('src',image);
+                console.log( $("#"+idx).children());
+
+                $("#"+idx).children().css("color","#777777");
+              }
+  });
+
         setTimeout(function() {
           /*  var path = window.location.pathname;
             var xpath = path.substring(path.lastIndexOf("/") + 1, path.indexOf(".html"));
@@ -79,16 +125,13 @@ layout: default
             console.log(start,end);
             var identifier=window.location.pathname.substr(start,end-start);
             console.log('-----',$('#'+identifier));
-            $('#'+identifier).css("background-color","#f7f7f7");
-            if(window.location.hash) {
-                $(window.location.hash).click();
-            } else {
-                $('#getting-started-with-snapdeal-ads').click();
-            }
+            if(identifier=='brand-serving')
+              $('#video-section').css("display","none");
+      $('#'+identifier).css({"background-color":"#419bf9","color":"white"});
+
+          
         }, 5);
-          setTimeout(function() {
-                $('.nav-container #blogs').addClass('menu-active');
-            }, 100);
+
     });
     </script>
 
@@ -189,24 +232,23 @@ line-height: 32px;
 margin-top:40px;
    }
 
-   .blog-section-subheading{
-    font-family: Helvetica;
-    color: #333333;
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 26px;
-    margin:0px;
+  .blog-section-subheading{
+
+    color: #555;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0px;
     margin-top: 30px;
+    line-height: 21px;
    }
 
    .blog-content{
-    font-family: Georgia;
-    color: #333333;
+     font-family: Georgia;
+    color: #333;
     font-size: 16px;
     font-weight: 400;
-    line-height: 26px;
-    margin-top: 10px;
-    margin-bottom: 30px;
+    line-height: 22px;
+    margin-top: 6px;
    }
 
    .blog-image{
@@ -220,17 +262,14 @@ margin-top:40px;
      webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-        width: 280px;
-    height: 140px;
-    border: 1px solid #e9e9e9;
-
    }
 
-   .blog-image-video:hover{
-    border: 1px solid #0a94f7;
+   .faq-image{
+     webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+
    }
-
-
    .table{
     margin-top: 30px;
    }
@@ -265,27 +304,271 @@ margin-top:40px;
     
     padding: 0px 3px;
    }
-   .summary-title:hover{
-  color:#1e81f7;
-   }
-   .more_blog{
-    font-weight: normal !important;
+
+
+    .nav-text{
+      font-size:13px;
+          font-size: 14px;
+    line-height: 30px;
+    color: #777777;
+        font-weight: normal;
+    }
+     .footer-class{
+        padding:0px;
+    }
+        #footer-block{
+        display: flex;
+        flex:1;
+        height: 231px;
+background-color: black;
+box-shadow: 0 1px 0 #eeeff2;
+padding-left: 100px;
+padding-right: 100px;
+padding-top: 50px;
+
+    }
+
+    #footer-logo{
+color: #525558;
+
+font-size: 26px;
+font-weight: 600;
+line-height: 32px;
+    }
+
+    #footer-about{
+        margin-left: 60px;
+        display: flex;
+        flex-direction:column;
+        width: 251px;
+    }
+
+    #about-heading{
+color: #525558;
+font-size: 14px;
+font-weight: 600;
+line-height: 32px;
+text-transform: uppercase;
+    }
+
+    #about-content{
+color: #525558;
+font-size: 13px;
+font-weight: 400;
+line-height: 22px;
+    }
+
+    #footer-links{
+                margin-left: 80px;
+        display: flex;
+        flex-direction:column;
+    
+    }
+
+    #links-heading{
+color: #525558;
+font-size: 14px;
+font-weight: 600;
+line-height: 32px;
+text-transform: uppercase;
+    }
+
+    #links-column1{
+        display: flex;
+        flex-direction:column;
+    }
+
+    #links-column2{
+        margin-left:60px;
+        display: flex;
+        flex-direction:column;
+    }
+
+    .links-entries{
+color: #525558;
+
+font-size: 13px;
+font-weight: 400;
+line-height: 24px;
+    }
+
+    #links-content{
+        display: flex;
+        width:250px;
+
+    }
+
+    #footer-contact{
+        display: flex;
+        flex-direction:column;
+        margin-left: 80px;
+    }
+
+    #contact-heading{
+        color: #525558;
+font-size: 14px;
+font-weight: 600;
+line-height: 32px;
+text-transform: uppercase;
+    }
+
+    #contact-content{
+        display: flex;
+        flex-direction:column;
+    }
+
+    .contact-entries{
+        color: #525558;
+font-size: 13px;
+font-weight: 400;
+line-height: 24px;
+    }
+
+    #faq-heading-v2{
+      height: 130px;
+      color: #525558;
+font-size: 32px;
+font-weight: 300;
+line-height: 100px;
+margin-top: 54px;
+align-items: center;
+    justify-content: center;
+    display: flex;
+
+    }
+
+    #type-nav{
+display: flex;
+height: 140px;
+cursor: pointer;
+    }
+
+    #brand-nav{
+background:#20a2f1 url("{{ site.baseurl }}/img/brand-nav.png") no-repeat ;
+    background-size: 100% 130px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    border: 1px solid white;
+
+    }
+
+    #seller-nav{
+background:#eee url("{{ site.baseurl }}/img/seller-nav.png") no-repeat;
+    background-size: 100% 130px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    border: 1px solid white;
+  
+    }
+
+  #faq-container{
+       display: flex;
+       flex-direction:column;
+    width: 920px;
+    background-color: white;
+    min-height: 600px;
+    margin: auto;
+    margin-top: 40px;
    }
 
-    a:hover{
-        text-decoration: underline !important;
-        transition: color 0.4s ease;
+   #faq-content-columns{
+display: flex;
    }
 
-   .post-title a:hover{
-    text-decoration: none !important;
-    transition: color 0.4s ease !important;
+   #faq-left-nav{
+    display: flex;
+    flex-direction:column;
+    
+    width: 200px;
+    min-width: 200px;
+    background-color:  #fff;
+    /*border-right: 1px solid #d5d5d5;*/
+
    }
-   .menu a:hover{
-       text-decoration: none !important;
+   #faq-categories{
+    height: 50px;
+    color: #525558;
+
+font-size: 24px;
+font-weight: 400;
+line-height: 32px;
+   }
+   #topics-list{
+    display: flex;
+    flex-direction:column;
+      /*  border: 1px solid #F1F1F1;*/
    }
 
-   .video-block-title a{
+   .topic-block{
+    display: flex;
+    align-items:center;
+    padding-left:10px;
+    height:40px;
+    color: #999;
+
+    font-size: 14px;
+font-weight: 400;
+line-height: 54px;
+   }
+     .topic-block:hover{
+    background-color: #419bf9;
+    color: white;
+   }
+
+   #page-title{
+        font-size: 26px;
+    font-family: Helvetica;
+    line-height: 48px;
+    margin-top: 24px;
+    color: #333333;
+    border-bottom: 1px solid #d5d5d5;
+    margin-bottom: 30px;
+}
+   
+
+   #page-content{
+    margin-top:0px;
+     margin-bottom: 40px;
+
+   }
+
+   #faq-content{
+    display: flex;
+    flex-direction:column;
+    padding-left: 120px;
+    padding-right: 30px;
+   }
+
+   .faq-line{
+    border-width: 1px;
+border-color:  #eeeeee;
+border-style: solid;
+
+margin-top: 40px;
+   }
+
+   .faq-video-heading{
+    color:#999999;
+        margin-top: 40px;
+    font-weight: 800;
+   }
+
+   .faq-video-list{
+       display: flex;
+       margin:auto;
+    margin-bottom: 40px;
+    margin-top: 40px;
+
+   }
+
+   .faq-video-block{
+    display: flex;
+    flex-direction:column;
+   }
+
+   .faq-video-title{
     font-family: Helvetica;
     color: #333333;
     font-size: 15px;
@@ -293,45 +576,88 @@ margin-top:40px;
     line-height: 22px;
     margin-top: 10px;
    }
-    .video-block-title a:hover{
 
-     color:#1e81f7;
-      text-decoration: none !important;
-      transition: color 0.4s ease !important;
-     
+   .faq-video-title a{
+    color: #333333;
    }
-      #page-title{
-    font-size: 26px;
-    font-family: Helvetica;
-    line-height: 48px;
-  
-    color: #0A94F7;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 300 !important;
-    margin-bottom: 30px;
-}
-#header {
-        padding-top: 50px;
-        padding-bottom: 30px;
-    }
+
+   .faq-video-title a:hover{
+    color: #1e81f7;
+   }
+    .faq-image{
+        border: 1px solid #E9E9E9;
+   }
+
+   .faq-image:hover{
+    border: 1px solid;
+   }
+
+    .faq-video-language{
+ font-family: Helvetica;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+   }
+   .faq-video-block sup{
+        font-weight: 800 !important;
+    font-size: 9px;
     
-    #header .title {
+    padding: 0px 3px;
+   }
+       #header .title {
         color: #0a94f7;
         font-size: 30px;
         font-weight: 300;
         line-height: 25px;
         text-transform: uppercase;
+            margin-top: 100px;
     }
-    
-    #header .sub-title {
-        color: rgb(102, 102, 102) !important;
-        font-size: 17px;
-        font-weight: 400;
-        line-height: 25px;
-        text-align: center;
+
+    .page-title-v2{
+      color: #525558;
+font-size: 26px;
+font-weight: 300;
+line-height: 32px;
     }
-           #footer-block{
+
+    #video-section{
+height: 516px;
+background-color: #fafafa;
+box-shadow: 0 1px 0 #eeeff2;
+padding-top: 60px;
+    padding-top: 60px;
+    display: flex;
+    /* margin: auto; */
+    /* justify-content: center; */
+    flex-direction: column;
+
+    }
+        .image-text{
+display: flex;
+    flex: 1;
+    text-shadow: 0.5px 0.9px 0 black;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 32px;
+    /* height: 210px; */
+    justify-content: center;
+    /* margin: auto; */
+
+    }
+
+    .arrow-contain{
+ 
+    /* align-items: flex-start; */
+    height: 10px;
+    /* justify-content: center; */
+    /* display: flex; */
+    margin: auto;
+    }
+              #footer-block{
         display: flex;
         flex:1;
         height: 231px;
@@ -443,10 +769,8 @@ line-height: 24px;
     #links-content a :hover{
         color:white;
     }
-     .footer-class{
-        padding:0px;
-    }
     </style>
+
 </head>
 
 <body>
@@ -469,10 +793,10 @@ line-height: 24px;
                             <li> <a href="{{ site.baseurl }}/help-center.html">
                                         Help Center
                                     </a> </li>
-                            <li> <a href="{{ site.baseurl }}/faqs/ad-serving.html">
+                            <li> <a class="active" href="{{ site.baseurl }}/faqs/ad-serving.html">
                                         FAQs
                                     </a> </li>
-                            <li> <a class="active" href="{{ site.baseurl }}/blog.html">
+                            <li> <a  href="{{ site.baseurl }}/blog.html">
                                         Blog
                                     </a> </li>
                             <li> <a class="btn" href="{{ site.baseurl }}/contact.html">GET IN TOUCH</a> </li>
@@ -482,143 +806,71 @@ line-height: 24px;
             </div>
         </nav>
     </div>
-     <div class="container" style="    margin-top: 50px;
-    
-    width: 100%;">
-            <div class="row">
-                <div class="col-sm-12 text-center">
-                    <div id="header">
-                        <h1 class="title">BLOGS</h1>
-                         <hr style="width:30px;margin:auto;    border: 1px solid #0a94f7;"/>
-                        <p class="sub-title" style="margin-bottom:0px;display:none">Here what we offer</p>
-                    </div>
+    <div id="faq-heading-v2">Frequently Asked Questions</div>
+    <div id="type-nav">
+      <div id="brand-nav"><div class="image-text">I am a Brand</div><div class="arrow-contain"><img id="brand-img" style="margin-top:-51px" src="{{ site.baseurl }}/img/arrow_up.png"></div></div>
+      <div id="seller-nav"><div class="image-text">I am a Seller</div><div class="arrow-contain"><img id="seller-img" style="margin-top:-51px;display:none" src="{{ site.baseurl }}/img/arrow_up.png"></div></div>
+    </div>
 
-                </div>
-            </div>
-        </div>
-    <section style="padding-top: 33px;">
-     
-        <div class="container" style="    padding: 0px;
-    width: 1024px;
-    display: flex;">
-            <div class="row" style="    margin: 0px;
-    
-        width: 702px;">
-                <div class="col-md-9  mb-xs-24" style="    padding: 0px;
-    width: 702px;">
-
-                   
-                         {% assign sorted_pages = (site.pages | sort: 'weight' reverse) %}
+       <div id="faq-container" >
+       <div id="faq-content-columns">
+       <div id="faq-left-nav">
+        <div id="faq-categories">FAQ Sections</div>
+        <div id="topics-list">
+             {% assign sorted_pages = (site.pages | sort: 'weight' reverse) %}
                       {% for page in sorted_pages reversed %}
-  {% if page.categories contains 'blogsummary' %}
-            <div class="row" style="    margin: 0px;
-    
-        width: 100%;display:flex;">
-                <div class="col-md-9  mb-xs-24" style="    padding: 0px;
-    width: 100%;">
-                
-                        <div class="post-title"> <!-- <span class="label">{{page.dated}}</span> -->
-                           <a href="{{ page.posturl }}"> <h4  class="summary-title" style="   font-size: 20px;
-    font-family: Helvetica;
-    font-weight: 700;
-    line-height: 10px;
-        transition: color 0.9s ease;">{{page.title}}</h4></a> </div>
-                      <!--   <ul class="post-meta">
-                            <li> <i class="ti-user"></i> <span>Written by
-                                            <a href="#">{{page.author}}</a>
-                                        </span> </li>
-                        </ul> -->
-                        <hr style="    margin: 0px;
-    padding: 0px;
-    margin-top: 3px;
-    margin-bottom:6px;
-    width:100%;
-    border-color: #f5f5f5;"
+  {% if page.categories contains 'faqsbrand' %}
+<a href="{{ page.url }}"><div class="topic-block" id="{{ page.idx }}">{{ page.short }}</div></a>
 
-    >
-    <div id="blog-info" style="    display: flex;">
-    <div><img src="{{page.image}}" width="32px" height="33px" style="margin-top: 6px;"></div>
-    <div style="    margin-left: 10px;">
-        <div style="   
-       font-size: 12px;
-    font-family: Helvetica;
-    font-weight: 400;
-    height: 18px;">{{page.author}}</div>
-        <div style="    font-family: Helvetica;
-    color: #999999;
-    font-size: 11px;
-    font-weight: 400;
-    line-height: 21px;">{{page.dated}}</div>
-    </div>
-  
-    </div>
-    <div  class="blog-content">
-     {{ page.description }}
-     <a class="more_blog" href="{{page.posturl}}">(more)</a>
-     </div> 
-  <!-- <a class="btn" href="{{ page.posturl }}" style="text-transform:uppercase;line-height:3.3">
-    Read more
-
-  </a> --> </div>
-                  </div>
-     {% endif %}
-{% endfor %} </div>
-                    <hr style="    padding: 0px;
-    margin: 0px;
-    border-top: 5px solid #ccc;display:none"> </div>
-                <div class="col-md-3  hidden-sm" style="    padding: 0px;
-    margin-left: 40px;
-    display: flex;
-    flex: 1;">
-                    <div class="widget">
-
-                 
-                      <h6 class="title" style="   font-family: Helvetica;
-    color: #333333;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 27px;
-    margin-bottom: 0px;
-    letter-spacing: 0px;
-    text-transform: none;"> Related Videos</h6>
-                     <div id="videos-list">
-                    <div class="video-block"><a href="/videos.html#create-campaign-v2"><img class="blog-image-video" src="/img/Create campaign thumbnail.png"></a>
-                    <div class="video-block-title"><a href="/videos.html#create-campaign-v2">Create Campaign</a></div>
-                    <div class="video-block-language">English <sup> . </sup> (3:31) Min.</div>
-                    </div>
-                      <div class="video-block"><a href="/videos.html#view-and-manage-campaign-v2"><img class="blog-image-video"  src="/img/view campaigns thumbnail.png"></a>
-                       <div class="video-block-title"><a href="/videos.html#view-and-manage-campaign-v2">View and manage campaigns</a></div>
-                       <div class="video-block-language">English <sup> . </sup> (1:49) Min.</div></div>
-                        <div class="video-block"><a href="/videos.html#campaign-reports-v2"><img class="blog-image-video"  src="/img/Campaign reports thumbnail .png"></a>
-                         <div class="video-block-title"><a href="/videos.html#campaign-reports-v2">Track campaign performance</a></div>
-                         <div class="video-block-language">English <sup> . </sup> (1:05) Min.</div></div>
-                          <div class="video-block"><a href="/videos.html#add-funds-and-view-transactions-advance"><img class="blog-image-video"  src="/img/Add funds thumbnail.png"></a>
-                           <div class="video-block-title"><a href="/videos.html#add-funds-and-view-transactions-advance">Add funds and view transaction history</a></div>
-                           <div class="video-block-language">English <sup> . </sup> (2:03) Min.</div></div>
-                            <div class="video-block"><a href="/videos.html#create-campaign-v2-hindi"><img class="blog-image-video"  src="/img/Create campaign thumbnail.png"></a>
-                             <div class="video-block-title"><a href="/videos.html#create-campaign-v2-hindi">Create Campaign </a> </div>
-                             <div class="video-block-language">Hindi <sup> . </sup> (4:09) Min.</div></div>
-                              <div class="video-block"><a href="/videos.html#view-and-manage-campaign-v2-hindi"><img class="blog-image-video"  src="/img/view campaigns thumbnail.png"></a>
-                               <div class="video-block-title"><a href="/videos.html#view-and-manage-campaign-v2-hindi">View and manage campaigns</a></div>
-                               <div class="video-block-language">Hindi <sup> . </sup> (2:20) Min.</div></div>
-                                <div class="video-block"><a href="/videos.html#campaign-reports-v2-hindi"><img class="blog-image-video"  src="/img/Campaign reports thumbnail .png"></a>
-                                 <div class="video-block-title"><a href="/videos.html#campaign-reports-v2-hindi">Track campaign performance</a> </div>
-                                 <div class="video-block-language">Hindi <sup> . </sup> (1:10) Min.</div></div>
-                                  <div class="video-block"><a href="/videos.html#add-funds-and-view-transactions-advance-hindi"><img class="blog-image-video"  src="/img/Add funds thumbnail.png"></a>
-                                   <div class="video-block-title"><a href="/videos.html#add-funds-and-view-transactions-advance-hindi">Add funds and view transaction history</a></div>
-                                   <div class="video-block-language">Hindi <sup> . </sup> (2:43) Min.</div></div>
-
-
-                     </div>
-                     <div id="toggle-button-videos">Show more...</div>
-                   
-                       
-                    </div>
-                </div>
-            </div>
+  {% endif %}
+{% endfor %}
         </div>
-    </section>
-    <footer class="footer-class" >
+       </div>
+      <div id="faq-content">
+        
+        <div id="page-content">
+       <div class="page-title-v2"> {{page.short}} </div>
+          {{content}}
+        
+
+        </div>
+
+
+      </div>
+      </div>
+      </div>
+      <div id="video-section">
+ <div style="  color: #525558;
+font-size: 34px;
+font-weight: 600;
+line-height: 32px;
+margin:auto;">
+          Related Videos
+      </div> 
+
+
+
+
+<div class="faq-video-list" style="margin-bottom:90px">
+  <div class="faq-video-block">
+  <div class="faq-video-image"><a href="{{page.videoImageLinkEnglish}}"><img class="faq-image" src="{{page.videoImageSrcEnglish}}"></a></div>
+  <div class="faq-video-title"><a href="{{page.videoImageLinkEnglish}}">{{page.videoTitleEnglish}}</a></div>
+  <div class="faq-video-language">{{page.videoLanguageEnglish}} <sup> . </sup> {{page.videoDurationEnglish}}</div>
+
+  </div>
+
+  <div class="faq-video-block" style="margin-left:60px">
+  <div class="faq-video-image"><a href="{{page.videoImageLinkHindi}}"><img class="faq-image" src="{{page.videoImageSrcHindi}}"></a></div>
+  <div class="faq-video-title"><a href="{{page.videoImageLinkHindi}}">{{page.videoTitleHindi}}</a></div>
+  <div class="faq-video-language">{{page.videoLanguageHindi}}<sup> . </sup> {{page.videoDurationHindi}}</div>
+
+  </div>
+
+</div>
+</div>
+   
+
+ <footer class="footer-class" >
             <div id="footer-block">
 <div id="footer-logo">
     Snapdeal Ads
@@ -655,30 +907,5 @@ line-height: 24px;
 </div>
 </div>
             </footer>
-    </div>
-    <script src="{{ site.baseurl }}/js/jquery.min.js"></script>
-    <script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
-    <script src="{{ site.baseurl }}/js/flickr.js"></script>
-    <script src="{{ site.baseurl }}/js/flexslider.min.js"></script>
-    <script src="{{ site.baseurl }}/js/lightbox.min.js"></script>
-    <script src="{{ site.baseurl }}/js/masonry.min.js"></script>
-    <script src="{{ site.baseurl }}/js/twitterfetcher.min.js"></script>
-    <script src="{{ site.baseurl }}/js/spectragram.min.js"></script>
-    <script src="{{ site.baseurl }}/js/ytplayer.min.js"></script>
-    <script src="{{ site.baseurl }}/js/countdown.min.js"></script>
-    <script src="{{ site.baseurl }}/js/smooth-scroll.min.js"></script>
-    <script src="{{ site.baseurl }}/js/parallax.js"></script>
-    <script src="{{ site.baseurl }}/js/scripts.js"></script>
-</body>
-
-<script>
-console.log('pageview',location.pathname);
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
- 
-  ga('create', 'UA-72149438-4', 'auto');
-  ga('send', 'pageview',location.pathname);
- 
-</script>
+    </body>
+    </html>
