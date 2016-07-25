@@ -56,7 +56,7 @@ layout: default
             <script>
   $(document).ready(function() {
         $.ajax({
-                url: "/footer2.html",
+                url: "/footeruat.html",
                 type:'GET',
                 success: function(data){
                     console.log('--------------success')
@@ -79,7 +79,11 @@ layout: default
         data: {message: "hellobby"},
         dataType: "json"
     });
-    alert('Thanks for the email, we\'ll be in touch promptly.');
+   /* alert('Thanks for the email, we\'ll be in touch promptly.');*/
+    var str='<div style="color: white;font-size: 18px;font-weight: 400;line-height: 54px;">';
+    str+='Thanks for showing interest, our team will get back to you shortly.</div>';
+$('#contactDiv').html(str);
+
             console.log('hello clicked');
 return false;
         });
@@ -257,7 +261,7 @@ justify-content:center;
  /*   margin-top: 0px;*/
     color: #525558;
     font-size: 32px;
-    font-weight: 300;
+    font-weight: 400;
 
         }
 
@@ -533,10 +537,11 @@ line-height: 28px;
 .advt-block{
   color: white;
 font-size: 18px;
-font-weight: 600;
+font-weight: 400;
 line-height: 54px;
 display: flex;
-    border-bottom: 1px solid #90d1f8;
+    /*border-bottom: 1px solid #90d1f8;*/
+        border-bottom: 1px solid #43b2f5;
 }
 
 #advt-title{
@@ -567,6 +572,11 @@ padding-right: 9px;
     display: flex;
     margin-top: -30px;
 }
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
     </style>
     </head>
     <body style="padding:0px; margin:0px;">
@@ -714,7 +724,7 @@ line-height: 32px;
 margin:auto;
 color:white;
 margin-bottom:50px">Contact Us</div>
-          <div style="width:620px;    margin: auto;">
+          <div id="contactDiv" style="width:620px;    margin: auto;">
                  <form  
                            method="POST">
                            <div class="form-block">
@@ -722,21 +732,21 @@ margin-bottom:50px">Contact Us</div>
                           <!--  <input  type="hidden" name="_next" value="indexv2.html" /> -->
                            <input type="hidden" name="_subject" value="New submission!" />
                              <div class="form-row">
-                           <input style="width:300px;border: 1px solid #cecece;
+                           <input style="    font-family: 'Open Sans',sans-serif;width:300px;border: 1px solid #cecece;
 border-radius: 4px;" type="text" class="validate-required" name="name" id="name1" placeholder="Name" required />
-                           <input style="width:300px;border: 1px solid #cecece;
+                           <input style="    font-family: 'Open Sans',sans-serif;width:300px;border: 1px solid #cecece;
 border-radius: 4px;;margin-left:20px" type="email" class="validate-required validate-email" id="email1"  name="_replyto" placeholder="E-mail ID" required />
                             </div>
                             <div class="form-row">
-                           <input style="width:300px;border: 1px solid #cecece;
+                           <input style="    font-family: 'Open Sans',sans-serif;width:300px;border: 1px solid #cecece;
 border-radius: 4px;" type="text" class="validate-required" name="mobile" id="mobile1" placeholder="Mobile No" required />
-                           <input style="width:300px;margin-left:20px;border: 1px solid #cecece;
+                           <input style="    font-family: 'Open Sans',sans-serif;width:300px;margin-left:20px;border: 1px solid #cecece;
 border-radius: 4px;" type="text" class="validate-required" name="company" id="company1" placeholder="Company Name" required />
                             </div>
                             <div>
-                           <button id="btn-new" style="width: 240px;
+                           <button id="btn-new" style="width: 220px;
 height: 52px;
-background-color: #20a2f1;font-size: 16px;
+background-color: #20a2f1;font-size: 14px;
 font-weight: 700;
 line-height: 23px;
 text-transform: uppercase;
