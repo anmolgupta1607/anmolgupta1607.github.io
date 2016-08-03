@@ -69,14 +69,19 @@ layout: default
             type: 'GET',
             success: function(data) {
                 $(".nav-container").html(data);
+                $('#seller').addClass('active');
             }
         });
 
                 $('#btn-new').click(function(){
+                  var name=$('#name1').val();
+                  var mobile=$('#mobile1').val();
+                  var email=$('#email1').val();
+                  var company=$('#company1').val();
                 $.ajax({
         url: "//formspree.io/anmol.gupta@snapdeal.com", 
         method: "POST",
-        data: {message: "hellobby"},
+        data: $("#contactForm1").serialize(),
         dataType: "json"
     });
    /* alert('Thanks for the email, we\'ll be in touch promptly.');*/
@@ -196,6 +201,9 @@ return false;
         .jssora22l.jssora22ldn { background-position: -250px -31px; }
         .jssora22r.jssora22rdn { background-position: -310px -31px; }
 
+         .menu li .active {
+        opacity: 1 !important;
+    }
         #type-selection{
             display: flex;
             flex:1;
@@ -692,7 +700,7 @@ color:white;
 margin-bottom:50px">Contact Us</div>
           <div id="contactDiv" style="width:620px;    margin: auto;">
                  <form  
-                           method="POST">
+                           method="POST" id="contactForm1">
                            <div class="form-block">
 
                           <!--  <input  type="hidden" name="_next" value="indexv2.html" /> -->

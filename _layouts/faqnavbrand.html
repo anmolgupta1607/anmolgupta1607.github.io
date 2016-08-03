@@ -69,15 +69,15 @@ layout: default
 
               $('#brand-nav').click(function(){
                 window.location.href = "{{ site.baseurl}}/faqs/brand-serving.html";
-                $('#brand-nav').css({"background":"#20a2f1 url({{ site.baseurl }}/img/brand-nav.png) no-repeat ","background-size":"100% 210px"});
-                $('#seller-nav').css({"background":"#eee url({{ site.baseurl }}/img/seller-nav.png) no-repeat ","background-size":"100% 210px"});
+                $('#brand-nav').css({"background":"#20a2f1 url({{ site.baseurl }}/img/Brand-tab-faq.jpg) no-repeat ","background-size":"100% 130pxpx"});
+                $('#seller-nav').css({"background":"#eee url({{ site.baseurl }}/img/Seller-tab-faq.jpg) no-repeat ","background-size":"100% 130pxpx"});
                 $('#brand-img').css("display","initial");
                 $('#seller-img').css("display","none");
               });
               $('#seller-nav').click(function(){
                 window.location.href = "{{ site.baseurl}}/faqs/ad-serving.html";
-                $('#seller-nav').css({"background":"#20a2f1 url({{ site.baseurl }}/img/seller-nav.png) no-repeat ","background-size":"100% 210px"});
-                $('#brand-nav').css({"background":"#eee url({{ site.baseurl }}/img/brand-nav.png) no-repeat ","background-size":"100% 210px"});
+                $('#seller-nav').css({"background":"#20a2f1 url({{ site.baseurl }}/img/Seller-tab-faq.jpg) no-repeat ","background-size":"100% 130px"});
+                $('#brand-nav').css({"background":"#eee url({{ site.baseurl }}/img/Brand-tab-faq.jpg) no-repeat ","background-size":"100% 130px"});
                 $('#seller-img').css("display","initial");
                 $('#brand-img').css("display","none");
               });
@@ -125,7 +125,7 @@ layout: default
             console.log(start,end);
             var identifier=window.location.pathname.substr(start,end-start);
             console.log('-----',$('#'+identifier));
-            if(identifier=='brand-serving')
+            if(identifier=='brand-serving'||identifier=='brands-billing'||identifier=='brand-reports'||identifier=='brand-serving'||identifier=='brand-campaign-state')
               $('#video-section').css("display","none");
       $('#'+identifier).css({"background-color":"#419bf9","color":"white"});
 

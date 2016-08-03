@@ -71,6 +71,7 @@ layout: default
             type: 'GET',
             success: function(data) {
                 $(".nav-container").html(data);
+                $('#index').addClass('active');
             }
         });
 
@@ -153,6 +154,9 @@ return false;
         .jssorb05 .av:hover     (active mouseover)
         .jssorb05 .dn           (mousedown)
         */
+                .menu li .active {
+        opacity: 1 !important;
+    }
         .jssorb05 {
             position: absolute;
         }
