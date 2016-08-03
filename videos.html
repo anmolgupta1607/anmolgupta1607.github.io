@@ -158,6 +158,120 @@ layout: default
                 }
             }
 
+  .footer-class{
+        padding:0px;
+    }
+        #footer-block{
+        display: flex;
+        flex:1;
+        height: 231px;
+background-color: black;
+box-shadow: 0 1px 0 #eeeff2;
+padding-left: 100px;
+padding-right: 100px;
+padding-top: 50px;
+justify-content:center;
+
+    }
+
+    #footer-logo{
+color: #525558;
+
+font-size: 26px;
+font-weight: 600;
+line-height: 32px;
+    }
+
+    #footer-about{
+        margin-left: 60px;
+        display: flex;
+        flex-direction:column;
+        width: 251px;
+    }
+
+    #about-heading{
+color: #525558;
+font-size: 14px;
+font-weight: 600;
+line-height: 32px;
+text-transform: uppercase;
+    }
+
+    #about-content{
+color: #525558;
+font-size: 13px;
+font-weight: 400;
+line-height: 22px;
+    }
+
+    #footer-links{
+                margin-left: 80px;
+        display: flex;
+        flex-direction:column;
+    
+    }
+
+    #links-heading{
+color: #525558;
+font-size: 14px;
+font-weight: 600;
+line-height: 32px;
+text-transform: uppercase;
+    }
+
+    #links-column1{
+        display: flex;
+        flex-direction:column;
+    }
+
+    #links-column2{
+        margin-left:60px;
+        display: flex;
+        flex-direction:column;
+    }
+
+    .links-entries{
+color: #525558;
+
+font-size: 13px;
+font-weight: 400;
+line-height: 24px;
+    }
+
+    #links-content{
+        display: flex;
+        width:250px;
+
+    }
+
+    #footer-contact{
+        display: flex;
+        flex-direction:column;
+        margin-left: 80px;
+    }
+
+    #contact-heading{
+        color: #525558;
+font-size: 14px;
+font-weight: 600;
+line-height: 32px;
+text-transform: uppercase;
+    }
+
+    #contact-content{
+        display: flex;
+        flex-direction:column;
+    }
+
+    .contact-entries{
+        color: #525558;
+font-size: 13px;
+font-weight: 400;
+line-height: 24px;
+    }
+
+    #links-content a :hover{
+      
         </style>
     </head>
 
@@ -342,40 +456,42 @@ layout: default
                 </table>
             </div>
         </div>
-        <footer class="footer-1 bg-dark">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3 col-sm-6">
-                        <h3>Snapdeal Ads</h3> </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="widget">
-                            <h6 class="title">Recent Posts</h6>
-                            <hr> <a href="/blog/help-center-launch.html">Snapdeal Ads - Help Center Launch</a>
-                            <br/> <a href="/blog/heard-your-feedback.html">Sellers we’ve heard your feedback</a>
-                            <br/> <a href="/blog/measuring-the-roi.html">Measuring ROI</a>
-                            <br/> <a href="/blog/introducing-snapdeal-ads.html">Introducing Snapdeal Ads</a>
-                            <br/> </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="widget">
-                            <h6 class="title">Important Links</h6>
-                            <hr>
-                            <ul class="link-list recent-posts">
-                                <li> <a href="home-app-landing.html">Home</a> </li>
-                                <li> <a href="features.html">Features</a> </li>
-                                <li> <a href="help-center.html">Help Center</a> </li>
-                                <li> <a href="faq.html">FAQs</a> </li>
-                                <li> <a href="/blog/introducing-snapdeal-ads.html">Blog</a> </li>
-                                <li> <a href="Termsofuse.html">Terms and Conditions </a> </li>
-                                <li> <a href="privacypolicy.html">Privacy Policy</a> </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6"> <span class="sub">&copy; Copyright 2015 - Snapdeal</span> </div>
-                </div>
-            </div> <a class="btn btn-sm fade-half back-to-top inner-link" href="#top">Top</a> </footer>
+        <footer class="footer-class">
+<div id="footer-block">
+<div id="footer-logo">
+    Snapdeal Ads
+</div>
+<div id="footer-about">
+    <div id="about-heading">About</div>
+    <div id="about-content">Sanpdeal Ads is an innovative online advertising solution to uplift brand awareness and sales for our affiliate businesses.
+</div>
+</div>
+<div id="footer-links">
+    <div id="links-heading">Snapdeal Ads</div>
+    <div id="links-content">
+        <div id="links-column1">
+            <a href="brand.html"><div class="links-entries">Brand Ads</div></a>
+            <a href="seller.html"><div class="links-entries">Seller Ads
+</div></a>
+            <a href="help-center.html"><div class="links-entries">Help Center</div></a>
+            <a href="/blog.html"><div class="links-entries">Blogs</div></a>
+        </div>
+        <div id="links-column2">
+            <a href="Termsofuse.html"><div class="links-entries">Legal</div></a>
+            <a href="privacypolicy.html"><div class="links-entries">Privacy</div></a>
+            <a href="/faqs/brand-serving.html"><div class="links-entries">Faqs</div></a>
+            <a href="/contact.html"><div class="links-entries">Contact Us</div></a>
+        </div>
+    </div>
+</div>
+<div id="footer-contact">
+    <!-- <div id="contact-heading">Sales</div> -->
+    <div id="contact-content">
+
+        <div class="contact-entries" style="margin-top:107px">©Copyright 2016</div>
+    </div>
+</div>
+</div> </footer>
         </div>
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
@@ -427,11 +543,11 @@ layout: default
             MSScrollParallax.setup(slider, 50, 80, true);
             $(document).ready(function () {
                 $.ajax({
-                    url: "/footer.html"
+                    url: "/footeryat.html"
                     , type: 'GET'
                     , success: function (data) {
                         console.log('--------------success')
-                        $(".footer-1").html(data);
+                        $(".footer-class").html(data);
                     }
                 });
                 $.ajax({
