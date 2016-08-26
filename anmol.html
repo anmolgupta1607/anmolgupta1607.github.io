@@ -69,15 +69,11 @@ layout: default
             type: 'GET',
             success: function(data) {
                 $(".nav-container").html(data);
-                $('#seller').addClass('active');
+                $('#brand').addClass('active');
             }
         });
 
                 $('#btn-new').click(function(){
-                  var name=$('#name1').val();
-                  var mobile=$('#mobile1').val();
-                  var email=$('#email1').val();
-                  var company=$('#company1').val();
                 $.ajax({
         url: "//formspree.io/anmol.gupta@snapdeal.com", 
         method: "POST",
@@ -158,6 +154,9 @@ return false;
         .jssorb05 .av:hover     (active mouseover)
         .jssorb05 .dn           (mousedown)
         */
+                .menu li .active {
+        opacity: 1 !important;
+    }
         .jssorb05 {
             position: absolute;
         }
@@ -201,9 +200,6 @@ return false;
         .jssora22l.jssora22ldn { background-position: -250px -31px; }
         .jssora22r.jssora22rdn { background-position: -310px -31px; }
 
-         .menu li .active {
-        opacity: 1 !important;
-    }
         #type-selection{
             display: flex;
             flex:1;
@@ -273,10 +269,11 @@ justify-content:center;
 
         }
 
-        .case{
+.case{
 display: flex;
 margin-left: 100px;
 margin-right: 100px;
+display: none;
 
         }
 
@@ -289,6 +286,7 @@ display: flex;
 flex:1;
 flex-direction:column;
 margin-left: 10px;
+overflow: hidden;
         }
 
         .case-logo{
@@ -306,15 +304,21 @@ margin-left: 10px;
 font-size: 16px;
 font-weight: 400;
 line-height: 28px;
+display: flex;
+flex:1;
         }
 
         .case-download{
-            display: flex;
-               background-image: -webkit-linear-gradient(85deg, #20a2f1 63%, #fff 23%);
-            flex:1;
-            align-items:center;
-            padding-top: 25px;
+display: flex;
+    background-color: #20a2f1;
+    height: 30px;
+    /* background-image: -webkit-linear-gradient(85deg, #20a2f1 63%, #fff 23%); */
+    /* flex: 1; */
+    align-items: center;
+    /* padding-top: 25px; */
         }
+
+
 
         .download-img{
 margin-left: 40px;
@@ -331,6 +335,7 @@ margin-left: 10px;
 
         .download-arrow{
 margin-left: 5px;
+/*margin-top: -4px;*/
         }
 
         .associated{
@@ -350,16 +355,9 @@ padding-right: 50px;
 
         .section-custom{
             height: 562px;
-background-color: #fff;
+background-color: #fafafa;
 box-shadow: 0 1px 0 #eeeff2;
-
-padding-top: 50px;
-        }
-        .section-custom-infinite{
-            display: none;
-background-color: #fff;
-box-shadow: 0 1px 0 #eeeff2;
-
+margin-top: 70px;
 padding-top: 50px;
         }
             .test-area{
@@ -419,8 +417,7 @@ flex:1;
     .test-first-block{
           display: flex;
     flex-direction: column;
-    /*align-self: center;*/
-    margin: auto;
+    align-self: center;
     }
     .test-author{
       color: white;
@@ -460,7 +457,7 @@ flex:1;
     }
 
     #brand-banner{
-background-image: url(img/Seller-page-banner.jpg);
+background-image: url(img/Brand-page-banner.jpg);
     background-size: 100% 346px;
     height: 346px;
     margin-top: 50px;
@@ -471,7 +468,7 @@ background-image: url(img/Seller-page-banner.jpg);
     }
     #banner-title{
     color: white;
-    width: 414px;
+    width: 517px;
     font-size: 68px;
     font-weight: 300;
     line-height: 80px;
@@ -568,20 +565,19 @@ padding-right: 120px;
 padding-right: 9px;
 }
 
-.custom-title{
-  color: #333 !important;
-    font-size: 20px !important;
-    font-weight: 400 !important;
-    line-height: 28px !important;
+    #try {
+    width: 0px;
+    height: 0px;
+    /* background-color: #000; */
+    border-bottom: 40px solid #20a2f1;
+    border-right: 490px solid transparent;
 }
 
-.custom-content{
-      color: #555;
-    font-size: 17px;
-    font-weight: 400;
-    line-height: 26px;
-  
+.download-content{
+    display: flex;
+    margin-top: -30px;
 }
+
 input:focus::-webkit-input-placeholder { color:transparent; }
 input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
 input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
@@ -595,55 +591,58 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
      
           </div>
           <div id="brand-banner">
-                        <div id="banner-title">Product Ads</div>
-            <div id="banner-subtitle">Increase sales and visibility on Snapdeal
-</div>
+                        <div id="banner-title">Snapdeal Brand Advertising</div>
+            <div id="banner-subtitle">Reach millions of shoppers everyday</div>
         </div>
-        <div class="section-heading">How we deliver results</div>
+        <div class="section-heading">Powerful Capabilities</div>
         <div id="power-container">
           <div class="power-list">
             <div class="power-block" style="margin-top:0px">
-              <div class="power-icon"><img src="img/seller-icon1.png"></div>
+              <div class="power-icon"><img src="img/power1.png"></div>
               <div class="power-text">
-                <div class="power-title">We Help You Reach Shopping Audiences</div>
-                <div class="power-subtitle">When people like some products and categories, we take note. We use this intent data to target users who may buy your product.
-</div>
+                <div class="power-title">Engaging Ad Formats</div>
+                <div class="power-subtitle">Create greater engagement through native ad formats.</div>
               </div>
             </div>
             <div class="power-block">
-              <div class="power-icon"><img src="img/seller-icon2.png"></div>
+              <div class="power-icon"><img src="img/power2.png"></div>
               <div class="power-text">
-                <div class="power-title">Target Based on 
-Location
-</div>
-                <div class="power-subtitle">Reach your customers in the areas where they live or where they do business with you.
-</div>
+                <div class="power-title">Audience Targeting </div>
+                <div class="power-subtitle">Target audience based on purchase intent.</div>
               </div>
             </div>
-
+            <div class="power-block">
+              <div class="power-icon"><img src="img/power5.png"></div>
+              <div class="power-text">
+                <div class="power-title">Self-Serve Interface </div>
+                <div class="power-subtitle">Use self-serve interface to manage and monitor multiple campaigns</div>
+              </div>
+            </div>
 
           </div>
-          <div id="power-center"><img src="img/seller-mobile-2.png"></div>
+          <div id="power-center"><img src="img/brand-mobile-1.png"></div>
                    <div class="power-list">
-                             <div class="power-block" style="margin-top:0px">
-              <div class="power-icon"><img src="img/seller-icon3.png"></div>
+            <div class="power-block" style="margin-top:0px">
+              <div class="power-icon" ><img src="img/power4.png"></div>
               <div class="power-text">
-                <div class="power-title">Reach Segments of Users</div>
-                <div class="power-subtitle">We have automatically segmented users based on high value and low value, by categories and so forth. Run campaigns specific to those segments to drive better results.</div>
+                <div class="power-title">Location Targeting </div>
+                <div class="power-subtitle">Run campaigns targeted on specific states and cities.</div>
               </div>
             </div>
-            <div class="power-block" >
-              <div class="power-icon" ><img src="img/seller-icon4.png"></div>
+            <div class="power-block">
+              <div class="power-icon"><img src="img/power3.png"></div>
               <div class="power-text">
-                <div class="power-title">Target Based on Buying Behaviour
-</div>
-                <div class="power-subtitle">Snapdeal enables you to reach customers based on purchased history and target them with related product and 
-categories.
-</div>
+                <div class="power-title">Real Time Analytics </div>
+                <div class="power-subtitle">Measure performance of your campaigns in real time.</div>
               </div>
             </div>
-  
-
+            <div class="power-block">
+              <div class="power-icon"><img src="img/power6.png"></div>
+              <div class="power-text">
+                <div class="power-title">Native Ad Units </div>
+                <div class="power-subtitle">High performing native advertising units.</div>
+              </div>
+            </div>
 
           </div>
 
@@ -652,150 +651,74 @@ categories.
 
 
         <div id="advantages-container">
-          <div id="advt-img"><img src="img/iphone2.png"></div>
+          <div id="advt-img"><img src="img/brand-mobile-2.png"></div>
           <div id="advt-list">
-            <div id="advt-title">Why Snapdeal Ads?</div>
-            <div class="advt-block" style=" margin-top: 45px;"><div class="advt-tick"><img src="img/tick-blue.png"></div><div>Get new customers</div></div>
-            <div class="advt-block"><div class="advt-tick"><img src="img/tick-blue.png"></div><div>Get assured buy button</div></div>
-            <div class="advt-block"><div class="advt-tick"><img src="img/tick-blue.png"></div><div>Measure result instantly</div></div>
-       
+            <div id="advt-title">Why advertise on Snapdeal?</div>
+            <div class="advt-block" style=" margin-top: 45px;"><div class="advt-tick"><img src="img/tick-blue.png"></div><div>India's Largest Online Marketplace</div></div>
+            <div class="advt-block"><div class="advt-tick"><img src="img/tick-blue.png"></div><div>60 MN+ Monthly Unique Visitors</div></div>
+            <div class="advt-block"><div class="advt-tick"><img src="img/tick-blue.png"></div><div>Curated Purchase Intent and Past Purchase Data of Millions of Users</div></div>
+            <div class="advt-block"><div class="advt-tick"><img src="img/tick-blue.png"></div><div>6000+ Cities and 28K+ Pinches serviced</div></div>
+           
+            <div class="advt-block"><div class="advt-tick"><img src="img/tick-blue.png"></div><div>High performance native advertising solutions</div></div>
           </div>
         </div>
+                <div class="section-heading">Trusted Brands</div>
+        <div class="associated">
+            <div class="associated-block"><div style="margin:auto"><img style="max-width:90%" src="img/dabur.png"></div></div>
+            <div class="associated-block"><div style="margin:auto"><img style="max-width:90%" src="img/p&g.png"></div></div>
+            <div class="associated-block"><div style="margin:auto"><img style="max-width:90%" src="img/microsoft.png"></div></div>
+            <div class="associated-block"><div style="margin:auto"><img style="max-width:90%" src="img/intex.png"></div></div>
+            <div class="associated-block"><div style="margin:auto"><img style="max-width:90%" src="img/intel.png"></div></div>
+            <div class="associated-block"><div style="margin:auto"><img style="max-width:90%" src="img/hindustan.png"></div></div>
 
-    <div class="section-custom-infinite">
-            <div class="section-heading" style="margin-top:0px">Features</div>
-            <ul class="accordion accordion-2 one-open" style="    width: 55%;
-    margin: auto;">
-                    <li>
-                        <div class="title">
-                            <div class="inline mb0 custom-title">Fully self-service platform</div> </div>
-                        <div class="content2 custom-content">
-                            <p> Snapdeal Ads features a fully self-service platform for sellers to run their targeted product ads for Snapdeal customers across m-site, App and web properties.<br/></br/>
-
-A fully self-service platform allows sellers or advertisers to be able to create, manage, pause, delete or optimize campaigns anytime they want. </p>
-                        </div>
-                    </li>
-                      <li>
-                        <div class="title">
-                            <div class="inline mb0 custom-title">Fine grained targeting</div> </div>
-                        <div class="content2 custom-content">
-                            <p> Sellers can target ads by selecting specific products, specific geographic locations across India as well as by selecting specific categories or audiences they want to target. </p>
-                        </div>
-                    </li>
-                    
-                      <li>
-                        <div class="title">
-                            <div class="inline mb0 custom-title">Cost Per View (CPV) Ads and Cost Per Click (CPC) ads</div> </div>
-                        <div class="content2 custom-content">
-                            <p> Snapdeal Ads allows product ads to be served as both Cost Per View (CPV) as well as Cost Per Click (CPC). Each kind of ad has a feature attached with CPV being the more premium that allows audience targeting using Snapdeal’s DMP as well as Retargeting. <br/><br/>
-
-Remember, CPV campaigns are charged per view which means every time your customer sees your ad in the CPV ad unit, you will be charged.<br/><br/>
-
-Typical CPV Pricing is about Rs 15 per thousand impressions (I.e. 15 paisa per view).<br/><br/>
-
-CPV Ads are shown on the Product Display Page (PDP) as “Ads based on your interest” widget.  </p>
-                        </div>
-                    </li>
-                      <li>
-                        <div class="title">
-                            <div class="inline mb0 custom-title">Intent behavior and purchase history based targeting on CPV campaigns</div> </div>
-                        <div class="content2 custom-content">
-                            <p> Snapdeal sellers can also leverage Snapdeal’s powerful Data management platform (DMP) to target users with intent or purchase history. <br/><br/>
-
-Examples of campaigns that you can run with this include:<br/><br/>
-
-
-Target customers who are about to buy shoes ( in cart)<br/>
-
-Target customers who bought shoes (and sell them socks)<br/>
-
-Target customers who bought home appliances (and sell them other home appliances).<br/><br/>
-
-
-Audience targeted ads are only available for Cost Per View (CPV) ad units which means that you will pay per view instead of pay per click. </p>
-                        </div>
-                    </li>
-                       <li>
-                        <div class="title">
-                            <div class="inline mb0 custom-title">Retargeting</div> </div>
-                        <div class="content2 custom-content">
-                            <p> Retargeting is a feature of Cost Per View (CPV) campaigns by which any products that your customers saw, and clicked automatically start following your customer. <br/><br/>
-This happens over several days and this enables Snapdeal to more aggressively position your product to the customer who has expressed interest in buying it.<br/><br/>
-
-Retargeting is automatic, when your campaign is of type Cost Per View (CPV).</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="title">
-                            <div class="inline mb0 custom-title">Seller stores as your primary landing page</div> </div>
-                        <div class="content2 custom-content">
-                            <p> All ad clicks now take users automatically to your seller store.<br/><br/>
-
-A seller store is a store created with your products. Most seller stores are created automatically. However you can customize and manage your own seller store so that you can drive higher sales on your store.<br/><br/>
-
-This means that users will not see any other assortment when the ad is clicked. <br/><br/>
-<img src="img/seller-store.png" style="max-width:50%">  </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="title">
-                            <div class="inline mb0 custom-title">Recurring Campaigns</div> </div>
-                        <div class="content2 custom-content">
-                            <p> Snapdeal ads now supports recurring campaigns as the default choice of campaigns. With this feature, advertising is not disrupted if campaigns run out of budget.<br/><br/>
-
-By setting a weekly (more options coming) recurring top-up of an amount, once the campaign amount is exhausted, campaigns will automatically debit from your COD balance to add to the campaign budget.<br/><br/>
-
-So for example if you set Rs 5000 as your weekly budget for your campaign, upon exhaustion of the budget  - your COD balance will automatically be debited by Rs 5000 and your campaign will continue to run. </p>
-                        </div>
-                    </li>
-                    </ul>
-            </div>
-        <div class="section-custom">
-            <div class="section-heading" style="margin-top:0px">What do People say?</div>
-  <div class="test-area">
-    <div class="test-block">
-      <div class="test-first">
-      <div class="test-img"><img src="img/abhishek.png" style="height:60px;width:60px"> </div>
-       <div class="test-first-block">
-        <div class="test-author">Abhishek  Jain</div>
-        <div class="test-company">KG Plast</div>
         </div>
-<div style="width:100px"></div>
-      </div>
 
-      <div class="test-second"><span class="double-quotes"><img style="max-width: none;" src="img/quotes.png"></span>We participated in a paid campaign around Rakshabandhan. To our surprise, we got booming figure of sales, even more then promised. Would surely take it again.</div>
+     <div class="section-heading" style="display:none">Case Study</div>
+     <div class="case">
+         <div class="case-block">
+             <div class="case-logo"><img src="img/micromax.png"></div>
+             <div class="case-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 
-    </div>
-    <div class="test-block" style="margin-left:20px">
-      <div class="test-first">
-      <div class="test-img"><img src="img/kiran.png" style="height:60px;width:60px"> </div>
-        <div class="test-first-block">
-        <div class="test-author">Kiran Jindal</div>
-        <div class="test-company">Asian Shoes</div>
-        </div>
-        <div style="width:100px"></div>
-      </div>
-      <div class="test-second"><span class="double-quotes"><img style="max-width: none;" src="img/quotes.png"></span>Using seller advertising, we could reach out to the masses, promote our brand and increase sales. Thanks to Snapdeal and their team for introducing and hand-holding us to success with this service.</div>
-    </div>
-    <div class="test-block" style="margin-left:20px">
-      <div class="test-first">
-      <div class="test-img"><img src="img/imran.png" style="height:60px;width:60px"> </div>
-        <div class="test-first-block">
-        <div class="test-author">Mohamed Imran</div>
-        <div class="test-company">Friske Knits</div>
-        </div>
-        <div style="width:85px"></div>
-      </div>
-      <div class="test-second"><span class="double-quotes"><img style="max-width: none;" src="img/quotes.png"></span>We almost made a 300% leap in our sales because of Snapdeal advertising. We could get good sales even for newly listed products which were not clocking high sales figures.</div>
-    </div>
+</div>
+<div id="try"></div>
+             <div class="case-download">
+             <div class="download-content">
+                 <div class="download-img"><img src="img/export.png"></div>
+                 <a href="http://www.adobe.com/content/dam/Adobe/en/devnet/acrobat/pdfs/pdf_open_parameters.pdf" target="_blank" download><div class="download-text">Download</div></a>
+                 <div class="download-arrow"><img src="img/arrow-export.png"></div>
+             </div>
+             </div>
+         </div>
+         <div class="case-block">
+             <div class="case-logo"><img src="img/lenovo.png"></div>
+             <div class="case-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+</div>
+<div id="try"></div>
+             <div class="case-download">
+             <div class="download-content">
+                 <div class="download-img"><img src="img/export.png"></div>
+                 <a href="http://www.adobe.com/content/dam/Adobe/en/devnet/acrobat/pdfs/pdf_open_parameters.pdf" target="_blank" download><div class="download-text">Download</div></a>
+                 <div class="download-arrow"><img src="img/arrow-export.png"></div>
+             </div>
+         </div>
+         </div>
+         <div class="case-block">
+             <div class="case-logo"><img src="img/samsung.png"></div>
+             <div class="case-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+</div>
+             <div id="try"></div>
+             <div class="case-download">
+             <div class="download-content">
+                 <div class="download-img"><img src="img/export.png"></div>
+                 <a href="http://www.adobe.com/content/dam/Adobe/en/devnet/acrobat/pdfs/pdf_open_parameters.pdf" target="_blank" download><div class="download-text">Download</div></a>
+                 <div class="download-arrow"><img src="img/arrow-export.png"></div>
+             </div>
+         </div>
+         </div>
+     </div>
+        
 
 
-
-
-
-  </div>
-        </div>
-              
               
       
          

@@ -815,7 +815,7 @@ footer.bg-dark li,
 /*!---------- 6. BUTTONS ----------*/
 .btn {
   font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  border: 2px solid #0A94F7;
+  border: 2px solid black;
   padding: 0 26px;
   height: 40px;
   min-width: 150px;
@@ -825,20 +825,21 @@ footer.bg-dark li,
   text-transform: uppercase;
   letter-spacing: 1px;
   border-radius: 0;
-  color: #0A94F7;
+  color: white;
   text-align: center;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   margin-right: 8px;
   margin-bottom: 24px;
+  background-color: black;
 }
 .btn:last-child,
 .btn:last-of-type {
   margin-right: 0;
 }
 .btn:hover {
-  background: #0A94F7;
+  background: black;
   color: #fff;
 }
 .btn-icon {
@@ -917,7 +918,7 @@ body.btn-rounded .btn {
   color: #fff;
 }
 .btn:visited {
-  color: #0A94F7;
+/*  color: black;*/
 }
 .btn-white:visited,
 .btn:visited:hover {
@@ -954,7 +955,7 @@ body.btn-rounded .btn {
     z-index: 999 !important;
 }
 nav {
-  background: #fff;
+  background: #ff2341;
   -webkit-backface-visibility: hidden;
   max-width: 100%;
 }
@@ -995,7 +996,7 @@ nav .btn,
   height: 55px;
   max-height: 55px;
   line-height: 53px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #ff2341;
 }
 .nav-bar .module,
 .nav-bar .module-group {
@@ -1050,8 +1051,7 @@ nav.bg-dark .logo-dark {
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 1px;
-  color: #292929;
-  opacity: 0.5;
+  color: white;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -1060,6 +1060,7 @@ nav.bg-dark .logo-dark {
 }
 .menu li a:hover {
   opacity: 1 !important;
+  font-weight: 800 !important;
 }
 .menu > li {
   margin-right: 32px;
@@ -2220,9 +2221,7 @@ button[type="submit"] .form-loading {
 .accordion .content2 {
   max-height: 0;
   overflow: hidden;
-  transition: all 0.4s ease;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
+\
 }
 .accordion li.active .content2 {
   max-height: 2200px;
@@ -2239,9 +2238,7 @@ button[type="submit"] .form-loading {
 .accordion-1 .title {
   background: #f5f5f5;
   padding: 13px;
-  transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
+
 }
 .bg-secondary .accordion-1 .title {
   background: #ebebeb;
@@ -2265,9 +2262,7 @@ button[type="submit"] .form-loading {
 .accordion-1 .content {
   border: 1px solid #eee;
   border-top: none;
-  transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
+
   opacity: 0;
 }
 .accordion-1 .content p {
@@ -2290,9 +2285,7 @@ button[type="submit"] .form-loading {
   font-weight: 500;
   padding: 16px 0;
   border-bottom: 1px solid #ccc;
-  transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
+
   opacity: .7;
 }
 .accordion-2 .title:before {
